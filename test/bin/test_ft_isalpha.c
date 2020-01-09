@@ -13,26 +13,39 @@
 #include "test.h"
 #include "../libft.h"
 
-char	*check_alpha(int c)
-{
-	if(c > 0)
-		return ("is an alphabet");
-	return ("is not an alphabet");
-}
-
-
 int	test_ft_isalpha()
 {
-	char s1 = 'A';
-	char s2 = 'a';
-	char s3 = '1';
-	char s4 = '*';
-	
-	printf("Check ft_isalpha\nChar: \"%c\", \"%c\", \"%c\", \"%c\"\n\n", s1, s2, s3, s4);
-	printf("%c - isalpha:    %s\n    ft_isalpha: %s\n", s1, check_alpha(isalpha(s1)), check_alpha(ft_isalpha(s1)));
-	printf("%c - isalpha:    %s\n    ft_isalpha: %s\n", s2, check_alpha(isalpha(s2)), check_alpha(ft_isalpha(s2)));
-	printf("%c - isalpha:    %s\n    ft_isalpha: %s\n", s3, check_alpha(isalpha(s3)), check_alpha(ft_isalpha(s3)));
-	printf("%c - isalpha:    %s\n    ft_isalpha: %s\n\n", s4, check_alpha(isalpha(s4)), check_alpha(ft_isalpha(s4)));
+	printf("Check ft_isalpha\n\nTest 1 - \"A\": ");
+	if (isalpha(65) > 0 && ft_isalpha(65) > 0)
+		OK
+	else
+		ERROR
+	printf("Test 2 - \"a\": ");
+	if (isalpha(97) > 0 && ft_isalpha(97) > 0)
+		OK
+	else
+		ERROR
+	printf("Test 3 - \"1\": ");
+	if (isalpha(49) != ft_isalpha(49))
+		ERROR
+	else
+		OK
+	printf("Test 4 - \"*\": ");
+	if (isalpha(42) != ft_isalpha(42))
+		ERROR
+	else
+		OK
+	printf("Test 5 - \" \": ");
+	if (isalpha(32) != ft_isalpha(32))
+		ERROR
+	else
+		OK
+	printf("Test 6 - \"\" : ");
+	if (isalpha(0) != ft_isalpha(0))
+		ERROR
+	else
+		OK
+	printf("\n");
 	return (0);
 }
 

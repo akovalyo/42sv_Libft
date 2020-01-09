@@ -15,14 +15,21 @@
 
 int	test_ft_strlen()
 {
-	char s[] = "abc";
-	int a, b;
-	
-	a = strlen(s);
-	b = ft_strlen(s);
-	printf("Check ft_strlen.\nString \"%s\"\n\n", s); 
-	printf("ft_strlen: %d\n", b);
-	printf("strlen: %i\n\n", a);
-		
+	printf("Check ft_strlen.\n\nTest 1 - \"\": ");
+	if(strlen("") != ft_strlen(""))
+		ERROR
+	else 
+		OK
+	printf("Test 2 - \"a\": ");
+	if(strlen("a") != ft_strlen("a"))
+		ERROR
+	else 
+		OK
+	printf("Test 3 - \"abc\": ");
+	if(strlen("abc") != ft_strlen("abc"))
+		ERROR
+	else 
+		OK
+	printf("\n");
 	return (0);
 }

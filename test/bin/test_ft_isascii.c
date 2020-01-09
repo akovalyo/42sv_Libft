@@ -14,22 +14,19 @@
 #include "test.h"
 #include "../libft.h"
 
-char	*check_ascii(int c)
-{
-	if(c > 0)
-		return ("is an ASCII character");
-	return ("is not an ASCII character");
-}
-
-
 int	test_ft_isascii()
 {
-	char s1 = '9';
-	char s2 = 129;
-	
-	printf("Check ft_isascii\nChar: \"%c\", \"%c\"\n\n", s1, s2);
-	printf("%c - isascii:    %s\n    ft_isascii: %s\n", s1, check_ascii(isascii(s1)), check_ascii(ft_isascii(s1)));
-	printf("%c - isdigit:    %s\n    ft_isascii: %s\n\n", s2, check_ascii(isascii(s2)), check_ascii(ft_isascii(s2)));
+	printf("Check ft_isascii\n\nTest 1 - \"9\": ");
+	if (isascii(57) > 0 && ft_isascii(57) > 0)
+		OK
+	else
+		ERROR
+	printf("Test 2 - \"�\": ");
+	if (isascii(129) != ft_isascii(129))
+		ERROR
+	else
+		OK
+	printf("\n");
 	return (0);
 }
 

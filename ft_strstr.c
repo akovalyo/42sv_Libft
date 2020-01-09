@@ -1,41 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/06 20:29:16 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/01/06 21:03:06 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/01/08 18:02:00 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/01/08 18:23:57 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-	int sign;
-	int collector;
 	size_t i;
-
-	sign = 1;
-	collector = 0;
+	size_t find_index;
+	size_t remember;
+	
 	i = 0;
-
-	while (nptr[i] == '\n' || nptr[i] == '\t' || nptr[i] == '\v' || 
-			nptr[i] == '\r' || nptr[i] == '\f' || nptr[i] == ' ')
-		i++;
-	if (nptr[i] == '-')
+	if (needle[0] == '\0')
+		return ((char *)haystack);
+	while (haystack[i])
 	{
-		sign = -1;
+		find_index = 0;
+		if (haystack[i] == needle[find_index])
+		{
+			remember = i;
+			while (haystack[i] == needle[find_index])
+			{
+				if (needle[find_index + 1] == '\0')
+					return ((char *)&haystack[remember]);
+				find_index++;
+				i++;
+			}
+			i = remember;
+		}
 		i++;
 	}
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-	{
-		collector = collector * 10 + nptr[i] - '0';
-		i++;
-	}
-	return (collector * sign);
+	return (0);
 }
-
-

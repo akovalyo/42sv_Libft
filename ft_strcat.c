@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                _______ ______   ______ __   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/07 21:17:02 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/01/07 21:17:05 by akovalyo    __________________________   */
+/*   Created: 2020/01/08 20:21:00 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/01/08 20:51:46 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+char	*ft_strcat(char *dest, const char *src)
 {
-	if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	return (0);
+	size_t len;
+	size_t i;
+
+	len = ft_strlen(dest);
+	i = 0;
+	while(src[i])
+	{
+		dest[len] = src[i];
+		len++;
+		i++;
+	}
+	dest[len] = '\0';
+	return (dest);
 }

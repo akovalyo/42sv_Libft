@@ -16,16 +16,24 @@
 int	test_ft_strcpy()
 {
 	// check ft_strcpy
-	char d[] = "hello";
-	char s[] = "world";
-	char d2[] = "hello";
-	char s2[] = "world";
-	
-	printf("Check ft_strcpy\ndest = \"%s\" src = \"%s\"\n\n", d, s);
-	ft_strcpy(d, s);
-	strcpy(d2, s2);
-	printf("ft_strcpy: %s\n", d);
-	printf("strcpy: %s\n\n", d2);
-	
+	char d1[50];
+	char d2[50];
+		
+	printf("Check ft_strcpy\nTest 1: ");
+	ft_strcpy(d1, "Hello");
+	strcpy(d2, "Hello");
+	if (ft_strlen(d1) != ft_strlen(d2))
+		ERROR
+	else
+		OK
+	printf("Test 2: ");
+	ft_strcpy(d1, "Hello");
+	strcpy(d2, "Hello");	
+	if (ft_strlen(d1) != ft_strlen(d2))
+		ERROR
+	else
+		OK
+
+	printf("\n");
 	return 0;
 }

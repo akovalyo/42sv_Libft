@@ -15,19 +15,25 @@
 
 int	test_ft_strncpy()
 {
-	// check ft_strncpy
-	char d[] = "hello";
-	char s[] = "worldddddddd";
-	int n = 5;
-	int n2 = 5;
-	char d2[] = "hello";
-	char s2[] = "worldddddddd";
 	
-	printf("Check ft_strncpy.\ndest = \"%s\" src = \"%s\", n = %d\n\n", d, s, n);
-	ft_strncpy(d, s, n);
-	strncpy(d2, s2, n2);
-	printf("ft_strncpy: %s\n", d);
-	printf("strncpy: %s\n\n", d2);
-		
+	char d1[100] = {0};
+	char d2[100] = {0};
+	
+	printf("Check ft_strncpy\nTest 1: ");
+	ft_strncpy(d1, "Hellooooo", 5);
+	strncpy(d2, "Hellooooo", 5);
+	if (ft_strlen(d1) != ft_strlen(d2))
+		ERROR
+	else
+		OK
+	printf("Test 2: ");
+	ft_strncpy(d1, "Hellooooo", 5);
+	strncpy(d2, "Helloooooo", 5);	
+	if (ft_strlen(d1) != ft_strlen(d2))
+		ERROR
+	else
+		OK
+
+	printf("\n");
 	return 0;
 }

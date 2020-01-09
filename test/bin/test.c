@@ -18,11 +18,11 @@ int	main()
 {
 	test_ft_strlen();
 	divider();	
+	test_ft_strcpy();
+	divider();	
 	test_ft_strncpy();
 	divider();	
 	test_ft_strdup();
-	divider();	
-	test_ft_strcpy();
 	divider();	
 	test_ft_atoi();
 	divider();
@@ -39,6 +39,14 @@ int	main()
 	test_ft_toupper();
 	divider();
 	test_ft_tolower();
+	divider();
+	test_ft_strstr();
+	divider();
+	test_ft_strcat();
+	divider();
+	test_ft_strncat();
+	divider();
+	test_ft_strlcat();
 	divider();
 	
 	return (0);

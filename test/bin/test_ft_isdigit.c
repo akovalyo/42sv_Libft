@@ -10,26 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "test.h"
 #include "../libft.h"
 
-char	*check_digit(int c)
-{
-	if(c > 0)
-		return ("is a digit");
-	return ("is not a digit");
-}
-
-
 int	test_ft_isdigit()
 {
-	char s1 = '9';
-	char s2 = 'a';
-	
-	printf("Check ft_isdigit\nChar: \"%c\", \"%c\"\n\n", s1, s2);
-	printf("%c - isdigit:    %s\n    ft_isdigit: %s\n", s1, check_digit(isdigit(s1)), check_digit(ft_isdigit(s1)));
-	printf("%c - isdigit:    %s\n    ft_isdigit: %s\n\n", s2, check_digit(isdigit(s2)), check_digit(ft_isdigit(s2)));
+	printf("Check ft_isdigit\n\nTest 1 - \"9\": ");
+	if (isdigit(57) > 0 && ft_isdigit(57) > 0)
+		OK
+	else
+		ERROR
+	printf("Test 2 - \"a\": ");
+	if (isdigit(97) != ft_isdigit(97))
+		ERROR
+	else
+		OK
+	printf("\n");
 	return (0);
 }
 

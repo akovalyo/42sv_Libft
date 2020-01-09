@@ -13,15 +13,55 @@
 #include "test.h"
 #include "../libft.h"
 
+int	atoi_check(char *str)
+{
+	if(atoi(str) != ft_atoi(str))
+		return (1);
+	return (0);
+}
+
 int	test_ft_atoi()
 {
-	char s1[] = "123b";
-	char s2[] = " 123b";
-	char s3[] = "b123";
-	char s4[] = "123b123";
-	
-	printf("Check ft_atoi\nstr: \"%s\", \"%s\", \"%s\", \"%s\"\n\n", s1, s2, s3, s4);
-	printf("ft_atoi: %d, %d, %d, %d\n", ft_atoi(s1), ft_atoi(s2), ft_atoi(s3), ft_atoi(s4));	
-	printf("atoi:    %d, %d, %d, %d\n\n", atoi(s1), atoi(s2), atoi(s3), atoi(s4));	
+	printf("Check ft_atoi\n\nTest 1 - \"\": ");
+	if(atoi_check("") == 1)
+		ERROR
+	else 
+		OK	
+	printf("Test 2 - \"\\n\\t\\v\\r\\f 123\": ");
+	if(atoi_check("\n\t\v\r\f 123") == 1)
+		ERROR
+	else 
+		OK
+	printf("Test 3 - \"a123\": ");
+	if(atoi_check("a123") == 1)
+		ERROR
+	else 
+		OK
+	printf("Test 4 - \"123a\": ");
+	if(atoi_check("123a") == 1)
+		ERROR
+	else 
+		OK
+	printf("Test 5 - \"-123\": ");
+	if(atoi_check("-123") == 1)
+		ERROR
+	else 
+		OK
+	printf("Test 6 - \"--123\": ");
+	if(atoi_check("--123") == 1)
+		ERROR
+	else 
+		OK
+	printf("Test 7 - \"-2147483648\": ");
+	if(atoi_check("-2147483648") == 1)
+		ERROR
+	else 
+		OK
+	printf("Test 8 - \"2147483647\": ");
+	if(atoi_check("2147483647") == 1)
+		ERROR
+	else 
+		OK
+	printf("\n");
 	return (0);
 }

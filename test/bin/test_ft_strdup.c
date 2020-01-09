@@ -15,14 +15,18 @@
 
 int	test_ft_strdup()
 {
-	char *src;
+	char *src = "hello";
 	char *new;
 	char *new2;
-
-	src = "hello";
+	
+	printf("Check ft_strdup\nTest 1: ");
 	new = ft_strdup(src);
 	new2 = strdup(src);
-	printf("Check ft_strcpy\nSrc = %s\n\nft_strdup: %s\nstrdup: %s\n\n", src, new, new2);
+	if (ft_strlen(new) != ft_strlen(new2))
+		ERROR
+	else
+		OK	
+	printf("\n");
 	
 	return(0);
 }
