@@ -48,6 +48,8 @@ int	main()
 	divider();
 	test_ft_strlcat();
 	divider();
+	test_ft_strnstr();
+	divider();
 	
 	return (0);
 }
