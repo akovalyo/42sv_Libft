@@ -50,6 +50,10 @@ int	main()
 	divider();
 	test_ft_strnstr();
 	divider();
+	test_ft_strcmp();
+	divider();
+	test_ft_strncmp();
+	divider();
 	
 	return (0);
 }

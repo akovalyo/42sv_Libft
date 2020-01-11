@@ -29,6 +29,8 @@ SRC = ft_strlen.c \
       ft_strncat.c \
       ft_strlcat.c \
       ft_strnstr.c \
+      ft_strcmp.c \
+      ft_strncmp.c \
       ft_putchar.c
 
 OF = $(SRC:%.c=%.o)

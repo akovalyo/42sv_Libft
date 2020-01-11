@@ -1,42 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                               __________________________   */
-/*   test_ft_isalnum.c                           _______ ______   ______ __   */
+/*   test_ft_strcmp.c                            _______ ______   ______ __   */
 /*                                               ___    |___  /   ___  //_/   */
 /*   By: akovalyo <al.kovalyov@gmail.com>        __  /| |__  /    __  ,<      */
 /*                                               _  ___ |_  / ___ _  /| |     */
-/*   Created: 2020/01/07 18:20:51 by akovalyo    /_/  |_|/_/  _(_)/_/ |_|     */
-/*   Updated: 2020/01/07 19:48:09 by akovalyo    __________________________   */
+/*   Created: 2020/01/10 20:11:53 by akovalyo    /_/  |_|/_/  _(_)/_/ |_|     */
+/*   Updated: 2020/01/10 20:11:53 by akovalyo    __________________________   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
 #include "../libft.h"
 
-int	test_ft_isalnum()
+int	test_ft_strcmp()
 {
-	printf("Check ft_isalnum\n\nTest 1 - \"1\": ");
-	if (isalnum(49) > 0 && ft_isalnum(49) > 0)
+	
+	printf("Check ft_strcmp\n\nTest 1 - \"abc\" - \"abc\": ");
+	if (ft_strcmp("abc", "abc") == 0)
 		OK
 	else
 		ERROR
-	printf("Test 2 - \"a\": ");
-	if (isalnum(97) > 0 && ft_isalnum(97) > 0)
+	printf("Test 2 - \"a\" - \"abc\": ");
+	if (ft_strcmp("a", "abc") < 0)
 		OK
 	else
 		ERROR
-	printf("Test 3 - \" \": ");
-	if (isalpha(32) != ft_isalpha(32))
-		ERROR
-	else
+	printf("Test 3 - \"abc\" - \"a\": ");
+	if (ft_strcmp("abc", "a") > 0)
 		OK
-	printf("Test 4 - \"*\": ");
-	if (isalpha(42) != ft_isalpha(42))
-		ERROR
 	else
+		ERROR
+	printf("Test 4 - \"abc\" - \"fgh\": ");
+	if (ft_strcmp("abc", "fgh") < 0)
 		OK
-	printf("%d\n", strcmp("abc", "fgh"));
+	else
+		ERROR
+	printf("Test 5 - \"\" - \"abc\": ");
+	if (ft_strcmp("", "abc") < 0)
+		OK
+	else
+		ERROR
+	printf("Test 6 - \"abc\" - \"\": ");
+	if (ft_strcmp("abc", "") > 0)
+		OK
+	else
+		ERROR
 	printf("\n");
 	return (0);
 }
-
