@@ -54,6 +54,8 @@ int	main()
 	divider();
 	test_ft_strncmp();
 	divider();
+	test_ft_strchr();
+	divider();
 	
 	return (0);
 }

@@ -39,6 +39,7 @@ int	test_ft_strlcat();
 int	test_ft_strnstr();
 int	test_ft_strcmp();
 int	test_ft_strncmp();
+int	test_ft_strchr();
 
 
 #endif
