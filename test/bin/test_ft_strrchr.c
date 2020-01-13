@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                               __________________________   */
-/*   test_ft_strchr.c                            _______ ______   ______ __   */
+/*   test_ft_strrchr.c                           _______ ______   ______ __   */
 /*                                               ___    |___  /   ___  //_/   */
 /*   By: akovalyo <al.kovalyov@gmail.com>        __  /| |__  /    __  ,<      */
 /*                                               _  ___ |_  / ___ _  /| |     */
@@ -13,20 +13,25 @@
 #include "test.h"
 #include "../libft.h"
 
-int	test_ft_strchr()
+int	test_ft_strrchr()
 {
 	
-	printf("Check ft_strchr\n\nTest 1 - \"Hello\" - \"i\": ");
-	if (strchr("Hello", 'i') != ft_strchr("Hello", 'i'))
+	printf("Check ft_strrchr\n\nTest 1 - \"Hello hello\" - \"e\": ");
+	if (strchr("Hello hello", 'e') != ft_strchr("Hello hello", 'e'))
 		ERROR
 	else
 		OK
-	printf("Test 2 - \"Hello\" - \"e\": ");
-	if (strchr("Hello", 'e') != ft_strchr("Hello", 'e'))
+	printf("Test 2 - \"llllll\" - \"l\": ");
+	if (strchr("llllll", 'l') != ft_strchr("llllll", 'l'))
 		ERROR
 	else
 		OK
-	printf("Test 3 - \"Hello\" - NULL: ");
+	printf("Test 3 - \"Hello\" - \"d\": ");
+	if (strchr("Hello", 'd') != ft_strchr("Hello", 'd'))
+		ERROR
+	else
+		OK
+	printf("Test 4 - \"Hello\" - NULL: ");
 	if (strchr("Hello", 0) != ft_strchr("Hello", 0))
 		ERROR
 	else

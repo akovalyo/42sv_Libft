@@ -56,6 +56,10 @@ int	main()
 	divider();
 	test_ft_strchr();
 	divider();
+	test_ft_strrchr();
+	divider();
+	test_ft_bzero();
+	divider();
 	
 	return (0);
 }
