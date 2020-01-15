@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                               __________________________   */
-/*   test_ft_strncpy.c                           _______ ______   ______ __   */
+/*   test_ft_memcpy.c                            _______ ______   ______ __   */
 /*                                               ___    |___  /   ___  //_/   */
 /*   By: akovalyo <al.kovalyov@gmail.com>        __  /| |__  /    __  ,<      */
 /*                                               _  ___ |_  / ___ _  /| |     */
@@ -13,26 +13,29 @@
 #include "test.h"
 #include "../libft.h"
 
-int	test_ft_strncpy()
+int	test_ft_memcpy()
 {
 	
-	char d1[100] = {0};
-	char d2[100] = {0};
-	
-	printf("Check ft_strncpy\nTest 1: ");
-	ft_strncpy(d1, "Hellooooo", 5);
-	strncpy(d2, "Hellooooo", 5);
-	if (strcmp(d1, d2) != 0)
+	char d1[10] = {0};
+	char d2[10] = {0};
+	char d3[10] = {0};
+        char d4[10] = {0};
+	printf("Check ft_memcpy\n\nTest 1: ");
+	if (strcmp(memcpy(d1, "Helloooo", 5), ft_memcpy(d2, "Hellooooo", 5)) != 0)
 		ERROR
 	else
 		OK
 	printf("Test 2: ");
-	ft_strncpy(d1, "Hellooooo", 5);
-	strncpy(d2, "Helloooooo", 5);	
-	if (strcmp(d1, d2) != 0)
-		ERROR
-	else
-		OK
+        if (strcmp(memcpy(d3, "He", 8), ft_memcpy(d4, "He", 8)) != 0)
+                ERROR
+        else
+                OK
+
+	printf("Test 3: ");
+        if (strcmp(memcpy(d3, "Hello", 0), ft_memcpy(d4, "Hello", 0)) != 0)
+                ERROR
+        else
+                OK
 
 	printf("\n");
 	return 0;

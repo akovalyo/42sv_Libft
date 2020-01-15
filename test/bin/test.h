@@ -42,6 +42,10 @@ int	test_ft_strncmp();
 int	test_ft_strchr();
 int	test_ft_strrchr();
 int	test_ft_bzero();
+int	test_ft_memset();
+int	test_ft_memchr();
+int	test_ft_memcpy();
+int	test_ft_memccpy();
 
 
 #endif

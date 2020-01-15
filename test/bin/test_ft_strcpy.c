@@ -22,14 +22,14 @@ int	test_ft_strcpy()
 	printf("Check ft_strcpy\nTest 1: ");
 	ft_strcpy(d1, "Hello");
 	strcpy(d2, "Hello");
-	if (ft_strlen(d1) != ft_strlen(d2))
+	if (strcmp(d1, d2) != 0)
 		ERROR
 	else
 		OK
 	printf("Test 2: ");
 	ft_strcpy(d1, "Hello");
 	strcpy(d2, "Hello");	
-	if (ft_strlen(d1) != ft_strlen(d2))
+	if (strcmp(d1, d2) != 0)
 		ERROR
 	else
 		OK

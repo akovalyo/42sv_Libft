@@ -35,7 +35,6 @@ int	test_ft_isalnum()
 		ERROR
 	else
 		OK
-	printf("%d\n", strcmp("abc", "fgh"));
 	printf("\n");
 	return (0);
 }

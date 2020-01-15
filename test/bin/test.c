@@ -60,6 +60,15 @@ int	main()
 	divider();
 	test_ft_bzero();
 	divider();
+	test_ft_memset();
+	divider();
+	test_ft_memchr();
+	divider();
+	test_ft_memcpy();
+	divider();
+	test_ft_memccpy();
+	divider();
+	
 	
 	return (0);
 }
