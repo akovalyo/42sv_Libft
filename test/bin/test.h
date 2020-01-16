@@ -46,6 +46,8 @@ int	test_ft_memset();
 int	test_ft_memchr();
 int	test_ft_memcpy();
 int	test_ft_memccpy();
+int	test_ft_memcmp();
+int	test_ft_memmove();
 
 
 #endif

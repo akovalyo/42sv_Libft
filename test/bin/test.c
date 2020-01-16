@@ -68,6 +68,10 @@ int	main()
 	divider();
 	test_ft_memccpy();
 	divider();
+	test_ft_memcmp();
+	divider();
+	test_ft_memmove();
+	divider();
 	
 	
 	return (0);
