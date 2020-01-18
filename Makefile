@@ -40,7 +40,9 @@ SRC = ft_strlen.c \
       ft_memccpy.c \
       ft_memcmp.c \
       ft_memmove.c \
-      ft_putchar.c
+      ft_putchar.c \
+      ft_putstr.c \
+      ft_putendl.c
 
 OF = $(SRC:%.c=%.o)
 
