@@ -74,7 +74,7 @@ will be allowed to use in all other projects.
 
 ### Tests:
 
-Put *libft.h* and *libft.a* in the folder test and run 
+Put *libft.h* and *libft.a* in the folder **test** and run 
 ```bash
 make
 ```
