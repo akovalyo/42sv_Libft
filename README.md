@@ -1,15 +1,15 @@
 # 42sv_Libft - akovalyo
 
-#### Summary: 
+### Summary: 
 
 The aim of this project is to code a C library regrouping usual functions that
 will be allowed to use in all other projects.
 
-#### Content:
+### Content:
 
 **1. Libc functions**
- - memset
- - bzero
+ - [x] memset
+ - [x] bzero
  - memcpy
  - memccpy
  - memmove
@@ -72,4 +72,9 @@ will be allowed to use in all other projects.
 
 **4. Personal functions:**
 
+### Tests:
 
+Put *libft.h* and *libft.a* in the folder test and run 
+''' bash
+make
+'''
