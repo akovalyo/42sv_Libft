@@ -76,6 +76,8 @@ int	main()
 	divider();
 	test_ft_putendl();
 	divider();
+	test_ft_putnbr();
+	divider();
 	
 	
 	return (0);

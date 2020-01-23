@@ -47,5 +47,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
 void    ft_putendl(char const *s);
+void	ft_putnbr(int n);
 
 #endif
