@@ -13,13 +13,25 @@
 #include "test.h"
 #include "../libft.h"
 
-int	test_ft_putstr()
+int	test_ft_put()
 {
 	char *s1 = "Hello";
 	char *s2 = "world!"; 
-	printf("Check ft_putstr\n\nTest 1 - s1 = \"Hello\", s2 = \"world!\": \n");
+	printf("Check ft_puchar, ft_putstr, ft_putendl, ft_putchar_fd, ft_putstr_fd, ft_putendl_fd\n\nTest 1 (ft_putstr) - s1 = \"Hello\", s2 = \"world!\": \n");
 	ft_putstr(s1);
 	ft_putstr(s2);
-	printf("\n\n");
+	ft_putchar('\n');
+	printf("Test 2 (ft_putendl) - s1 = \"Hello\", s2 = \"world!\": \n");
+	ft_putendl(s1);
+	ft_putendl(s2);
+	ft_putchar('\n');
+	ft_putstr("Test ft_putchar_fd: ");
+	ft_putchar_fd('+', 1);
+	ft_putchar('\n');
+	ft_putstr_fd("Test ft_putstr_fd: +", 1);
+	ft_putchar('\n');
+	ft_putendl_fd("Test ft_putendl_fd: +", 1);
+	ft_putchar('\n');
+	ft_putchar('\n');
 	return (0);
 }

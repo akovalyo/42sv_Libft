@@ -58,9 +58,9 @@ will be allowed to use in all other projects.
  - [x] ft_putstr
  - [x] ft_putendl
  - [x] ft_putchar_fd
- - [ ] ft_putstr_fd
- - [ ] ft_putendl_fd
- - [ ] ft_putnbr_fd
+ - [x] ft_putstr_fd
+ - [x] ft_putendl_fd
+ - [x] ft_putnbr_fd
 
 **3. Bonus part:**
  - [ ] ft_lstnew
