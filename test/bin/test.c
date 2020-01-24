@@ -72,7 +72,9 @@ int	main()
 	divider();
 	test_ft_memmove();
 	divider();
-	test_ft_put();
+	test_ft_putstr();
+	divider();
+	test_ft_putendl();
 	divider();
 	test_ft_putnbr();
 	divider();

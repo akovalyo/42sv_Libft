@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                               __________________________   */
-/*   test_ft_putnbr.c                            _______ ______   ______ __   */
+/*   test_ft_putendl.c                           _______ ______   ______ __   */
 /*                                               ___    |___  /   ___  //_/   */
 /*   By: akovalyo <al.kovalyov@gmail.com>        __  /| |__  /    __  ,<      */
 /*                                               _  ___ |_  / ___ _  /| |     */
-/*   Created: 2020/01/22 21:24:15 by akovalyo    /_/  |_|/_/  _(_)/_/ |_|     */
-/*   Updated: 2020/01/22 21:24:15 by akovalyo    __________________________   */
+/*   Created: 2020/01/17 20:42:48 by akovalyo    /_/  |_|/_/  _(_)/_/ |_|     */
+/*   Updated: 2020/01/17 21:20:39 by akovalyo    __________________________   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
 #include "../libft.h"
 
-int	test_ft_putnbr()
+int	test_ft_putendl()
 {
-
-	ft_putstr("Check ft_putnbr\n\nTest 1 - n=0: ");
-	ft_putnbr(0);
-	ft_putstr("\nTest 2 - n=1234: ");
-	ft_putnbr(1234);
-	ft_putstr("\nTest 3 - n=-1234: ");
-	ft_putnbr(-1234);
-	ft_putstr("\nTest 4 - n=-2147483648: ");
-	ft_putnbr(-2147483648);
-	ft_putstr("\nTest 5 - n=2147483647: ");
-	ft_putnbr(2147483647);
-	ft_putstr("\n\n");
+	char *s1 = "Hello";
+	char *s2 = "world!"; 
+	printf("Check ft_putendl\n\nTest 1 - s1 = \"Hello\", s2 = \"world!\": \n");
+	ft_putendl(s1);
+	ft_putendl(s2);
+	printf("\n");
+	return (0);
 }
-
