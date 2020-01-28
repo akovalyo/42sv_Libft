@@ -50,6 +50,12 @@ int	test_ft_memcmp();
 int	test_ft_memmove();
 int	test_ft_put();
 int	test_ft_putnbr();
+int	test_ft_strclr();
+int	test_ft_striter();
+int	test_ft_striteri();
+int	test_ft_strequ();
+int	test_ft_strnequ();
+int	test_ft_memalloc();
 
 
 #endif

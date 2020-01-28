@@ -38,16 +38,16 @@ will be allowed to use in all other projects.
  - [x] tolower
 
 **2. Additional functions**
- - [ ] ft_memalloc
- - [ ] ft_memdel
- - [ ] ft_strnew
- - [ ] ft_strdel
- - [ ] ft_strclr
- - [ ] ft_striter
- - [ ] ft_striteri
+ - [x] ft_memalloc
+ - [x] ft_memdel
+ - [x] ft_strnew
+ - [x] ft_strdel
+ - [x] ft_strclr
+ - [x] ft_striter
+ - [x] ft_striteri
  - [ ] ft_strmap
  - [ ] ft_strmapi
- - [ ] ft_strequ
+ - [x] ft_strequ
  - [ ] ft_strnequ
  - [ ] ft_strsub
  - [ ] ft_strjoin
@@ -78,3 +78,7 @@ Put *libft.h* and *libft.a* in the folder test and run
 ```bash
 make
 ```
+
+There should be no errors (segmentation fault, etc).
+
+No tests: ft_memdel, ft_strnew, ft_strdel, ft_memalloc (test only for allocation memory failure)

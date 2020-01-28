@@ -76,6 +76,18 @@ int	main()
 	divider();
 	test_ft_putnbr();
 	divider();
+	test_ft_strclr();
+	divider();
+	test_ft_striter();
+	divider();
+	test_ft_striteri();
+	divider();
+	test_ft_strequ();
+	divider();
+	test_ft_strnequ();
+	divider();
+	test_ft_memalloc();
+	divider();
 	
 	
 	return (0);

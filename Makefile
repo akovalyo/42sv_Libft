@@ -47,7 +47,16 @@ SRC = ft_strlen.c \
       ft_putchar_fd.c \
       ft_putstr_fd.c \
       ft_putendl_fd.c \
-      ft_putnbr_fd.c
+      ft_putnbr_fd.c \
+      ft_strclr.c \
+      ft_striter.c \
+      ft_striteri.c \
+      ft_strequ.c \
+      ft_strnequ.c \
+      ft_memalloc.c \
+      ft_memdel.c \
+      ft_strnew.c \
+      ft_strdel.c
 
 OF = $(SRC:%.c=%.o)
 
