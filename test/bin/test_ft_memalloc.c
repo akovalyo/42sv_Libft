@@ -18,7 +18,7 @@ int	test_ft_memalloc()
 	void *test;
 	
 		
-	printf("Check ft_memalloc\n\nTest 1 (allocation fails): ");
+	printf("Check ft_memalloc\n\nTest 1 (allocation failure): ");
 	if (ft_memalloc(22000000000) != NULL)
 		ERROR
 	else

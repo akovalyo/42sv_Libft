@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/27 12:11:36 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/01/27 12:11:36 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/01/28 12:06:15 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/01/28 12:06:15 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t i;
-
-	i = 0;
-	if (s == NULL || f == NULL)
-		return ;
-	while (s[i])
-	{
-		f(&s[i]);
-		i++;
-	}
+	char *fresh;
+	
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	fresh = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (fresh == NULL)
+		return (NULL);
+	ft_strcpy(fresh, s1);
+	ft_strcat(fresh, s2);
+	return (fresh);
 }

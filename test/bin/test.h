@@ -56,6 +56,13 @@ int	test_ft_striteri();
 int	test_ft_strequ();
 int	test_ft_strnequ();
 int	test_ft_memalloc();
+int	test_ft_strmap();
+int	test_ft_strmapi();
+int	test_ft_strsub();
+int	test_ft_strjoin();
+int	test_ft_strtrim();
+int	test_ft_strsplit();
+
 
 
 #endif

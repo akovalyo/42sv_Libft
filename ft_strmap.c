@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,16 +12,21 @@
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+char	*ft_strmap(char const *s, char (*f)(char))
 {
 	size_t i;
+	char *fresh;
 
 	i = 0;
 	if (s == NULL || f == NULL)
-		return ;
+		return (NULL);
+	fresh = (char *)(malloc(ft_strlen(s) + 1));
+	if (fresh == NULL)
+		return (NULL);
 	while (s[i])
 	{
-		f(&s[i]);
+		fresh[i] = f(s[i]);
 		i++;
 	}
+	return (fresh);
 }

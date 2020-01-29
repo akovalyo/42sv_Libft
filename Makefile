@@ -56,7 +56,12 @@ SRC = ft_strlen.c \
       ft_memalloc.c \
       ft_memdel.c \
       ft_strnew.c \
-      ft_strdel.c
+      ft_strdel.c \
+      ft_strmap.c \
+      ft_strmapi.c \
+      ft_strsub.c \
+      ft_strjoin.c \
+      ft_strtrim.c
 
 OF = $(SRC:%.c=%.o)
 

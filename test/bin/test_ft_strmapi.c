@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                               __________________________   */
-/*   test_ft_striter.c                           _______ ______   ______ __   */
+/*   test_ft_strmapi.c                           _______ ______   ______ __   */
 /*                                               ___    |___  /   ___  //_/   */
 /*   By: akovalyo <al.kovalyov@gmail.com>        __  /| |__  /    __  ,<      */
 /*                                               _  ___ |_  / ___ _  /| |     */
@@ -13,30 +13,32 @@
 #include "test.h"
 #include "../libft.h"
 
-void			f(char *s)
+char			f2_map(unsigned int i, char s)
 {
-	*s = *s + 1;
+	return (s + i);
 }
 
-int	test_ft_striter()
+int	test_ft_strmapi()
 {
 	char s1[] = "hello";
+	char *new;
 	
-	printf("Check ft_striter\n\nTest 1: ");
-	ft_striter(NULL, NULL);
-	printf("OK\n");
+	printf("Check ft_strmapi\n\nTest 1: ");
+	if (ft_strmapi(NULL, NULL) == NULL)
+		OK
 	printf("Test 2: ");
-	ft_striter(s1, NULL);
-	printf("OK\n");
+	if (ft_strmapi(s1, NULL) == NULL)
+		OK
 	printf("Test 3: ");
-	ft_striter(NULL, f);
-	printf("OK\n");
+	if (ft_strmapi(NULL, f2_map) == NULL)
+		OK
 	printf("Test 4: ");
-	ft_striter(s1, f);
-	if (strcmp(s1, "ifmmp") != 0)
+	new = ft_strmapi(s1, f2_map);	
+	if (strcmp(new, "hfnos") != 0)
 		ERROR
 	else
 		OK
 	printf("\n");
+	free(new);
 	return (0);
 }

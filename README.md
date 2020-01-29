@@ -45,12 +45,12 @@ will be allowed to use in all other projects.
  - [x] ft_strclr
  - [x] ft_striter
  - [x] ft_striteri
- - [ ] ft_strmap
- - [ ] ft_strmapi
+ - [x] ft_strmap
+ - [x] ft_strmapi
  - [x] ft_strequ
- - [ ] ft_strnequ
- - [ ] ft_strsub
- - [ ] ft_strjoin
+ - [x] ft_strnequ
+ - [x] ft_strsub
+ - [x] ft_strjoin
  - [ ] ft_strtrim
  - [ ] ft_strsplit
  - [ ] ft_itoa
@@ -74,7 +74,7 @@ will be allowed to use in all other projects.
 
 ### Tests:
 
-Put *libft.h* and *libft.a* in the folder test and run 
+Put *libft.h* and *libft.a* in the folder **test** and run 
 ```bash
 make
 ```

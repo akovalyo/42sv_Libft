@@ -13,7 +13,6 @@
 #include "../libft.h"
 #include "test.h"
 
-
 int	main()
 {
 	test_ft_strlen();
@@ -87,6 +86,18 @@ int	main()
 	test_ft_strnequ();
 	divider();
 	test_ft_memalloc();
+	divider();
+	test_ft_strmap();
+	divider();
+	test_ft_strmapi();
+	divider();
+	test_ft_strsub();
+	divider();
+	test_ft_strjoin();
+	divider();
+	test_ft_strtrim();
+	divider();
+	test_ft_strsplit();
 	divider();
 	
 	
