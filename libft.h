@@ -55,10 +55,10 @@ char	*ft_strtrim(char const *s);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void    ft_putendl(char const *s);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
-void    ft_putnbr_fd(int n, int fd);
 
 /*
 ** Bonus part
@@ -77,8 +77,8 @@ char    *ft_strncat(char *dest, const char *src, size_t n);
 int	ft_strcmp(const char *s1, const char *s2);
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
-void    ft_putendl(char const *s);
 void	ft_putnbr(int n);
+void    ft_putnbr_fd(int n, int fd);
 void	ft_strclr(char *s);
 void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
