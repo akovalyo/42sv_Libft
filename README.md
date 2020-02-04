@@ -1,14 +1,15 @@
  42sv_Libft - akovalyo
 
-### Summary: 
+# Summary: 
 
 The aim of this project is to code a C library regrouping usual functions that
 will be allowed to use in all other projects.
 
-### Content:
+# Content:
 
-**Part 1 - Libc functions**
- - [x] ft_memset
+## Part 1 - Libc functions**
+
+### ft_memset
 > 	void *ft_memset(void *s, int c, size_t n);
 
 DESCRIPTION
@@ -20,7 +21,7 @@ RETURN VALUE
 
 >       The ft_memset() function returns a pointer to the memory area s.
 
- - [x] ft_bzero
+### ft_bzero
 
 > 	void ft_bzero(void *s, size_t n);
 
@@ -34,7 +35,7 @@ RETURN VALUE
 
 >        None.
 
- - [x] ft_memcpy
+### ft_memcpy
 > 	void *ft_memcpy(void *dest, const void *src, size_t n);
 
 DESCRIPTION
@@ -206,7 +207,7 @@ RETURN VALUE
  - [x] ft_strdup
  - [x] ft_calloc
 
-**Part 2 - Additional functions**
+### Part 2 - Additional functions
 
  - [x] ft_substr
  - [x] ft_strjoin
@@ -219,7 +220,7 @@ RETURN VALUE
  - [x] ft_putendl_fd
  - [x] ft_putnbr_fd
 
-**Bonus part:**
+### Bonus part:
  - [ ] ft_lstnew
  - [ ] ft_lstadd_front
  - [ ] ft_lstsize
@@ -230,7 +231,7 @@ RETURN VALUE
  - [ ] ft_lstiter
  - [ ] ft_lstmap
 
-**4. Personal functions:**
+### 4. Personal functions:
 
  - [x] ft_nbrlen
  - [x] ft_strstr
