@@ -59,9 +59,12 @@ SRC = ft_strlen.c \
       ft_strdel.c \
       ft_strmap.c \
       ft_strmapi.c \
-      ft_strsub.c \
+      ft_substr.c \
       ft_strjoin.c \
-      ft_strtrim.c
+      ft_strtrim.c \
+      ft_strsplit.c \
+      ft_itoa.c \
+      ft_nbrlen.c
 
 OF = $(SRC:%.c=%.o)
 

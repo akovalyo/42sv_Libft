@@ -63,9 +63,12 @@ char	*ft_strnew(size_t size);
 void	ft_strdel(void **as);
 char    *ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-char    *ft_strsub(char const *s1, unsigned int start, size_t len);
+char    *ft_substr(char const *s1, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
+char	**ft_strsplit(char const *s, char c);
+char	*ft_itoa(int n);
+int	ft_nbrlen(int n);
 
 
 #endif

@@ -91,13 +91,15 @@ int	main()
 	divider();
 	test_ft_strmapi();
 	divider();
-	test_ft_strsub();
+	test_ft_substr();
 	divider();
 	test_ft_strjoin();
 	divider();
 	test_ft_strtrim();
 	divider();
 	test_ft_strsplit();
+	divider();
+	test_ft_itoa();
 	divider();
 	
 	

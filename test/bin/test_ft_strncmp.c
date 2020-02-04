@@ -52,7 +52,7 @@ int	test_ft_strncmp()
 	else
 		ERROR
 	printf("Test 8: ");
-	if (ft_strncmp("abc", "a", 0) > 0)
+	if (ft_strncmp("abc", "a", 0) == 0)
 		OK
 	else
 		ERROR

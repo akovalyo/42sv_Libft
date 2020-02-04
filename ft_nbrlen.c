@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_nbrlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/28 11:01:18 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/01/28 11:01:18 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/02/03 22:04:53 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/02/03 22:04:53 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+int	ft_nbrlen(int n)
 {
-	char *fresh;
-	size_t i;
-	
-	i = 0;
-	if (s == NULL)
-		return (NULL);	
-	fresh = (char *)malloc(len + 1);
-	if (fresh == NULL)
-		return (NULL);
-	while (i < len)
+	int i;
+
+	i = 0;	
+	if (n < 0)
+		i++;
+	while (n >= 10 || n <= -10)
 	{
-		fresh[i] = s[start + i];
+		n = n / 10;
 		i++;
 	}
-	fresh[i] = '\0';
-	return (fresh);
+	i++;
+	return (i);
 }

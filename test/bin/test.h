@@ -16,8 +16,8 @@
 #include <stdio.h>
 #include <ctype.h>
 
-#define ERROR printf("Test failed\n\n"); 
-#define OK printf("OK\n");
+#define ERROR { printf("\033[1;31m"); printf("Test failed\n\n"); printf("\033[0m"); } 
+#define OK { printf("\033[0;32m"); printf("OK\n"); printf("\033[0m"); }
 
 void	divider();
 int	test_ft_strlen();
@@ -58,10 +58,11 @@ int	test_ft_strnequ();
 int	test_ft_memalloc();
 int	test_ft_strmap();
 int	test_ft_strmapi();
-int	test_ft_strsub();
+int	test_ft_substr();
 int	test_ft_strjoin();
 int	test_ft_strtrim();
 int	test_ft_strsplit();
+int	test_ft_itoa();
 
 
 
