@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strnequ_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/28 12:42:53 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/01/28 12:42:53 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/01/27 13:31:21 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/01/27 13:31:21 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	int i;
-	int j;
-	int end;
+	size_t i;
 
 	i = 0;
-	j = 0;
-	if (s == NULL)
-		return (NULL);
-	end = ft_strlen(s) - 1;
-	while ((s[i] == ' ' || s[i] == '\n' || s[i] == '\t') && s[i] != '\0')
+	if (s1 == NULL || s2 == NULL)
+		return (0);
+	while ((s1[i] || s2[i]) && i < n)
+	{
+		if (s1[i] != s2[i])
+			return (0);
 		i++;
-	while ((s[end] == ' ' || s[end] == '\n' || s[end] == '\t') && end > i)
-	{		
-		j++;
-		end--;
 	}
-	return (ft_substr(s, i, (ft_strlen(s) - i - j)));
+	return (1);
 }

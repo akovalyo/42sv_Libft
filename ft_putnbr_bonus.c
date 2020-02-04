@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/28 12:42:53 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/01/28 12:42:53 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/01/22 20:47:33 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/01/22 20:47:33 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+void	ft_putnbr(int n)
 {
-	int i;
-	int j;
-	int end;
-
-	i = 0;
-	j = 0;
-	if (s == NULL)
-		return (NULL);
-	end = ft_strlen(s) - 1;
-	while ((s[i] == ' ' || s[i] == '\n' || s[i] == '\t') && s[i] != '\0')
-		i++;
-	while ((s[end] == ' ' || s[end] == '\n' || s[end] == '\t') && end > i)
-	{		
-		j++;
-		end--;
+	if (n == -2147483648)
+		ft_putstr("-2147483648");
+	else
+	{
+		if (n < 0)
+		{
+			ft_putchar('-');
+			n = -n;
+		}
+		if (n >= 10)
+			ft_putnbr(n / 10);
+		ft_putchar(n % 10 + 48);
 	}
-	return (ft_substr(s, i, (ft_strlen(s) - i - j)));
 }

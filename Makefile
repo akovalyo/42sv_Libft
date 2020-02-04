@@ -13,6 +13,7 @@
 NAME = libft.a
 FLAGS = -Wall -Wextra -Werror -c
 SRC = ft_strlen.c \
+      ft_calloc.c \
       ft_strcpy.c \
       ft_strncpy.c \
       ft_strdup.c \
@@ -62,8 +63,9 @@ SRC = ft_strlen.c \
       ft_substr.c \
       ft_strjoin.c \
       ft_strtrim.c \
-      ft_strsplit.c \
+      ft_split.c \
       ft_itoa.c \
+      ft_strlcpy.c \
       ft_nbrlen.c
 
 OF = $(SRC:%.c=%.o)

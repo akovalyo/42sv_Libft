@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/28 12:42:53 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/01/28 12:42:53 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/02/04 08:54:30 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/02/04 08:54:30 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 {
-	int i;
-	int j;
-	int end;
+	size_t i;
+	size_t len;
 
 	i = 0;
-	j = 0;
-	if (s == NULL)
-		return (NULL);
-	end = ft_strlen(s) - 1;
-	while ((s[i] == ' ' || s[i] == '\n' || s[i] == '\t') && s[i] != '\0')
+	len = ft_strlen(src);
+	while (src[i] != '\0' && i < (dstsize - 1))
+	{
+		dest[i] = src[i];
 		i++;
-	while ((s[end] == ' ' || s[end] == '\n' || s[end] == '\t') && end > i)
-	{		
-		j++;
-		end--;
 	}
-	return (ft_substr(s, i, (ft_strlen(s) - i - j)));
+	dest[i] = '\0';
+	return (len);
 }
+			

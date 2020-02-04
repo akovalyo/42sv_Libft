@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_striter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/28 12:42:53 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/01/28 12:42:53 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/01/27 12:11:36 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/01/27 12:11:36 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+void	ft_striter(char *s, void (*f)(char *))
 {
-	int i;
-	int j;
-	int end;
+	size_t i;
 
 	i = 0;
-	j = 0;
-	if (s == NULL)
-		return (NULL);
-	end = ft_strlen(s) - 1;
-	while ((s[i] == ' ' || s[i] == '\n' || s[i] == '\t') && s[i] != '\0')
+	if (s == NULL || f == NULL)
+		return ;
+	while (s[i])
+	{
+		f(&s[i]);
 		i++;
-	while ((s[end] == ' ' || s[end] == '\n' || s[end] == '\t') && end > i)
-	{		
-		j++;
-		end--;
 	}
-	return (ft_substr(s, i, (ft_strlen(s) - i - j)));
 }

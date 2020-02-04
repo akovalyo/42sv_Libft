@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strncat_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/28 12:42:53 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/01/28 12:42:53 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/01/08 20:21:00 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/01/08 20:51:46 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+char	*ft_strncat(char *dest, const char *src, size_t n)
 {
-	int i;
-	int j;
-	int end;
+	size_t len;
+	size_t i;
 
+	len = ft_strlen(dest);
 	i = 0;
-	j = 0;
-	if (s == NULL)
-		return (NULL);
-	end = ft_strlen(s) - 1;
-	while ((s[i] == ' ' || s[i] == '\n' || s[i] == '\t') && s[i] != '\0')
+	while(i < n)
+	{
+		dest[len] = src[i];
+		len++;
 		i++;
-	while ((s[end] == ' ' || s[end] == '\n' || s[end] == '\t') && end > i)
-	{		
-		j++;
-		end--;
 	}
-	return (ft_substr(s, i, (ft_strlen(s) - i - j)));
+	dest[len] = '\0';
+	return (dest);
 }

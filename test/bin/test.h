@@ -48,7 +48,6 @@ int	test_ft_memcpy();
 int	test_ft_memccpy();
 int	test_ft_memcmp();
 int	test_ft_memmove();
-int	test_ft_put();
 int	test_ft_putnbr();
 int	test_ft_strclr();
 int	test_ft_striter();
@@ -61,8 +60,9 @@ int	test_ft_strmapi();
 int	test_ft_substr();
 int	test_ft_strjoin();
 int	test_ft_strtrim();
-int	test_ft_strsplit();
+int	test_ft_split();
 int	test_ft_itoa();
+int	test_ft_strlcpy();
 
 
 
