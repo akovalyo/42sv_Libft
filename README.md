@@ -48,7 +48,7 @@ RETURN VALUE
 
 >       The ft_memcpy() function returns a pointer to dest.
 
- - [x] ft_memccpy
+### ft_memccpy
 > 	void *memccpy(void *dest, const void *src, int c, size_t n);
 
 DESCRIPTION
@@ -62,7 +62,7 @@ RETURN VALUE
 >       The ft_memccpy() function returns a pointer to the next  character  in  dest
 >       after c, or NULL if c was not found in the first n characters of src.
 
- - [x] ft_memmove
+### ft_memmove
 > 	void *ft_memmove(void *dest, const void *src, size_t n);
 
 DESCRIPTION
@@ -77,7 +77,7 @@ RETURN VALUE
 
 >       The ft_memmove() function returns a pointer to dest.
 
- - [x] ft_memchr
+### ft_memchr
 > 	void *ft_memchr(const void *s, int c, size_t n);
 
 DESCRIPTION
@@ -86,7 +86,7 @@ DESCRIPTION
 >       pointed to by s for the first instance of c.  Both c and the bytes of the
 >       memory area pointed to by s are interpreted as unsigned char.
 
- - [x] ft_memcmp
+### ft_memcmp
 > 	int ft_memcmp(const void *s1, const void *s2, size_t n);
 
 DESCRIPTION
@@ -110,7 +110,7 @@ RETURN VALUE
 
 >       If n is zero, the return value is zero.
 
- - [x] ft_strlen
+### ft_strlen
 > 	size_t ft_strlen(const char *s);
 
 DESCRIPTION
@@ -123,7 +123,7 @@ RETURN VALUE
 >       The ft_strlen() function returns the number  of  characters  in  the  string
 >       pointed to by s.
 
- - [x] ft_strlcpy
+### ft_strlcpy
 > 	size_t ft_strlcpy(char *dest, const char *src, size_t dstsize);
 
 DESCRIPTION
@@ -136,7 +136,7 @@ RETURN VALUE
 > 	The ft_strlcpy() function returns the total length of the string
 >	it tried to create (the length of src). 
  
- - [x] ft_strlcat
+### ft_strlcat
 >	size_t ft_strlcat(char *dest, const char *src, size_t size);
 
 DESCRIPTION
@@ -149,7 +149,7 @@ RETURN VALUE
 >	The ft_strlcat() function returns the total length of the string
 >	it tried to create (the initial length of dest plus the length of src).
 
- - [x] ft_strchr
+### ft_strchr
 >	char *ft_strchr(const char *s, int c);
 
 DESCRIPTION
@@ -164,7 +164,7 @@ RETURN VALUE
 >       byte is considered part of the string, so that if c is specified as '\0',
 >       this function return a pointer to the terminator.
        
- - [x] ft_strrchr
+### ft_strrchr
 >	char *ft_strrchr(const char *s, int c);
 
 DESCRIPTION
@@ -179,7 +179,7 @@ RETURN VALUE
 >       byte is considered part of the string, so that if c is specified as '\0',
 >       this function return a pointer to the terminator.
 
- - [x] ft_strnstr
+### ft_strnstr
 >	char	*ft_strnstr(const char *big, const char *little, size_t len);
 
 DESCRIPTION
@@ -195,30 +195,30 @@ RETURN VALUE
 >	in big, NULL is returned; otherwise a pointer to the first character of
 >	the first occurrence of little is returned.
 
- - [x] ft_strncmp
- - [x] ft_atoi
- - [x] ft_isalpha
- - [x] ft_isdigit
- - [x] ft_isalnum 
- - [x] ft_isascii 
- - [x] ft_isprint 
- - [x] ft_toupper 
- - [x] ft_tolower
- - [x] ft_strdup
- - [x] ft_calloc
+### ft_strncmp
+### ft_atoi
+### ft_isalpha
+### ft_isdigit
+### ft_isalnum 
+### ft_isascii 
+### ft_isprint 
+### ft_toupper 
+### ft_tolower
+### ft_strdup
+### ft_calloc
 
 ### Part 2 - Additional functions
 
- - [x] ft_substr
- - [x] ft_strjoin
- - [x] ft_strtrim
- - [x] ft_split
- - [x] ft_itoa
- - [x] ft_strmapi
- - [x] ft_putchar_fd
- - [x] ft_putstr_fd
- - [x] ft_putendl_fd
- - [x] ft_putnbr_fd
+### ft_substr
+### ft_strjoin
+### ft_strtrim
+### ft_split
+### ft_itoa
+### ft_strmapi
+### ft_putchar_fd
+### ft_putstr_fd
+### ft_putendl_fd
+### ft_putnbr_fd
 
 ### Bonus part:
  - [ ] ft_lstnew
@@ -233,8 +233,8 @@ RETURN VALUE
 
 ### 4. Personal functions:
 
- - [x] ft_nbrlen
- - [x] ft_strstr
+### ft_nbrlen
+### ft_strstr
 >	char	*ft_strstr(const char *haystack, const char *needle)
 
 DESCRIPTION
@@ -248,24 +248,24 @@ RETURN VALUE
 >	in big, NULL is returned; otherwise a pointer to the first character of
 >	the first occurrence of little is returned.
 
- - [x] ft_strcpy
- - [x] ft_strncpy
- - [x] ft_strcat
- - [x] ft_strncat 
- - [x] ft_strcmp
- - [x] ft_memalloc
- - [x] ft_memdel
- - [x] ft_strnew
- - [x] ft_strdel
- - [x] ft_strclr
- - [x] ft_striter
- - [x] ft_striteri
- - [x] ft_strmap
- - [x] ft_strequ
- - [x] ft_strnequ
- - [x] ft_putchar
- - [x] ft_putstr
- - [x] ft_putendl
+### ft_strcpy
+### ft_strncpy
+### ft_strcat
+### ft_strncat 
+### ft_strcmp
+### ft_memalloc
+### ft_memdel
+### ft_strnew
+### ft_strdel
+### ft_strclr
+### ft_striter
+### ft_striteri
+### ft_strmap
+### ft_strequ
+### ft_strnequ
+### ft_putchar
+### ft_putstr
+### ft_putendl
 
 ### Tests:
 
