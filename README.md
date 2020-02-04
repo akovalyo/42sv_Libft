@@ -5,6 +5,8 @@
 The aim of this project is to code a C library regrouping usual functions that
 will be allowed to use in all other projects.
 
+***
+
 # Content:
 
 ## Part 1 - Libc functions
@@ -207,6 +209,8 @@ RETURN VALUE
 ### 23. ft_strdup
 ### 24. ft_calloc
 
+___
+
 ## Part 2 - Additional functions
 
 ### 1. ft_substr
@@ -220,6 +224,8 @@ RETURN VALUE
 ### 9. ft_putendl_fd
 ### 10. ft_putnbr_fd
 
+___
+
 ## Bonus part:
 
 ### 1. ft_lstnew
@@ -231,6 +237,8 @@ RETURN VALUE
 ### 7. ft_lstclear
 ### 8. ft_lstiter
 ### 9. ft_lstmap
+
+___
 
 ## 4. Personal functions:
 
@@ -267,6 +275,8 @@ RETURN VALUE
 ### 18. ft_putchar
 ### 19. ft_putstr
 ### 20. ft_putendl
+
+***
 
 ## Tests:
 
