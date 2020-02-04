@@ -10,33 +10,33 @@ will be allowed to use in all other projects.
 ## Part 1 - Libc functions
 
 ### 1. ft_memset
->	void *ft_memset(void *s, int c, size_t n);
+>       void *ft_memset(void *s, int c, size_t n);
 
 DESCRIPTION
 
->	The  ft_memset() function fills the first n bytes of the memory area pointed
->	to by s with the constant byte c.
+>       The  ft_memset() function fills the first n bytes of the memory area pointed
+>       to by s with the constant byte c.
 
 RETURN VALUE
 
->	The ft_memset() function returns a pointer to the memory area s.
+>       The ft_memset() function returns a pointer to the memory area s.
 
 ### 2. ft_bzero
 
->	void ft_bzero(void *s, size_t n);
+>       void ft_bzero(void *s, size_t n);
 
 DESCRIPTION
 
->	The  function erases the data in the n bytes of the memory start‐
+>       The  function erases the data in the n bytes of the memory start‐
 >       ing at the location pointed to by s, by writing zeroes (bytes  containing
 >       '\0') to that area.
 
 RETURN VALUE
 
->        None.
+>       None.
 
 ### 3. ft_memcpy
->	void *ft_memcpy(void *dest, const void *src, size_t n);
+>       void *ft_memcpy(void *dest, const void *src, size_t n);
 
 DESCRIPTION
 
@@ -49,7 +49,7 @@ RETURN VALUE
 >       The ft_memcpy() function returns a pointer to dest.
 
 ### 4. ft_memccpy
->	void *memccpy(void *dest, const void *src, int c, size_t n);
+>       void *memccpy(void *dest, const void *src, int c, size_t n);
 
 DESCRIPTION
 
@@ -63,7 +63,7 @@ RETURN VALUE
 >       after c, or NULL if c was not found in the first n characters of src.
 
 ### 5. ft_memmove
->	void *ft_memmove(void *dest, const void *src, size_t n);
+>       void *ft_memmove(void *dest, const void *src, size_t n);
 
 DESCRIPTION
 
@@ -78,7 +78,7 @@ RETURN VALUE
 >       The ft_memmove() function returns a pointer to dest.
 
 ### 6. ft_memchr
->	void *ft_memchr(const void *s, int c, size_t n);
+>       void *ft_memchr(const void *s, int c, size_t n);
 
 DESCRIPTION
 
@@ -87,7 +87,7 @@ DESCRIPTION
 >       memory area pointed to by s are interpreted as unsigned char.
 
 ### 7. ft_memcmp
->	int ft_memcmp(const void *s1, const void *s2, size_t n);
+>       int ft_memcmp(const void *s1, const void *s2, size_t n);
 
 DESCRIPTION
 
@@ -111,11 +111,11 @@ RETURN VALUE
 >       If n is zero, the return value is zero.
 
 ### 8. ft_strlen
->	size_t ft_strlen(const char *s);
+>       size_t ft_strlen(const char *s);
 
 DESCRIPTION
 
-> 	The  ft_strlen()  function calculates the length of the string pointed to by
+>       The  ft_strlen()  function calculates the length of the string pointed to by
 >       s, excluding the terminating null byte ('\0').
 
 RETURN VALUE
@@ -124,38 +124,38 @@ RETURN VALUE
 >       pointed to by s.
 
 ### 9. ft_strlcpy
->	size_t ft_strlcpy(char *dest, const char *src, size_t dstsize);
+>       size_t ft_strlcpy(char *dest, const char *src, size_t dstsize);
 
 DESCRIPTION
 
-> 	The ft_strlcpy() function copies up to (size - 1) characters from the NUL-
->	terminated string src to dest, NUL-terminating the result.
+>       The ft_strlcpy() function copies up to (size - 1) characters from the NUL-
+>       terminated string src to dest, NUL-terminating the result.
 
 RETURN VALUE
 
-> 	The ft_strlcpy() function returns the total length of the string
->	it tried to create (the length of src). 
+>       The ft_strlcpy() function returns the total length of the string
+>       it tried to create (the length of src). 
  
 ### 10. ft_strlcat
->	size_t ft_strlcat(char *dest, const char *src, size_t size);
+>       size_t ft_strlcat(char *dest, const char *src, size_t size);
 
 DESCRIPTION
 
->	The strlcat() function appends the NUL-terminated string src to the end of dst.
->	It will append at most size - strlen(dest) - 1 bytes, NUL-terminating the result.
+>       The strlcat() function appends the NUL-terminated string src to the end of dst.
+>       It will append at most size - strlen(dest) - 1 bytes, NUL-terminating the result.
 
 RETURN VALUE
 
->	The ft_strlcat() function returns the total length of the string
->	it tried to create (the initial length of dest plus the length of src).
+>       The ft_strlcat() function returns the total length of the string
+>       it tried to create (the initial length of dest plus the length of src).
 
 ### 11. ft_strchr
->	char *ft_strchr(const char *s, int c);
+>       char *ft_strchr(const char *s, int c);
 
 DESCRIPTION
 
->	The  ft_strchr()  function  returns a pointer to the first occurrence of the
->	character c in the string s.
+>       The  ft_strchr()  function  returns a pointer to the first occurrence of the
+>       character c in the string s.
 
 RETURN VALUE
 
@@ -165,12 +165,12 @@ RETURN VALUE
 >       this function return a pointer to the terminator.
        
 ### 12. ft_strrchr
->	char *ft_strrchr(const char *s, int c);
+>       char *ft_strrchr(const char *s, int c);
 
 DESCRIPTION
 
-> 	The ft_strrchr() function returns a pointer to the last occurrence  of
->	the character c in the string s.
+>       The ft_strrchr() function returns a pointer to the last occurrence  of
+>       the character c in the string s.
 
 RETURN VALUE
 
@@ -180,20 +180,20 @@ RETURN VALUE
 >       this function return a pointer to the terminator.
 
 ### 13. ft_strnstr
->	char	*ft_strnstr(const char *big, const char *little, size_t len);
+>       char	*ft_strnstr(const char *big, const char *little, size_t len);
 
 DESCRIPTION
 
->	The ft_strnstr() function locates the	first occurrence of the	null-termi-
->	nated string little in the	string big, where not more than	len characters
->	are searched.  Characters that appear after a '\0' character are not
->	searched.
+>       The ft_strnstr() function locates the	first occurrence of the	null-termi-
+>       nated string little in the	string big, where not more than	len characters
+>       are searched.  Characters that appear after a '\0' character are not
+>       searched.
 
 RETURN VALUE
 
->	If little is an empty string, big is returned; if little occurs nowhere
->	in big, NULL is returned; otherwise a pointer to the first character of
->	the first occurrence of little is returned.
+>       If little is an empty string, big is returned; if little occurs nowhere
+>       in big, NULL is returned; otherwise a pointer to the first character of
+>       the first occurrence of little is returned.
 
 ### 14. ft_strncmp
 ### 15. ft_atoi
@@ -236,18 +236,18 @@ RETURN VALUE
 
 ### 1. ft_nbrlen
 ### 2. ft_strstr
->	char	*ft_strstr(const char *haystack, const char *needle)
+>       char	*ft_strstr(const char *haystack, const char *needle)
 
 DESCRIPTION
 
->	The strstr() function locates the first occurrence of the null-terminated
->	string little in the null-terminated string big.
+>       The strstr() function locates the first occurrence of the null-terminated
+>       string little in the null-terminated string big.
 
 RETURN VALUE
 
->	If little is an empty string, big is returned; if little occurs nowhere
->	in big, NULL is returned; otherwise a pointer to the first character of
->	the first occurrence of little is returned.
+>       If little is an empty string, big is returned; if little occurs nowhere
+>       in big, NULL is returned; otherwise a pointer to the first character of
+>       the first occurrence of little is returned.
 
 ### 3. ft_strcpy
 ### 4. ft_strncpy
