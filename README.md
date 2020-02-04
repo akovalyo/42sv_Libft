@@ -7,27 +7,27 @@ will be allowed to use in all other projects.
 
 # Content:
 
-## Part 1 - Libc functions**
+## Part 1 - Libc functions
 
-### ft_memset
-> 	void *ft_memset(void *s, int c, size_t n);
+### 1. ft_memset
+>	void *ft_memset(void *s, int c, size_t n);
 
 DESCRIPTION
 
->       The  ft_memset() function fills the first n bytes of the memory area pointed
->       to by s with the constant byte c.
+>	The  ft_memset() function fills the first n bytes of the memory area pointed
+>	to by s with the constant byte c.
 
 RETURN VALUE
 
->       The ft_memset() function returns a pointer to the memory area s.
+>	The ft_memset() function returns a pointer to the memory area s.
 
-### ft_bzero
+### 2. ft_bzero
 
-> 	void ft_bzero(void *s, size_t n);
+>	void ft_bzero(void *s, size_t n);
 
 DESCRIPTION
 
->       The  function erases the data in the n bytes of the memory start‐
+>	The  function erases the data in the n bytes of the memory start‐
 >       ing at the location pointed to by s, by writing zeroes (bytes  containing
 >       '\0') to that area.
 
@@ -35,8 +35,8 @@ RETURN VALUE
 
 >        None.
 
-### ft_memcpy
-> 	void *ft_memcpy(void *dest, const void *src, size_t n);
+### 3. ft_memcpy
+>	void *ft_memcpy(void *dest, const void *src, size_t n);
 
 DESCRIPTION
 
@@ -48,8 +48,8 @@ RETURN VALUE
 
 >       The ft_memcpy() function returns a pointer to dest.
 
-### ft_memccpy
-> 	void *memccpy(void *dest, const void *src, int c, size_t n);
+### 4. ft_memccpy
+>	void *memccpy(void *dest, const void *src, int c, size_t n);
 
 DESCRIPTION
 
@@ -62,8 +62,8 @@ RETURN VALUE
 >       The ft_memccpy() function returns a pointer to the next  character  in  dest
 >       after c, or NULL if c was not found in the first n characters of src.
 
-### ft_memmove
-> 	void *ft_memmove(void *dest, const void *src, size_t n);
+### 5. ft_memmove
+>	void *ft_memmove(void *dest, const void *src, size_t n);
 
 DESCRIPTION
 
@@ -77,8 +77,8 @@ RETURN VALUE
 
 >       The ft_memmove() function returns a pointer to dest.
 
-### ft_memchr
-> 	void *ft_memchr(const void *s, int c, size_t n);
+### 6. ft_memchr
+>	void *ft_memchr(const void *s, int c, size_t n);
 
 DESCRIPTION
 
@@ -86,8 +86,8 @@ DESCRIPTION
 >       pointed to by s for the first instance of c.  Both c and the bytes of the
 >       memory area pointed to by s are interpreted as unsigned char.
 
-### ft_memcmp
-> 	int ft_memcmp(const void *s1, const void *s2, size_t n);
+### 7. ft_memcmp
+>	int ft_memcmp(const void *s1, const void *s2, size_t n);
 
 DESCRIPTION
 
@@ -110,8 +110,8 @@ RETURN VALUE
 
 >       If n is zero, the return value is zero.
 
-### ft_strlen
-> 	size_t ft_strlen(const char *s);
+### 8. ft_strlen
+>	size_t ft_strlen(const char *s);
 
 DESCRIPTION
 
@@ -123,8 +123,8 @@ RETURN VALUE
 >       The ft_strlen() function returns the number  of  characters  in  the  string
 >       pointed to by s.
 
-### ft_strlcpy
-> 	size_t ft_strlcpy(char *dest, const char *src, size_t dstsize);
+### 9. ft_strlcpy
+>	size_t ft_strlcpy(char *dest, const char *src, size_t dstsize);
 
 DESCRIPTION
 
@@ -136,7 +136,7 @@ RETURN VALUE
 > 	The ft_strlcpy() function returns the total length of the string
 >	it tried to create (the length of src). 
  
-### ft_strlcat
+### 10. ft_strlcat
 >	size_t ft_strlcat(char *dest, const char *src, size_t size);
 
 DESCRIPTION
@@ -149,7 +149,7 @@ RETURN VALUE
 >	The ft_strlcat() function returns the total length of the string
 >	it tried to create (the initial length of dest plus the length of src).
 
-### ft_strchr
+### 11. ft_strchr
 >	char *ft_strchr(const char *s, int c);
 
 DESCRIPTION
@@ -164,7 +164,7 @@ RETURN VALUE
 >       byte is considered part of the string, so that if c is specified as '\0',
 >       this function return a pointer to the terminator.
        
-### ft_strrchr
+### 12. ft_strrchr
 >	char *ft_strrchr(const char *s, int c);
 
 DESCRIPTION
@@ -179,7 +179,7 @@ RETURN VALUE
 >       byte is considered part of the string, so that if c is specified as '\0',
 >       this function return a pointer to the terminator.
 
-### ft_strnstr
+### 13. ft_strnstr
 >	char	*ft_strnstr(const char *big, const char *little, size_t len);
 
 DESCRIPTION
@@ -195,46 +195,47 @@ RETURN VALUE
 >	in big, NULL is returned; otherwise a pointer to the first character of
 >	the first occurrence of little is returned.
 
-### ft_strncmp
-### ft_atoi
-### ft_isalpha
-### ft_isdigit
-### ft_isalnum 
-### ft_isascii 
-### ft_isprint 
-### ft_toupper 
-### ft_tolower
-### ft_strdup
-### ft_calloc
+### 14. ft_strncmp
+### 15. ft_atoi
+### 16. ft_isalpha
+### 17. ft_isdigit
+### 18. ft_isalnum 
+### 19. ft_isascii 
+### 20. ft_isprint 
+### 21. ft_toupper 
+### 22. ft_tolower
+### 23. ft_strdup
+### 24. ft_calloc
 
-### Part 2 - Additional functions
+## Part 2 - Additional functions
 
-### ft_substr
-### ft_strjoin
-### ft_strtrim
-### ft_split
-### ft_itoa
-### ft_strmapi
-### ft_putchar_fd
-### ft_putstr_fd
-### ft_putendl_fd
-### ft_putnbr_fd
+### 1. ft_substr
+### 2. ft_strjoin
+### 3. ft_strtrim
+### 4. ft_split
+### 5. ft_itoa
+### 6. ft_strmapi
+### 7. ft_putchar_fd
+### 8. ft_putstr_fd
+### 9. ft_putendl_fd
+### 10. ft_putnbr_fd
 
-### Bonus part:
- - [ ] ft_lstnew
- - [ ] ft_lstadd_front
- - [ ] ft_lstsize
- - [ ] ft_lstlast
- - [ ] ft_lstadd_back
- - [ ] ft_lstdelone
- - [ ] ft_lstclear
- - [ ] ft_lstiter
- - [ ] ft_lstmap
+## Bonus part:
 
-### 4. Personal functions:
+### 1. ft_lstnew
+### 2. ft_lstadd_front
+### 3. ft_lstsize
+### 4. ft_lstlast
+### 5. ft_lstadd_back
+### 6. ft_lstdelone
+### 7. ft_lstclear
+### 8. ft_lstiter
+### 9. ft_lstmap
 
-### ft_nbrlen
-### ft_strstr
+## 4. Personal functions:
+
+### 1. ft_nbrlen
+### 2. ft_strstr
 >	char	*ft_strstr(const char *haystack, const char *needle)
 
 DESCRIPTION
@@ -248,26 +249,26 @@ RETURN VALUE
 >	in big, NULL is returned; otherwise a pointer to the first character of
 >	the first occurrence of little is returned.
 
-### ft_strcpy
-### ft_strncpy
-### ft_strcat
-### ft_strncat 
-### ft_strcmp
-### ft_memalloc
-### ft_memdel
-### ft_strnew
-### ft_strdel
-### ft_strclr
-### ft_striter
-### ft_striteri
-### ft_strmap
-### ft_strequ
-### ft_strnequ
-### ft_putchar
-### ft_putstr
-### ft_putendl
+### 3. ft_strcpy
+### 4. ft_strncpy
+### 5. ft_strcat
+### 6. ft_strncat 
+### 7. ft_strcmp
+### 8. ft_memalloc
+### 9. ft_memdel
+### 10. ft_strnew
+### 11. ft_strdel
+### 12. ft_strclr
+### 13. ft_striter
+### 14. ft_striteri
+### 15. ft_strmap
+### 16. ft_strequ
+### 17. ft_strnequ
+### 18. ft_putchar
+### 19. ft_putstr
+### 20. ft_putendl
 
-### Tests:
+## Tests:
 
 Put *libft.h* and *libft.a* in the folder **test** and run 
 ```bash
