@@ -16,6 +16,12 @@
 #include <string.h>
 #include <stdlib.h>
 
+typedef struct		s_list
+{
+	void		*content;
+	struct s_list	*next;
+}			t_list;
+
 /*
 ** Part 1 - Libc functions
 */
@@ -55,15 +61,16 @@ char	*ft_strtrim(char const *s);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-void    ft_putendl(char const *s);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
+void    ft_putnbr_fd(int n, int fd);
 
 /*
 ** Bonus part
 */
 
+t_list	*ft_lstnew(void *content);
 
 /*
 ** Personal functions
@@ -78,7 +85,6 @@ int	ft_strcmp(const char *s1, const char *s2);
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
 void	ft_putnbr(int n);
-void    ft_putnbr_fd(int n, int fd);
 void	ft_strclr(char *s);
 void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
@@ -90,6 +96,7 @@ char	*ft_strnew(size_t size);
 void	ft_strdel(void **as);
 char    *ft_strmap(char const *s, char (*f)(char));
 int	ft_nbrlen(int n);
+void    ft_putendl(char const *s);
 
 
 #endif

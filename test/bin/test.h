@@ -63,6 +63,7 @@ int	test_ft_strtrim();
 int	test_ft_split();
 int	test_ft_itoa();
 int	test_ft_strlcpy();
+int	test_ft_lstnew();
 
 
 

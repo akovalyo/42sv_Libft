@@ -260,7 +260,7 @@ DESCRIPTION
 
 >       Checks for any printable character including space.
 
-RETURN VALUE for **16-19**
+RETURN VALUE for **16-20**
 
 >       The values returned are nonzero if the character c falls into the  tested
 >       class, and zero if not.
@@ -397,18 +397,7 @@ RETURN VALUE
 >       The string created from the successive applications of f.
 >       Returns NULL if the allocation fails.
 
-### 7. ft_putendl
->       void ft_putendl(char *s);
-
-DESCRIPTION
-
->       Outputs the string s to the standard output, followed by a newline.
-
-RETURN VALUE
-
->       None
-
-### 8. ft_putchar_fd
+### 7. ft_putchar_fd
 >       void ft_putchar_fd(char c, int fd);
 
 DESCRIPTION
@@ -419,7 +408,7 @@ RETURN VALUE
 
 >       None
 
-### 9. ft_putstr_fd
+### 8. ft_putstr_fd
 >       void ft_putstr_fd(char *s, int fd);
 
 DESCRIPTION
@@ -430,7 +419,7 @@ RETURN VALUE
 
 >       None
 
-### 10. ft_putendl_fd
+### 9. ft_putendl_fd
 >       void ft_putendl_fd(char *s, int fd);
 
 DESCRIPTION
@@ -440,15 +429,34 @@ DESCRIPTION
 RETURN VALUE
 
 >       None
+
+### 10. ft_putnbr_fd
+
+>       void ft_putnbr_fd(int n, int fd);
+
+DESCRIPTION
+
+>       Outputs the integer 'n' to the given file descriptor.
+
+RETURN VALUE
+
+>       None
 ___
 
 ## Bonus part:
 
 ### 1. ft_lstnew
+>       t_list *ft_lstnew(void *content)
 
 DESCRIPTION
+>       Allocates (with malloc(3)) and returns a new element.
+>       The variables content is initialized by copy of the
+>       parameters of the function. The variable next is 
+>       initialized to NULL.
 
 RETURN VALUE
+
+>       The new element.
 
 ### 2. ft_lstadd_front
 
@@ -642,11 +650,17 @@ DESCRIPTION
 
 RETURN VALUE
 
-### 12. ft_putnbr_fd
+### 12. ft_putendl
+>       void ft_putendl(char *s);
 
 DESCRIPTION
 
+>       Outputs the string s to the standard output, followed by a newline.
+
 RETURN VALUE
+
+>       None
+
 
 ***
 
@@ -667,4 +681,4 @@ make all
 
 There should be no errors (segmentation fault, etc).
 
-There is no tests for *ft_calloc*, *ft_***_fd*  (test only for allocation memory failure)
+There is no tests for *ft_calloc*, *ft_***_fd*

@@ -1,3 +1,4 @@
 libft.a
 /test/libft.h
 *.o
+.*.swp
