@@ -459,52 +459,100 @@ RETURN VALUE
 >       The new element.
 
 ### 2. ft_lstadd_front
+>       void ft_lstadd_front(t_list **lst, t_list *new);
 
 DESCRIPTION
 
+>       Adds the element ’new’ at the beginning of the list.
+
+RETURN VALUE
+
+>       None
 
 ### 3. ft_lstsize
+>       int ft_lstsize(t_list *lst);
 
 DESCRIPTION
 
+>       Counts the number of elements in a list.
+
 RETURN VALUE
+
+>       Length of the list.
 
 ### 4. ft_lstlast
+>       t_list *ft_lstlast(t_list *lst);
 
 DESCRIPTION
 
+>       Returns the last element of the list.
+
 RETURN VALUE
+
+>       Last element of the list.
 
 ### 5. ft_lstadd_back
+>       void ft_lstadd_back(t_list **lst, t_list *new);
 
 DESCRIPTION
 
+>       Adds the element ’new’ at the end of the list.
+
 RETURN VALUE
+
+>       None.
 
 ### 6. ft_lstdelone
+>       void ft_lstdelone(t_list *lst, void (*del)(void*));
 
 DESCRIPTION
 
+>       Takes as a parameter an element and frees the memory of
+>       the element’s content using the function ’del’ given as
+>       a parameter and free the element. The memory of ’next’
+>       must not be freed.
+
 RETURN VALUE
+
+>       None.
 
 ### 7. ft_lstclear
+>       void ft_lstclear(t_list **lst, void (*del)(void*));
 
 DESCRIPTION
+>       Deletes and frees the given element and every successor of
+>       that element, using the function ’del’ and free(3). Finally,
+>       the pointer to the list must be set to NULL.
 
 RETURN VALUE
+
+>       None.
 
 ### 8. ft_lstiter
+>       void ft_lstiter(t_list *lst, void (*f)(void *));
 
 DESCRIPTION
 
+>       Iterates the list ’lst’ and applies the function ’f’ to the
+>       content of each element.
+
 RETURN VALUE
+
+>       None.
 
 ### 9. ft_lstmap
+>       t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 DESCRIPTION
 
+>       Iterates the list ’lst’ and applies the function ’f’ to the
+>       content of each element. Creates a new list resulting of the
+>       successive applications of the function ’f’. The ’del’ function
+>       is used to delete the content of an element if needed.
+
 RETURN VALUE
 
+>       The new list. NULL if the allocation fails.
 ___
 
 ## 4. Personal functions:
@@ -660,6 +708,13 @@ DESCRIPTION
 RETURN VALUE
 
 >       None
+
+### 13. ft_lstprint_str
+>       void ft_lstprint_str(t_list *lst)
+
+DESCRIPTION
+
+>       Prints contents (type of char) of linked list starting from head.
 
 
 ***

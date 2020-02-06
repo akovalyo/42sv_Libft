@@ -48,6 +48,14 @@ SRC = ft_memset.c \
       ft_putnbr_fd.c \
 
 BONUS = ft_lstnew.c \
+	ft_lstadd_front.c \
+	ft_lstadd_back.c \
+	ft_lstsize.c \
+	ft_lstlast.c \
+	ft_lstdelone.c \
+	ft_lstclear.c \
+	ft_lstiter.c \
+	ft_lstmap.c \
 	ft_putchar_bonus.c \
 	ft_strcpy_bonus.c \
 	ft_strncpy_bonus.c \
@@ -68,7 +76,8 @@ BONUS = ft_lstnew.c \
 	ft_strnew_bonus.c \
 	ft_strdel_bonus.c \
 	ft_strmap_bonus.c \
-	ft_nbrlen_bonus.c
+	ft_nbrlen_bonus.c \
+	ft_lstprint_str_bonus.c \
 
 OF = $(SRC:%.c=%.o)
 

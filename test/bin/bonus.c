@@ -20,7 +20,7 @@ int	main()
 	printf("\033[0m");
 	
 	divider();
-	test_ft_lstnew();
+	test_ft_lst();
 	divider();
 	
 	return (0);
