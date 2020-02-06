@@ -35,7 +35,7 @@ DESCRIPTION
 
 RETURN VALUE
 
->       None.
+>       None
 
 ### 3. ft_memcpy
 >       void *ft_memcpy(void *dest, const void *src, size_t n);
@@ -500,7 +500,7 @@ DESCRIPTION
 
 RETURN VALUE
 
->       None.
+>       None
 
 ### 6. ft_lstdelone
 >       void ft_lstdelone(t_list *lst, void (*del)(void*));
@@ -514,7 +514,7 @@ DESCRIPTION
 
 RETURN VALUE
 
->       None.
+>       None
 
 ### 7. ft_lstclear
 >       void ft_lstclear(t_list **lst, void (*del)(void*));
@@ -526,7 +526,7 @@ DESCRIPTION
 
 RETURN VALUE
 
->       None.
+>       None
 
 ### 8. ft_lstiter
 >       void ft_lstiter(t_list *lst, void (*f)(void *));
@@ -538,7 +538,7 @@ DESCRIPTION
 
 RETURN VALUE
 
->       None.
+>       None
 
 ### 9. ft_lstmap
 >       t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
@@ -581,27 +581,63 @@ RETURN VALUE
 >       the first occurrence of little is returned.
 
 ### 3. ft_strcpy
+>       char *strcpy(char *dest, const char *src);
 
 DESCRIPTION
 
+>       The strcpy() function copies the string pointed to by src, including the
+>       terminating null byte ('\0'), to the buffer pointed to by dest.  The strings
+>       may  not  overlap, and the destination string dest must be large enough to
+>       receive the copy.  Beware of buffer overruns!
+
 RETURN VALUE
+
+>       The  strcpy() function returns a pointer to the destination string dest.
+
 
 ### 4. ft_strncpy
-
+>       char *strncpy(char *dest, const char *src, size_t n);
 
 DESCRIPTION
+
+>       The strncpy() function is similar, except that at most n bytes of  src  are
+>       copied. Warning:  If there is no null byte among the first n bytes of src, the
+>       string placed in dest will not be null-terminated. If the length of src is less
+>       than n, strncpy() writes additional null bytes to  dest to ensure that a total
+>       of n bytes are written.
 
 RETURN VALUE
 
+>       The  strncpy() function returns a pointer to the destination string dest.
+
 ### 5. ft_strcat
+>       char *strcat(char *dest, const char *src);
 
 DESCRIPTION
+>       The  strcat()  function  appends  the src string to the dest string, overwriting the
+>       terminating null byte ('\0') at the end of dest, and then adds  a  terminating  null
+>       byte.   The  strings may not overlap, and the dest string must have enough space for
+>       the result.  If dest is not large enough, program behavior is unpredictable;  buffer
+>       overruns are a favorite avenue for attacking secure programs.
 
+RETURN VALUE
+
+>        The strcat() function returns a pointer to the resulting string dest.
 
 ### 6. ft_strncat
+>        char *strncat(char *dest, const char *src, size_t n);
 
 DESCRIPTION
 
+>       The strncat() function is similar to strcat(), except that it will use at most n bytes
+>       from src; and src does not need to be null-terminated if it contains n or more bytes. 
+>       As with strcat(), the resulting string in dest is always null-terminated. If src contains
+>       n or more bytes, strncat() writes n+1 bytes to dest (n from src plus the terminating
+>       null byte). Therefore, the size of dest must  be  at  least strlen(dest)+n+1.
+
+RETURN VALUE
+
+>       The strncat() function returns a pointer to the resulting string dest.
  
 ### 7. ft_strcmp
 >       int ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -617,86 +653,161 @@ RETURN VALUE
 >       to,  or  greater than zero if the first n bytes of s1 is found,
 >       respectively, to be less than, to match, or be greater than s2.
 ### 8. ft_memalloc
+>       void * ft_memalloc(size_t size);
 
 DESCRIPTION
 
+>       Allocates (with malloc(3)) and returns a “fresh” memory area. The
+>       memory allocated is initialized to 0. If the allocation fails, the
+>       function returns NULL.
+
 RETURN VALUE
 
+>       The allocated memory area.
 
 ### 9. ft_memdel
+>       void ft_memdel(void **ap);
 
 DESCRIPTION
 
+>       Takes as a parameter the address of a memory area that needs to be
+>       freed with free(3), then puts the pointer to NULL.
+
 RETURN VALUE
 
+>       None
 
 ### 10. ft_strnew
+>       char * ft_strnew(size_t size);
 
 DESCRIPTION
 
+>       Allocates (with malloc(3)) and returns a “fresh” string ending with
+>       ’\0’. Each character of the string is initialized at ’\0’. If the
+>       allocation fails the function returns NULL.
+
 RETURN VALUE
 
+>       The string allocated and initialized to 0.
 
 ### 11. ft_strdel
+>       void ft_strdel(char **as);
 
 DESCRIPTION
 
+>       Takes as a parameter the address of a string that need to be freed
+>       with free(3), then sets its pointer to NULL.
+
 RETURN VALUE
+
+>       None
 
 ### 12. ft_strclr
+>       void ft_strclr(char *s);
 
 DESCRIPTION
 
+>       Sets every character of the string to the value ’\0’.
+
 RETURN VALUE
+
+>       None
 
 ### 13. ft_striter
+>       void ft_striter(char *s, void (*f)(char *));
 
 DESCRIPTION
 
+>       Applies the function f to each character of the string passed as argument.
+>       Each character is passed by address to f to be modified if necessary.
+
 RETURN VALUE
+
+>       None
 
 ### 14. ft_striteri
+>       void ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 DESCRIPTION
 
+>       Applies the function f to each character of the string passed as argument,
+>       and passing its index as first argument. Each character is passed by 
+>       address to f to be modified if necessary.
+
 RETURN VALUE
+
+>       None
 
 ### 15. ft_strmap
+>       char * ft_strmap(char const *s, char (*f)(char));
 
 DESCRIPTION
 
+>       Applies the function f to each character of the string given as argument to
+>       create a “fresh” new string (with malloc(3)) resulting from the successive
+>       applications of f.
+
 RETURN VALUE
+
+>       The “fresh” string created from the successive applications off.
 
 ### 16. ft_strequ
+>       int ft_strequ(char const *s1, char const *s2);
 
 DESCRIPTION
 
+>       Lexicographical comparison between s1 and s2. If the 2 strings are identical
+>       the function returns 1, or 0 otherwise.
+
 RETURN VALUE
+
+>       1 or 0 according to if the 2 strings are identical or not.
 
 ### 17. ft_strnequ
+>       int ft_strnequ(char const *s1, char const *s2, size_t n);
 
 DESCRIPTION
 
+>       Lexicographical comparison between s1 and s2 up to n characters or until a 
+>       ’\0’ is reached. If the 2 strings are identical, the function returns 1, or
+>       0 otherwise.
+
 RETURN VALUE
+
+>       1 or 0 according to if the 2 strings are identical or not.
 
 ### 18. ft_putchar
+>       void ft_putchar(char c);
 
 DESCRIPTION
 
+>       Outputs the character c to the standard output.
+
 RETURN VALUE
+
+>       None
 
 ### 19. ft_putstr
-
+>       void ft_putstr(char const *s);
 
 DESCRIPTION
 
+>       Outputs the string s to the standard output.
+
 RETURN VALUE
+
+>       None
 
 ### 20. ft_putnbr
+>       void ft_putnbr(int n);
 
 DESCRIPTION
 
+>       Outputs the integer n to the standard output.
+
 RETURN VALUE
+
+>       None
 
 ### 12. ft_putendl
 >       void ft_putendl(char *s);
