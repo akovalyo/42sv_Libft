@@ -1,39 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                               __________________________   */
-/*   test_ft_strncpy.c                           _______ ______   ______ __   */
+/*   test_ft_memalloc.c                          _______ ______   ______ __   */
 /*                                               ___    |___  /   ___  //_/   */
 /*   By: akovalyo <al.kovalyov@gmail.com>        __  /| |__  /    __  ,<      */
 /*                                               _  ___ |_  / ___ _  /| |     */
-/*   Created: 2020/01/07 18:23:11 by akovalyo    /_/  |_|/_/  _(_)/_/ |_|     */
-/*   Updated: 2020/01/07 18:23:16 by akovalyo    __________________________   */
+/*   Created: 2020/01/27 11:34:49 by akovalyo    /_/  |_|/_/  _(_)/_/ |_|     */
+/*   Updated: 2020/01/27 11:34:49 by akovalyo    __________________________   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
-#include "../libft.h"
+#include "../test.h"
+#include "../../libft.h"
 
-int	test_ft_strncpy()
+int	test_ft_memalloc()
 {
+	void *test;
 	
-	char d1[100] = {0};
-	char d2[100] = {0};
-	
-	printf("Check ft_strncpy\nTest 1: ");
-	ft_strncpy(d1, "Hellooooo", 5);
-	strncpy(d2, "Hellooooo", 5);
-	if (strcmp(d1, d2) != 0)
-		ERROR
-	else
-		OK
-	printf("Test 2: ");
-	ft_strncpy(d1, "Hellooooo", 5);
-	strncpy(d2, "Helloooooo", 5);	
-	if (strcmp(d1, d2) != 0)
+		
+	printf("Check ft_memalloc\n\nTest 1 (allocation failure): ");
+	if (ft_memalloc(22000000000) != NULL)
 		ERROR
 	else
 		OK
 
 	printf("\n");
-	return 0;
+	
+
+	
+	
+	return (0);
 }

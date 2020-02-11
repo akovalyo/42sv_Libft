@@ -1,46 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                               __________________________   */
-/*   test_ft_strmap.c                            _______ ______   ______ __   */
+/*   test_ft_strcat.c                            _______ ______   ______ __   */
 /*                                               ___    |___  /   ___  //_/   */
 /*   By: akovalyo <al.kovalyov@gmail.com>        __  /| |__  /    __  ,<      */
 /*                                               _  ___ |_  / ___ _  /| |     */
-/*   Created: 2020/01/27 11:34:49 by akovalyo    /_/  |_|/_/  _(_)/_/ |_|     */
-/*   Updated: 2020/01/27 11:34:49 by akovalyo    __________________________   */
+/*   Created: 2020/01/08 20:46:42 by akovalyo    /_/  |_|/_/  _(_)/_/ |_|     */
+/*   Updated: 2020/01/08 20:46:42 by akovalyo    __________________________   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
-#include "../libft.h"
 
-char	f_map(char s)
-{
-	return (s + 1);
-}
+#include "../test.h"
+#include "../../libft.h"
 
-int	test_ft_strmap()
+int	test_ft_strcat()
 {
-	char s1[] = "hello";
-	char *new;
+	char d1[100] = {0};
+	char d2[100] = {0};
 	
-	printf("Check ft_strmap\n\nTest 1: ");
-	if (ft_strmap(NULL, NULL) == NULL)
-		OK
-	printf("Test 2: ");
-	if (ft_strmap(s1, NULL) == NULL)
-		OK
-	printf("Test 3: ");
-	if (ft_strmap(NULL, f_map) == NULL)
-		OK
-	printf("Test 4: ");
-	new = ft_strmap(s1, f_map);
-	if (strcmp(new, "ifmmp") != 0)
+	strcat(d1, "Hello");
+	ft_strcat(d2, "Hello");	
+	printf("Check ft_strcat\n\nTest 1: ");
+	if (ft_strlen(d1) != ft_strlen(d2))
 		ERROR
 	else
 		OK
-		
-	
+	printf("Test 2: ");
+	strcat(d1, "Hello");    
+        ft_strcat(d2, "Hello"); 
+	if (ft_strlen(d1) != ft_strlen(d2))
+		ERROR
+	else
+		OK
 	printf("\n");
-	free(new);
 	return (0);
+
 }

@@ -1,44 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                               __________________________   */
-/*   test_ft_striteri.c                          _______ ______   ______ __   */
+/*   test_ft_strcpy.c                            _______ ______   ______ __   */
 /*                                               ___    |___  /   ___  //_/   */
 /*   By: akovalyo <al.kovalyov@gmail.com>        __  /| |__  /    __  ,<      */
 /*                                               _  ___ |_  / ___ _  /| |     */
-/*   Created: 2020/01/27 11:34:49 by akovalyo    /_/  |_|/_/  _(_)/_/ |_|     */
-/*   Updated: 2020/01/27 11:34:49 by akovalyo    __________________________   */
+/*   Created: 2020/01/07 18:21:22 by akovalyo    /_/  |_|/_/  _(_)/_/ |_|     */
+/*   Updated: 2020/01/07 18:21:25 by akovalyo    __________________________   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
-#include "../libft.h"
+#include "../test.h"
+#include "../../libft.h"
 
-void			f2(unsigned int i, char *s)
+int	test_ft_strcpy()
 {
-	*s = *s + i;
-}
-
-int	test_ft_striteri()
-{
-	char s1[] = "hello";
-	
-	printf("Check ft_striteri\n\nTest 1: ");
-	ft_striteri(NULL, NULL);
-	printf("OK\n");
-	printf("Test 2: ");
-	ft_striteri(s1, NULL);
-	printf("OK\n");
-	printf("Test 3: ");
-	ft_striteri(NULL, f2);
-	printf("OK\n");
-	printf("Test 4: ");
-	ft_striteri(s1, f2);
-	if (strcmp(s1, "hfnos") != 0)
+	// check ft_strcpy
+	char d1[50];
+	char d2[50];
+		
+	printf("Check ft_strcpy\nTest 1: ");
+	ft_strcpy(d1, "Hello");
+	strcpy(d2, "Hello");
+	if (strcmp(d1, d2) != 0)
 		ERROR
 	else
 		OK
-		
-	
+	printf("Test 2: ");
+	ft_strcpy(d1, "Hello");
+	strcpy(d2, "Hello");	
+	if (strcmp(d1, d2) != 0)
+		ERROR
+	else
+		OK
+
 	printf("\n");
-	return (0);
+	return 0;
 }

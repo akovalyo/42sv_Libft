@@ -1,41 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                               __________________________   */
-/*   test_ft_stlcpy.c                            _______ ______   ______ __   */
+/*   test_personal.c                             _______ ______   ______ __   */
 /*                                               ___    |___  /   ___  //_/   */
 /*   By: akovalyo <al.kovalyov@gmail.com>        __  /| |__  /    __  ,<      */
 /*                                               _  ___ |_  / ___ _  /| |     */
-/*   Created: 2020/02/04 09:25:06 by akovalyo    /_/  |_|/_/  _(_)/_/ |_|     */
-/*   Updated: 2020/02/04 09:25:06 by akovalyo    __________________________   */
+/*   Created: 2020/02/10 16:15:10 by akovalyo    /_/  |_|/_/  _(_)/_/ |_|     */
+/*   Updated: 2020/02/10 16:15:10 by akovalyo    __________________________   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
 #include "../libft.h"
+#include "test.h"
 
-int	test_ft_strlcpy()
+int	main()
 {
-	char d1[5];
-	char d2[1];
-	char d3[5];
-	
-	printf("Check ft_strlcpy\n\nTest 1: ");	
-	if (ft_strlcpy(d1, "1234567", 5) == 7 && strcmp(d1, "1234") == 0)
-		OK
-	else 
-		ERROR
-	
-	printf("Test 2: ");	
-	if (ft_strlcpy(d2, "1234567", 1) == 7 && strcmp(d2, "") == 0)
-		OK
-	else 
-		ERROR
-	
-	printf("Test 3: ");	
-	if (ft_strlcpy(d3, "", 5) == 0 && strcmp(d3, "") == 0)
-		OK
-	else 
-		ERROR
-
-	return(0);	
+	printf("\033[01;33m");
+	printf("\n********* PERSONAL *******\n\n");
+	printf("\033[0m");
+	test_ft_strcmp();
+	divider();
 }

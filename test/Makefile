@@ -34,6 +34,11 @@ bonus:
 	@./tmp_test_bonus
 	@rm -f tmp_test_bonus
 
+personal:
+	@gcc -o tmp_test_personal bin/test_personal.c bin/divider.c bin/personal/test_ft_* $(LIBFT)
+	@./tmp_test_personal
+	@rm -f tmp_test_personal
+
 
 all: lib part1 part2 bonus
 

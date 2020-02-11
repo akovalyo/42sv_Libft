@@ -1,39 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                               __________________________   */
-/*   test_ft_strcpy.c                            _______ ______   ______ __   */
+/*   test_ft_stlcpy.c                            _______ ______   ______ __   */
 /*                                               ___    |___  /   ___  //_/   */
 /*   By: akovalyo <al.kovalyov@gmail.com>        __  /| |__  /    __  ,<      */
 /*                                               _  ___ |_  / ___ _  /| |     */
-/*   Created: 2020/01/07 18:21:22 by akovalyo    /_/  |_|/_/  _(_)/_/ |_|     */
-/*   Updated: 2020/01/07 18:21:25 by akovalyo    __________________________   */
+/*   Created: 2020/02/04 09:25:06 by akovalyo    /_/  |_|/_/  _(_)/_/ |_|     */
+/*   Updated: 2020/02/04 09:25:06 by akovalyo    __________________________   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
-#include "../libft.h"
+#include "../test.h"
+#include "../../libft.h"
 
-int	test_ft_strcpy()
+int	test_ft_strlcpy()
 {
-	// check ft_strcpy
-	char d1[50];
-	char d2[50];
-		
-	printf("Check ft_strcpy\nTest 1: ");
-	ft_strcpy(d1, "Hello");
-	strcpy(d2, "Hello");
-	if (strcmp(d1, d2) != 0)
-		ERROR
-	else
+	char d1[5];
+	char d2[1];
+	char d3[5];
+	
+	printf("Check ft_strlcpy\n\nTest 1: ");	
+	if (ft_strlcpy(d1, "1234567", 5) == 7 && strcmp(d1, "1234") == 0)
 		OK
-	printf("Test 2: ");
-	ft_strcpy(d1, "Hello");
-	strcpy(d2, "Hello");	
-	if (strcmp(d1, d2) != 0)
+	else 
 		ERROR
-	else
+	
+	printf("Test 2: ");	
+	if (ft_strlcpy(d2, "1234567", 1) == 7 && strcmp(d2, "") == 0)
 		OK
+	else 
+		ERROR
+	
+	printf("Test 3: ");	
+	if (ft_strlcpy(d3, "", 5) == 0 && strcmp(d3, "") == 0)
+		OK
+	else 
+		ERROR
 
-	printf("\n");
-	return 0;
+	return(0);	
 }

@@ -825,7 +825,7 @@ RETURN VALUE
 
 DESCRIPTION
 
->       Prints contents (type of char) of linked list starting from head.
+>       Prints contents (string) of linked list starting from head.
 
 
 ***
