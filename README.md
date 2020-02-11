@@ -820,7 +820,33 @@ RETURN VALUE
 
 >       None
 
-### 13. ft_lstprint_str
+### 13. ft_strspn
+>       size_t strspn(const char *s, const char *accept);
+
+DESCRIPTION
+
+>       The  strspn()  function calculates the length (in bytes) of the 
+>       initial segment of s which consists entirely of bytes in accept.
+
+RETURN VALUE
+
+>       The  strspn()  function returns the number of bytes in the 
+>       initial segment of s which consist only of bytes from accept.
+
+### 14. ft_strcspn
+>       size_t strspn(const char *s, const char *accept);
+
+DESCRIPTION
+
+>       The strcspn() function calculates the length of the initial
+>       segment  of s which consists entirely of bytes not in reject.
+
+RETURN VALUE
+
+>        The strcspn() function returns the number of bytes in the
+>        initial  segment of s which are not in the string reject.
+
+### 15. ft_lstprint_str
 >       void ft_lstprint_str(t_list *lst)
 
 DESCRIPTION

@@ -20,4 +20,8 @@ int	main()
 	printf("\033[0m");
 	test_ft_strcmp();
 	divider();
+	test_ft_strspn();
+	divider();
+	test_ft_strcspn();
+	divider();
 }

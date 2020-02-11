@@ -77,6 +77,8 @@ BONUS = ft_lstnew.c \
 	ft_strdel_bonus.c \
 	ft_strmap_bonus.c \
 	ft_nbrlen_bonus.c \
+	ft_strspn_bonus.c \
+	ft_strcspn_bonus.c \
 	ft_lstprint_str_bonus.c \
 
 OF = $(SRC:%.c=%.o)

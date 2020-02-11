@@ -106,6 +106,8 @@ void	ft_strdel(void **as);
 char    *ft_strmap(char const *s, char (*f)(char));
 int	ft_nbrlen(int n);
 void    ft_putendl(char const *s);
+size_t	ft_strspn(const char *s, const char *accept);
+size_t	ft_strcspn(const char *s, const char *reject);
 void	ft_lstprint_str(t_list *lst);
 
 

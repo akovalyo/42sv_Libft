@@ -13,47 +13,36 @@
 #include "../test.h"
 #include "../../libft.h"
 
-int     ft_strcmp2(char *s1, char *s2)
-{
-        int i;
-
-        i = 0;
-        while (s1[i] && s2[i] && s1[i] == s2[i])
-                i++;
-        return (s1[i] - s2[i]);
-}
-
-
 int	test_ft_strcmp()
 {
 	
 	printf("Check ft_strcmp\n\nTest 1 - \"abc\" - \"abc\": ");
-	if (ft_strcmp2("abc", "abc") == 0)
+	if (ft_strcmp("abc", "abc") == 0)
 		OK
 	else
 		ERROR
 	printf("Test 2 - \"a\" - \"abc\": ");
-	if (ft_strcmp2("a", "abc") < 0)
+	if (ft_strcmp("a", "abc") < 0)
 		OK
 	else
 		ERROR
 	printf("Test 3 - \"abc\" - \"a\": ");
-	if (ft_strcmp2("abc", "a") > 0)
+	if (ft_strcmp("abc", "a") > 0)
 		OK
 	else
 		ERROR
 	printf("Test 4 - \"abc\" - \"fgh\": ");
-	if (ft_strcmp2("abc", "fgh") < 0)
+	if (ft_strcmp("abc", "fgh") < 0)
 		OK
 	else
 		ERROR
 	printf("Test 5 - \"\" - \"abc\": ");
-	if (ft_strcmp2("", "abc") < 0)
+	if (ft_strcmp("", "abc") < 0)
 		OK
 	else
 		ERROR
 	printf("Test 6 - \"abc\" - \"\": ");
-	if (ft_strcmp2("abc", "") > 0)
+	if (ft_strcmp("abc", "") > 0)
 		OK
 	else
 		ERROR

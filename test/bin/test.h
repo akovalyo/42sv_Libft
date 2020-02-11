@@ -64,6 +64,8 @@ int	test_ft_split();
 int	test_ft_itoa();
 int	test_ft_strlcpy();
 int	test_ft_lst();
+int	test_ft_strspn();
+int	test_ft_strcspn();
 
 
 
