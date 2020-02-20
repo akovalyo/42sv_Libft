@@ -6,7 +6,7 @@
 /*   By: akovalyo <al.kovalyov@gmail.com>        __  /| |__  /    __  ,<      */
 /*                                               _  ___ |_  / ___ _  /| |     */
 /*   Created: 2020/02/10 16:15:10 by akovalyo    /_/  |_|/_/  _(_)/_/ |_|     */
-/*   Updated: 2020/02/10 16:15:10 by akovalyo    __________________________   */
+/*   Updated: 2020/02/19 17:29:59 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ int	main()
 	printf("\033[01;33m");
 	printf("\n********* PERSONAL *******\n\n");
 	printf("\033[0m");
-	test_ft_strcmp();
-	divider();
 	test_ft_strspn();
 	divider();
 	test_ft_strcspn();

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
+/*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/04 08:54:30 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/02/04 08:54:30 by akovalyo         ###   ########.fr       */
+/*   Updated: 2020/02/19 11:43:54 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 	dest[i] = '\0';
 	return (len);
 }
-			

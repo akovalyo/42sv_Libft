@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
+/*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/13 12:00:15 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/01/13 12:00:15 by akovalyo         ###   ########.fr       */
+/*   Updated: 2020/02/18 23:25:21 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_bzero(void *s, size_t n)
 {
 	char *tmp;
-	
+
 	tmp = (char*)s;
 	while (n > 0)
 	{

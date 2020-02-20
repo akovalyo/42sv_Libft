@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
+/*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/27 12:11:36 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/01/27 12:11:36 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/02/19 15:39:40 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/02/19 15:40:03 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t i;
-	char *fresh;
+	size_t	i;
+	char	*fresh;
 
 	i = 0;
 	if (s == NULL || f == NULL)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
+/*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 20:32:53 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/01/11 20:32:53 by akovalyo         ###   ########.fr       */
+/*   Updated: 2020/02/19 11:27:33 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strchr(const char *s, int c)
 {
 	size_t i;
 
-	i = 0;	
+	i = 0;
 	while (s[i] && s[i] != c)
 		i++;
 	if (s[i] == c)

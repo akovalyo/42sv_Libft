@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
+/*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 21:22:35 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/01/15 21:49:08 by akovalyo         ###   ########.fr       */
+/*   Updated: 2020/02/19 21:16:48 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char *tmp;
-	size_t i;
-	char *n_dest;
-	const char *n_src;
+	char		*tmp;
+	size_t		i;
+	char		*n_dest;
+	const char	*n_src;
 
 	tmp = NULL;
 	i = 0;

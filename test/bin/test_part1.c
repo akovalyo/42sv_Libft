@@ -6,7 +6,7 @@
 /*   By: akovalyo <al.kovalyov@gmail.com>        __  /| |__  /    __  ,<      */
 /*                                               _  ___ |_  / ___ _  /| |     */
 /*   Created: 2020/01/07 18:19:14 by akovalyo    /_/  |_|/_/  _(_)/_/ |_|     */
-/*   Updated: 2020/01/07 18:19:20 by akovalyo    __________________________   */
+/*   Updated: 2020/02/19 17:13:22 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,15 @@ int	main()
 	divider();
 	test_ft_strlen();
 	divider();
-	test_ft_strlcpy();
+	test_ft_strdup();
+	divider();
+	test_ft_strcpy();
+	divider();
+	test_ft_strncpy();
+	divider();
+	test_ft_strcat();
+	divider();
+	test_ft_strncat();
 	divider();
 	test_ft_strlcat();
 	divider();
@@ -42,7 +50,11 @@ int	main()
 	divider();
 	test_ft_strrchr();
 	divider();
+	test_ft_strstr();
+	divider();
 	test_ft_strnstr();
+	divider();
+	test_ft_strcmp();
 	divider();
 	test_ft_strncmp();
 	divider();
@@ -62,8 +74,5 @@ int	main()
 	divider();
 	test_ft_tolower();
 	divider();
-	
-	
 	return (0);
 }
-

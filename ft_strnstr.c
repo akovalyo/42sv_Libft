@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
+/*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/08 18:02:00 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/01/08 18:23:57 by akovalyo         ###   ########.fr       */
+/*   Updated: 2020/02/19 11:49:18 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t i;
 	size_t find_index;
-	size_t remember;
-	
+	size_t mem;
+
 	i = 0;
 	if (little[0] == '\0')
 		return ((char *)big);
@@ -26,11 +26,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		if (len < ft_strlen(little))
 			return (NULL);
 		find_index = 0;
-		remember = i;
-		while (big[remember] == little[find_index] && big[remember] && little[find_index])
+		mem = i;
+		while (big[mem] == little[find_index] && big[mem] && little[find_index])
 		{
 			find_index++;
-			remember++;
+			mem++;
 		}
 		if (little[find_index] == '\0')
 			return ((char *)big + i);

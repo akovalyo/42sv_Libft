@@ -2,3 +2,5 @@ libft.a
 /test/libft.h
 *.o
 .*.swp
+.DS_Store
+._*

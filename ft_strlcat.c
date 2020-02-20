@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
+/*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/08 21:42:06 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/01/08 21:42:06 by akovalyo         ###   ########.fr       */
+/*   Updated: 2020/02/19 12:14:36 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t len;
 	size_t i;
@@ -23,7 +23,7 @@ size_t ft_strlcat(char *dest, const char *src, size_t size)
 		return (ft_strlen(src));
 	if (len > size - 1)
 		return (size + ft_strlen(src));
-	while ((len + i < size -1) && src[i])
+	while ((len + i < size - 1) && src[i])
 	{
 		dest[len + i] = src[i];
 		i++;
