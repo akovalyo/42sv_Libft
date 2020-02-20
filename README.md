@@ -869,24 +869,3 @@ RETURN VALUE
 DESCRIPTION
 
 >       Prints contents (string) of linked list starting from head.
-
-***
-
-## Tests:
-
-Put *libft.h* and *libft.a* in the folder **test** and run 
-```bash
-make part1
-```
-
-```bash
-make part2
-```
-
-```bash
-make all
-```
-
-There should be no errors (segmentation fault, etc).
-
-There is no tests for *ft_malloc*, *ft_put****, *ft_***_fd*, *ft_memdel*, *ft_strnew*, *ft_strdel*
