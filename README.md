@@ -2,6 +2,7 @@
 
 # Summary: 
 2020 (old curriculum)
+
 The aim of this project is to code a C library regrouping usual functions that
 will be allowed to use in all other projects.
 
@@ -65,14 +66,14 @@ RETURN VALUE
 >       after c, or NULL if c was not found in the first n characters of src.
 
 ### 5. ft_memmove
->       void *ft_memmove(void *dest, const void *src, size_t n);
+>       void *ft_memmove(void *dst, const void *src, size_t n);
 
 DESCRIPTION
 
->       The ft_memmove() function copies n bytes from memory area src to memory area
->       dest.  The memory areas may overlap: copying takes place  as  though  the
+>       The ft_memmove() function copies len bytes from memory area src to memory area
+>       dst.  The memory areas may overlap: copying takes place  as  though  the
 >       bytes  in src are first copied into a temporary array that does not over‐
->       lap src or dest, and the bytes are then copied from the  temporary  array
+>       lap src or dst, and the bytes are then copied from the  temporary  array
 >       to dest.
 
 RETURN VALUE
@@ -260,7 +261,7 @@ RETURN VALUE
 >       the first occurrence of needle is returned.
 
 ### 18. ft_strnstr
->       char	*ft_strnstr(const char *big, const char *little, size_t len);
+>       char *strnstr(const char *haystack, const char *needle, size_t len);
 
 DESCRIPTION
 

@@ -6,37 +6,34 @@
 /*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 21:22:35 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/02/19 21:16:48 by akovalyo         ###   ########.fr       */
+/*   Updated: 2020/02/20 13:57:36 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char		*tmp;
-	size_t		i;
-	char		*n_dest;
+	int			i;
+	char		*n_dst;
 	const char	*n_src;
 
-	tmp = NULL;
-	i = 0;
-	n_dest = (char *)dest;
+	i = (int)len;
+	n_dst = (char *)dst;
 	n_src = (const char *)src;
-	tmp = (char *)malloc(sizeof(char) * n);
-	if (tmp == NULL)
-		return (NULL);
-	while (i < n)
+	if (!dst && !src)
+		return (dst);
+	if (src == dst)
+		return (dst);
+	else if (src < dst && dst < src + len)
 	{
-		tmp[i] = n_src[i];
-		i++;
+		while (i >= 0)
+		{	
+			n_dst[i] = n_src[i];
+			i--;
+		}
 	}
-	i = 0;
-	while (i < n)
-	{
-		n_dest[i] = tmp[i];
-		i++;
-	}
-	free(tmp);
-	return (dest);
+	else
+		ft_memcpy(dst, src, len);
+	return (dst);
 }

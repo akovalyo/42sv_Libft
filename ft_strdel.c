@@ -6,13 +6,13 @@
 /*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 15:07:38 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/02/19 15:07:54 by akovalyo         ###   ########.fr       */
+/*   Updated: 2020/02/19 22:40:59 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strdel(void **as)
+void	ft_strdel(char **as)
 {
 	if (as == NULL)
 		return ;
