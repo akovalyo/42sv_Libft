@@ -486,9 +486,9 @@ RETURN VALUE
 
 DESCRIPTION
 
->       Applies the function f to each character of the string passed as
->       argument to create a new string (with malloc(3)) resulting from
->       successive applications of f.
+>       Applies the function f to each character of the string passedas argument
+>       by giving its index as first argument to create a “fresh” new string
+>       (with malloc(3)) resulting from the successive applications of f.
 
 RETURN VALUE
 

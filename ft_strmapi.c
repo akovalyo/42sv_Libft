@@ -6,7 +6,7 @@
 /*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 15:39:40 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/02/19 15:40:03 by akovalyo         ###   ########.fr       */
+/*   Updated: 2020/02/21 09:07:22 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		fresh[i] = f(i, s[i]);
 		i++;
 	}
+	fresh[i] = '\0';
 	return (fresh);
 }

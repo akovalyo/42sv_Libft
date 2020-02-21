@@ -6,7 +6,7 @@
 /*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/06 20:29:16 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/02/20 16:58:12 by akovalyo         ###   ########.fr       */
+/*   Updated: 2020/02/21 12:03:04 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ int			ft_atoi(const char *nptr)
 	sign = 1;
 	collector = 0;
 	lng = 0;
-	while (*nptr == '\n' || *nptr == '\t' || *nptr == '\v' ||
-			*nptr == '\r' || *nptr == '\f' || *nptr == ' ')
+	while (*nptr == '\n' || *nptr == '\t' || *nptr == '\v' || *nptr == '\r' ||
+			*nptr == '\f' || *nptr == ' ' || *nptr == '+')
 		nptr++;
 	if (*nptr == '-')
 	{

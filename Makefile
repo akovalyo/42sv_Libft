@@ -6,7 +6,7 @@
 #    By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/01 21:26:34 by akovalyo          #+#    #+#              #
-#    Updated: 2020/02/19 22:02:32 by akovalyo         ###   ########.fr        #
+#    Updated: 2020/02/21 12:02:30 by akovalyo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,6 +69,7 @@ SRC = ft_memset.c \
 	  ft_lstdel.c \
  	  ft_lstadd.c \
 	  ft_lstiter.c \
+	  ft_lstmap.c \
 	  ft_strlcpy.c \
 	  ft_calloc.c \
 	  ft_nbrlen.c \
@@ -97,4 +98,13 @@ fclean: clean
 re: fclean all
 
 norm:
-	@norminette -R CheckForbiddenSourceHeader $(SRC)
+	@norminette -R CheckForbiddenSourceHeader $(SRC) libft.h
+
+test: testcl 
+	@gcc -o test test*.c -L. -lft
+
+testcl:
+	@rm test
+
+testclall:
+	@rm test*
