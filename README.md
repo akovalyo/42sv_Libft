@@ -221,30 +221,28 @@ RETURN VALUE
 
 DESCRIPTION
 
->       The  ft_strchr()  function  returns a pointer to the first occurrence of the
->       character c in the string s.
+>       The strchr() function locates the first occurrence of c (converted to
+>       a char) in the string pointed to by s.  The terminating null character is
+>       considered to be part of the string; therefore if c is '\0', the functions
+>       locate the terminating `\0'.
 
 RETURN VALUE
 
->       The ft_strchr() function returns  a  pointer  to  the  matched
->       character  or  NULL  if the character is not found. The terminating null
->       byte is considered part of the string, so that if c is specified as '\0',
->       this function return a pointer to the terminator.
+>       The strchr() function returns a pointer to the located character, or NULL
+>       if the character does not appear in the string.
        
 ### 16. ft_strrchr
 >       char *ft_strrchr(const char *s, int c);
 
 DESCRIPTION
 
->       The ft_strrchr() function returns a pointer to the last occurrence  of
->       the character c in the string s.
+>       The strrchr() function is identical to strchr(), except it locates the
+>       last occurrence of c.
 
 RETURN VALUE
 
->       The ft_strrchr() function returns  a  pointer  to  the  matched
->       character  or  NULL  if the character is naot found.  The terminating null
->       byte is considered part of the string, so that if c is specified as '\0',
->       this function return a pointer to the terminator.
+>       The strchr() function returns a pointer to the located character, or NULL
+>       if the character does not appear in the string.
 
 ### 17. ft_strstr
 >       char *ft_strstr(const char *haystack, const char *needle);
@@ -288,7 +286,8 @@ RETURN VALUE
 
 >       The ft_strcmp() function returns an integer less  than,  equal
 >       to,  or  greater than zero if s1 is found, respectively, to be
->       less than, qto match, or be greater than s2.
+>       less than, qto match, or be greater than s2. The comparison is
+>       done using unsigned characters, so that `\200' is greater than `\0'.
 
 
 ### 20. ft_strncmp
@@ -297,8 +296,10 @@ RETURN VALUE
 
 DESCRIPTION
 
->       The ft_strncmp() function is similar to ft_srcmp(), except it compares only the first
->       (at most) n bytes of s1 and s2.
+>       The ft_strncmp() function is similar to ft_srcmp(), except it 
+>       compares only the first (at most) n bytes of s1 and s2. The 
+>       comparison is done using unsigned characters, so that `\200'
+>       is greater than `\0'.
 
 RETURN VALUE
 
