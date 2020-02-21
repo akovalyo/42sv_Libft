@@ -242,7 +242,7 @@ DESCRIPTION
 RETURN VALUE
 
 >       The ft_strrchr() function returns  a  pointer  to  the  matched
->       character  or  NULL  if the character is not found.  The terminating null
+>       character  or  NULL  if the character is naot found.  The terminating null
 >       byte is considered part of the string, so that if c is specified as '\0',
 >       this function return a pointer to the terminator.
 

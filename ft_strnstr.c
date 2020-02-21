@@ -6,7 +6,7 @@
 /*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/08 18:02:00 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/02/20 12:32:47 by akovalyo         ###   ########.fr       */
+/*   Updated: 2020/02/20 14:15:55 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 			return (NULL);
 		find_index = 0;
 		mem = i;
-		while (haystack[mem] == needle[find_index] && haystack[mem] && needle[find_index])
+		while (haystack[mem] == needle[find_index]
+				&& haystack[mem] && needle[find_index])
 		{
 			find_index++;
 			mem++;

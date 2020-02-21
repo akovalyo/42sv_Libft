@@ -6,33 +6,46 @@
 /*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/06 20:29:16 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/02/20 00:02:27 by akovalyo         ###   ########.fr       */
+/*   Updated: 2020/02/20 16:58:12 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *nptr)
+static int	ft_double_overflow(unsigned long lng, int sign)
 {
-	int sign;
-	int collector;
-	int i;
+	if (lng > 9223372036854775807)
+	{
+		if (sign < 0)
+			return (0);
+		return (-1);
+	}
+	return (1);
+}
+
+int			ft_atoi(const char *nptr)
+{
+	int				sign;
+	unsigned long	collector;
+	int				lng;
 
 	sign = 1;
 	collector = 0;
-	i = 0;
-	while (nptr[i] == '\n' || nptr[i] == '\t' || nptr[i] == '\v' ||
-			nptr[i] == '\r' || nptr[i] == '\f' || nptr[i] == ' ')
-		i++;
-	if (nptr[i] == '-')
+	lng = 0;
+	while (*nptr == '\n' || *nptr == '\t' || *nptr == '\v' ||
+			*nptr == '\r' || *nptr == '\f' || *nptr == ' ')
+		nptr++;
+	if (*nptr == '-')
 	{
 		sign = -1;
-		i++;
+		nptr++;
 	}
-	while (nptr[i] >= '0' && nptr[i] <= '9')
+	while (*nptr >= '0' && *nptr <= '9')
 	{
-		collector = collector * 10 + nptr[i] - '0';
-		i++;
+		collector = collector * 10 + *nptr - '0';
+		nptr++;
 	}
-	return (collector * sign);
+	if ((lng = ft_double_overflow(collector, sign)) <= 0)
+		return (lng);
+	return ((int)collector * sign);
 }
