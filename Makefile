@@ -6,7 +6,7 @@
 #    By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/01 21:26:34 by akovalyo          #+#    #+#              #
-#    Updated: 2020/02/21 12:02:30 by akovalyo         ###   ########.fr        #
+#    Updated: 2020/02/21 14:42:26 by akovalyo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -100,7 +100,7 @@ re: fclean all
 norm:
 	@norminette -R CheckForbiddenSourceHeader $(SRC) libft.h
 
-test: testcl 
+test: 
 	@gcc -o test test*.c -L. -lft
 
 testcl:
