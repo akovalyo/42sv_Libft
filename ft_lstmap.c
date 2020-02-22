@@ -6,7 +6,7 @@
 /*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 20:41:34 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/02/21 10:45:52 by akovalyo         ###   ########.fr       */
+/*   Updated: 2020/02/22 11:14:53 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,15 @@
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
 	t_list *new;
-	t_list *node;
 
 	if (lst == NULL || f == NULL)
 		return (NULL);
-	node = f(lst);
-	new = node;
-	while (lst != NULL)
+	if (lst->next != NULL)
 	{
-		lst = lst->next;
-		if (!(node->next = f(lst)))
-		{
-			free(node->next);
-			return (NULL);
-		}
-		node = node->next;
+		new = ft_lstmap(lst->next, f);
+		ft_lstadd(&new, f(lst));
 	}
+	else
+		new = f(lst);
 	return (new);
 }
