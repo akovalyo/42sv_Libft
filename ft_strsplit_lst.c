@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_strsplit_lst.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 16:01:24 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/02/26 11:31:12 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/02/22 11:53:41 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/02/26 11:33:28 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,27 +55,30 @@ static int	last_word_i(char const *s, char c, int i)
 	return (i);
 }
 
-char		**ft_strsplit(char const *s, char c)
+t_list		*ft_strsplit_lst(char const *s, char c)
 {
 	int		words;
 	int		i;
-	char	**array;
+	t_list	*new;
+	t_list	*elem;
 
+	elem = NULL;
+	new = NULL;
 	if (!s || !c)
 		return (NULL);
 	i = ft_strlen(s) - 1;
 	words = total_words(s, c);
-	array = (char **)malloc(words * sizeof(char *) + 1);
-	if (array == NULL)
+	new = (t_list *)malloc(sizeof(t_list));
+	new = ft_lstnew("\0", 1);
+	if (new == NULL)
 		return (NULL);
-	array[words] = NULL;
-	words--;
 	while (i > 0)
 	{
 		i = last_word_i(s, c, i);
-		array[words] = ft_strsub(s, i, w_size(s, c, i));
+		elem = ft_lstnew(ft_strsub(s, i, w_size(s, c, i)), w_size(s, c, i) + 1);
+		ft_lstadd(&new, elem);
 		i--;
 		words--;
 	}
-	return (array);
+	return (new);
 }

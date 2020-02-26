@@ -682,7 +682,7 @@ ___
 ## Bonus part:
 
 ### 1. ft_lstnew
->       t_list * ft_lstnew(void const *content, size_t content_size);
+>       t_list *ft_lstnew(void const *content, size_t content_size);
 
 DESCRIPTION
 
@@ -754,7 +754,7 @@ RETURN VALUE
 >       None
 
 ### 6. ft_lstmap
->       t_list * ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+>       t_list *ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 DESCRIPTION
 
@@ -870,6 +870,22 @@ RETURN VALUE
 ### 9. ft_lstprint_str
 >       void ft_lstprint_str(t_list *lst)
 
+
 DESCRIPTION
 
 >       Prints contents (string) of linked list starting from head.
+
+
+### 10. ft_strsplit_lst
+>       t_list	*ft_strsplit_lst(char const *s, char c)
+
+
+DESCRIPTION
+
+>       Allocates (with malloc) and returns a linked list of "fresh" 
+>       strings (all ending with '\0') obtained by spliting s using 
+>       the character c as a delimiter.
+
+RETURN VALUE
+
+>       Returns a list of strings.

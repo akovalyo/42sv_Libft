@@ -6,7 +6,7 @@
 /*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/01 18:00:42 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/02/22 13:31:50 by akovalyo         ###   ########.fr       */
+/*   Updated: 2020/02/26 11:08:29 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,6 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 /*
 ** Personal functions
@@ -111,5 +110,6 @@ void				ft_lstadd_back(t_list **alst, t_list *new);
 int					ft_lstsize(t_list *lst);
 t_list				*ft_lstlast(t_list *lst);
 void				ft_lstprint_str(t_list *lst);
+t_list				*ft_strsplit_lst(char const *s, char c);
 
 #endif
