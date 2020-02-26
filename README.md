@@ -1,4 +1,4 @@
- 42sv_Libft - akovalyo
+# 42sv_Libft - akovalyo
 
 # Summary: 
 2020 (old curriculum)
