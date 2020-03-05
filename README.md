@@ -14,19 +14,7 @@ Final result: 120/100
 
 ## Part 1 - Libc functions
 
-### 1. ft_memset
->       void *ft_memset(void *s, int c, size_t n);
-
-DESCRIPTION
-
->       The  ft_memset() function fills the first n bytes of the memory area pointed
->       to by s with the constant byte c.
-
-RETURN VALUE
-
->       The ft_memset() function returns a pointer to the memory area s.
-
-### 2. ft_bzero
+### 1. ft_bzero
 
 >       void ft_bzero(void *s, size_t n);
 
@@ -39,6 +27,20 @@ DESCRIPTION
 RETURN VALUE
 
 >       None
+
+### 2. ft_memchr
+>       void *ft_memchr(const void *s, int c, size_t n);
+
+DESCRIPTION
+
+>       The  ft_memchr()  function  scans  the  initial  n  bytes of the memory area
+>       pointed to by s for the first instance of c.  Both c and the bytes of the
+>       memory area pointed to by s are interpreted as unsigned char.
+
+RETURN VALUE
+
+>       The memchr() function returns a pointer to the byte located, or NULL if no such
+>       byte exists within n bytes.
 
 ### 3. ft_memcpy
 >       void *ft_memcpy(void *dest, const void *src, size_t n);
@@ -67,36 +69,7 @@ RETURN VALUE
 >       The ft_memccpy() function returns a pointer to the next  character  in  dest
 >       after c, or NULL if c was not found in the first n characters of src.
 
-### 5. ft_memmove
->       void *ft_memmove(void *dst, const void *src, size_t n);
-
-DESCRIPTION
-
->       The ft_memmove() function copies len bytes from memory area src to memory area
->       dst.  The memory areas may overlap: copying takes place  as  though  the
->       bytes  in src are first copied into a temporary array that does not over‐
->       lap src or dst, and the bytes are then copied from the  temporary  array
->       to dest.
-
-RETURN VALUE
-
->       The ft_memmove() function returns a pointer to dest.
-
-### 6. ft_memchr
->       void *ft_memchr(const void *s, int c, size_t n);
-
-DESCRIPTION
-
->       The  ft_memchr()  function  scans  the  initial  n  bytes of the memory area
->       pointed to by s for the first instance of c.  Both c and the bytes of the
->       memory area pointed to by s are interpreted as unsigned char.
-
-RETURN VALUE
-
->       The memchr() function returns a pointer to the byte located, or NULL if no such
->       byte exists within n bytes.
-
-### 7. ft_memcmp
+### 5. ft_memcmp
 >       int ft_memcmp(const void *s1, const void *s2, size_t n);
 
 DESCRIPTION
@@ -120,63 +93,34 @@ RETURN VALUE
 
 >       If n is zero, the return value is zero.
 
-### 8. ft_strlen
->       size_t ft_strlen(const char *s);
+### 6. ft_memmove
+>       void *ft_memmove(void *dst, const void *src, size_t n);
 
 DESCRIPTION
 
->       The  ft_strlen()  function calculates the length of the string pointed to by
->       s, excluding the terminating null byte ('\0').
+>       The ft_memmove() function copies len bytes from memory area src to memory area
+>       dst.  The memory areas may overlap: copying takes place  as  though  the
+>       bytes  in src are first copied into a temporary array that does not over‐
+>       lap src or dst, and the bytes are then copied from the  temporary  array
+>       to dest.
 
 RETURN VALUE
 
->       The ft_strlen() function returns the number  of  characters  in  the  string
->       pointed to by s.
+>       The ft_memmove() function returns a pointer to dest.
 
-### 9. ft_strdup
->       char *ft_strdup(const char *s);
+### 7. ft_memset
+>       void *ft_memset(void *s, int c, size_t n);
 
 DESCRIPTION
 
->       The ft_strdup() function returns a pointer to a new string which is a
->       duplicate of the string s.  Memory for the new string is  obtained
->       with  malloc(3), and can be freed with free(3).
+>       The  ft_memset() function fills the first n bytes of the memory area pointed
+>       to by s with the constant byte c.
 
 RETURN VALUE
 
->       On  success,  the  ft_strdup() function returns a pointer to the 
->       duplicated string. It returns NULL if insufficient memory was available
+>       The ft_memset() function returns a pointer to the memory area s.
 
-### 10. ft_strcpy
->       char *strcpy(char *dest, const char *src);
-
-DESCRIPTION
-
->       The strcpy() function copies the string pointed to by src, including the
->       terminating null byte ('\0'), to the buffer pointed to by dest.  The strings
->       may  not  overlap, and the destination string dest must be large enough to
->       receive the copy.  Beware of buffer overruns!
-
-RETURN VALUE
-
->       The  strcpy() function returns a pointer to the destination string dest.
-
-### 11. ft_strncpy
->       char *strncpy(char *dest, const char *src, size_t n);
-
-DESCRIPTION
-
->       The strncpy() function is similar, except that at most n bytes of  src  are
->       copied. Warning:  If there is no null byte among the first n bytes of src, the
->       string placed in dest will not be null-terminated. If the length of src is less
->       than n, strncpy() writes additional null bytes to  dest to ensure that a total
->       of n bytes are written.
-
-RETURN VALUE
-
->       The  strncpy() function returns a pointer to the destination string dest.
-
-### 12. ft_strcat
+### 8. ft_strcat
 >       char *strcat(char *dest, const char *src);
 
 DESCRIPTION
@@ -190,7 +134,7 @@ RETURN VALUE
 
 >        The strcat() function returns a pointer to the resulting string dest.
 
-### 13. ft_strncat
+### 9. ft_strncat
 >        char *strncat(char *dest, const char *src, size_t n);
 
 DESCRIPTION
@@ -205,7 +149,7 @@ RETURN VALUE
 
 >       The strncat() function returns a pointer to the resulting string dest.
 
-### 14. ft_strlcat
+### 10. ft_strlcat
 >       size_t ft_strlcat(char *dest, const char *src, size_t size);
 
 DESCRIPTION
@@ -218,7 +162,7 @@ RETURN VALUE
 >       The ft_strlcat() function returns the total length of the string
 >       it tried to create (the initial length of dest plus the length of src).
 
-### 15. ft_strchr
+### 11. ft_strchr
 >       char *ft_strchr(const char *s, int c);
 
 DESCRIPTION
@@ -226,14 +170,14 @@ DESCRIPTION
 >       The strchr() function locates the first occurrence of c (converted to
 >       a char) in the string pointed to by s.  The terminating null character is
 >       considered to be part of the string; therefore if c is '\0', the functions
->       locate the terminating `\0'.
+>       locate the terminating '\0'.
 
 RETURN VALUE
 
 >       The strchr() function returns a pointer to the located character, or NULL
 >       if the character does not appear in the string.
        
-### 16. ft_strrchr
+### 12. ft_strrchr
 >       char *ft_strrchr(const char *s, int c);
 
 DESCRIPTION
@@ -246,37 +190,7 @@ RETURN VALUE
 >       The strchr() function returns a pointer to the located character, or NULL
 >       if the character does not appear in the string.
 
-### 17. ft_strstr
->       char *ft_strstr(const char *haystack, const char *needle);
-
-DESCRIPTION
-
->       The strstr() function locates the first occurrence of the null-terminated
->       string needle in the null-terminated string haystack.
-
-RETURN VALUE
-
->       If needle is an empty string, haystack is returned; if needle occurs nowhere
->       in haystack, NULL is returned; otherwise a pointer to the first character of
->       the first occurrence of needle is returned.
-
-### 18. ft_strnstr
->       char *strnstr(const char *haystack, const char *needle, size_t len);
-
-DESCRIPTION
-
->       The ft_strnstr() function locates the	first occurrence of the	null-termi-
->       nated string little in the string big, where not more than len characters
->       are searched.  Characters that appear after a '\0' character are not
->       searched.
-
-RETURN VALUE
-
->       If little is an empty string, big is returned; if little occurs nowhere
->       in big, NULL is returned; otherwise a pointer to the first character of
->       the first occurrence of little is returned.
-
-### 19. ft_strcmp
+### 13. ft_strcmp
 >       ft_strcmp(const char *s1, const char *s2);
 
 DESCRIPTION
@@ -291,8 +205,7 @@ RETURN VALUE
 >       less than, qto match, or be greater than s2. The comparison is
 >       done using unsigned characters, so that `\200' is greater than `\0'.
 
-
-### 20. ft_strncmp
+### 14. ft_strncmp
 
 >       int ft_strncmp(const char *s1, const char *s2, size_t n);
 
@@ -308,6 +221,92 @@ RETURN VALUE
 >       The ft_strncmp() function returns an integer less  than,  equal
 >       to,  or  greater than zero if the first n bytes of s1 is found,
 >       respectively, to be less than, to match, or be greater than s2.
+
+### 15. ft_strcpy
+>       char *strcpy(char *dest, const char *src);
+
+DESCRIPTION
+
+>       The strcpy() function copies the string pointed to by src, including the
+>       terminating null byte ('\0'), to the buffer pointed to by dest.  The strings
+>       may  not  overlap, and the destination string dest must be large enough to
+>       receive the copy.  Beware of buffer overruns!
+
+RETURN VALUE
+
+>       The  strcpy() function returns a pointer to the destination string dest.
+
+### 16. ft_strncpy
+>       char *strncpy(char *dest, const char *src, size_t n);
+
+DESCRIPTION
+
+>       The strncpy() function is similar, except that at most n bytes of  src  are
+>       copied. Warning:  If there is no null byte among the first n bytes of src, the
+>       string placed in dest will not be null-terminated. If the length of src is less
+>       than n, strncpy() writes additional null bytes to  dest to ensure that a total
+>       of n bytes are written.
+
+RETURN VALUE
+
+>       The  strncpy() function returns a pointer to the destination string dest.
+
+### 17. ft_strdup
+>       char *ft_strdup(const char *s);
+
+DESCRIPTION
+
+>       The ft_strdup() function returns a pointer to a new string which is a
+>       duplicate of the string s.  Memory for the new string is  obtained
+>       with  malloc(3), and can be freed with free(3).
+
+RETURN VALUE
+
+>       On  success,  the  ft_strdup() function returns a pointer to the 
+>       duplicated string. It returns NULL if insufficient memory was available
+
+### 18. ft_strlen
+>       size_t ft_strlen(const char *s);
+
+DESCRIPTION
+
+>       The  ft_strlen()  function calculates the length of the string pointed to by
+>       s, excluding the terminating null byte ('\0').
+
+RETURN VALUE
+
+>       The ft_strlen() function returns the number  of  characters  in  the  string
+>       pointed to by s.
+
+### 19. ft_strstr
+>       char *ft_strstr(const char *haystack, const char *needle);
+
+DESCRIPTION
+
+>       The strstr() function locates the first occurrence of the null-terminated
+>       string needle in the null-terminated string haystack.
+
+RETURN VALUE
+
+>       If needle is an empty string, haystack is returned; if needle occurs nowhere
+>       in haystack, NULL is returned; otherwise a pointer to the first character of
+>       the first occurrence of needle is returned.
+
+### 20. ft_strnstr
+>       char *strnstr(const char *haystack, const char *needle, size_t len);
+
+DESCRIPTION
+
+>       The ft_strnstr() function locates the	first occurrence of the	null-termi-
+>       nated string little in the string big, where not more than len characters
+>       are searched.  Characters that appear after a '\0' character are not
+>       searched.
+
+RETURN VALUE
+
+>       If little is an empty string, big is returned; if little occurs nowhere
+>       in big, NULL is returned; otherwise a pointer to the first character of
+>       the first occurrence of little is returned.
 
 ### 21. ft_atoi
 >       int atoi(const char *nptr);
@@ -384,7 +383,19 @@ ___
 
 ## Part 2 - Additional functions
 
-### 1. ft_memalloc
+### 1. ft_itoa
+>       char *ft_itoa(int n);
+
+DESCRIPTION
+
+>       Allocates (with malloc(3)) and returns a string representing the
+>       integer received as an argument. Negative numbers must be handled.
+
+RETURN VALUE
+
+>       The string representing the integer. NULL if the allocation fails.
+
+### 2. ft_memalloc
 >       void * ft_memalloc(size_t size);
 
 DESCRIPTION
@@ -397,7 +408,7 @@ RETURN VALUE
 
 >       The allocated memory area.
 
-### 2. ft_memdel
+### 3. ft_memdel
 >       void ft_memdel(void **ap);
 
 DESCRIPTION
@@ -409,20 +420,18 @@ RETURN VALUE
 
 >       None
 
-### 3. ft_strnew
->       char * ft_strnew(size_t size);
+### 4. ft_strclr
+>       void ft_strclr(char *s);
 
 DESCRIPTION
 
->       Allocates (with malloc(3)) and returns a “fresh” string ending with
->       ’\0’. Each character of the string is initialized at ’\0’. If the
->       allocation fails the function returns NULL.
+>       Sets every character of the string to the value ’\0’.
 
 RETURN VALUE
 
->       The string allocated and initialized to 0.
+>       None
 
-### 4. ft_strdel
+### 5. ft_strdel
 >       void ft_strdel(char **as);
 
 DESCRIPTION
@@ -434,18 +443,45 @@ RETURN VALUE
 
 >       None
 
-### 5. ft_strclr
->       void ft_strclr(char *s);
+### 6. ft_strequ
+>       int ft_strequ(char const *s1, char const *s2);
 
 DESCRIPTION
 
->       Sets every character of the string to the value ’\0’.
+>       Lexicographical comparison between s1 and s2. If the 2 strings are identical
+>       the function returns 1, or 0 otherwise.
 
 RETURN VALUE
 
->       None
+>       1 or 0 according to if the 2 strings are identical or not.
 
-### 6. ft_striter
+### 7. ft_strjoin
+
+>       char *ft_strjoin(char const *s1, char const *s2);
+
+DESCRIPTION
+
+>       Allocates (with malloc(3)) and returns a new string, result of 
+>       the concatenation of s1 and s2.
+
+RETURN VALUE
+
+>       The new string. NULL if the allocation fails.
+
+### 8. ft_strnequ
+>       int ft_strnequ(char const *s1, char const *s2, size_t n);
+
+DESCRIPTION
+
+>       Lexicographical comparison between s1 and s2 up to n characters or until a 
+>       ’\0’ is reached. If the 2 strings are identical, the function returns 1, or
+>       0 otherwise.
+
+RETURN VALUE
+
+>       1 or 0 according to if the 2 strings are identical or not.
+
+### 9. ft_striter
 >       void ft_striter(char *s, void (*f)(char *));
 
 DESCRIPTION
@@ -457,7 +493,7 @@ RETURN VALUE
 
 >       None
 
-### 7. ft_striteri
+### 10. ft_striteri
 >       void ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 DESCRIPTION
@@ -470,7 +506,7 @@ RETURN VALUE
 
 >       None
 
-### 8. ft_strmap
+### 11. ft_strmap
 >       char * ft_strmap(char const *s, char (*f)(char));
 
 DESCRIPTION
@@ -483,7 +519,7 @@ RETURN VALUE
 
 >       The “fresh” string created from the successive applications off.
 
-### 9. ft_strmapi
+### 12. ft_strmapi
 >       char *ft_strmapi(char *s, void (*f)(unsigned int, char));
 
 DESCRIPTION
@@ -497,32 +533,34 @@ RETURN VALUE
 >       The string created from the successive applications of f.
 >       Returns NULL if the allocation fails.
 
-### 10. ft_strequ
->       int ft_strequ(char const *s1, char const *s2);
+### 13. ft_strnew
+>       char * ft_strnew(size_t size);
 
 DESCRIPTION
 
->       Lexicographical comparison between s1 and s2. If the 2 strings are identical
->       the function returns 1, or 0 otherwise.
+>       Allocates (with malloc(3)) and returns a “fresh” string ending with
+>       ’\0’. Each character of the string is initialized at ’\0’. If the
+>       allocation fails the function returns NULL.
 
 RETURN VALUE
 
->       1 or 0 according to if the 2 strings are identical or not.
+>       The string allocated and initialized to 0.
 
-### 11. ft_strnequ
->       int ft_strnequ(char const *s1, char const *s2, size_t n);
+### 14. ft_strsplit
+>       char **ft_strsplit(char const *s, char c);
 
 DESCRIPTION
 
->       Lexicographical comparison between s1 and s2 up to n characters or until a 
->       ’\0’ is reached. If the 2 strings are identical, the function returns 1, or
->       0 otherwise.
+>       Allocates (with malloc(3)) and returns an array of strings obtained
+>       by splitting s using the character c as a delimiter. The array must
+>       be ended by a NULL pointer.
 
 RETURN VALUE
 
->       1 or 0 according to if the 2 strings are identical or not.
+>       The array of new strings result of the split. NULL if the allocation
+>       fails.
 
-### 12. ft_strsub
+### 15. ft_strsub
 >       char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 DESCRIPTION
@@ -537,20 +575,7 @@ RETURN VALUE
 
 >       The substring. NULL if the allocation fails.
 
-### 13. ft_strjoin
-
->       char *ft_strjoin(char const *s1, char const *s2);
-
-DESCRIPTION
-
->       Allocates (with malloc(3)) and returns a new string, result of 
->       the concatenation of s1 and s2.
-
-RETURN VALUE
-
->       The new string. NULL if the allocation fails.
-
-### 14. ft_strtrim
+### 16. ft_strtrim
 >       char *ft_strtrim(char const *s1, char const *set);
 
 DESCRIPTION
@@ -561,33 +586,6 @@ DESCRIPTION
 RETURN VALUE
 
 >       The trimmed string. NULL if the allocation fails.
-
-
-### 15. ft_strsplit
->       char **ft_strsplit(char const *s, char c);
-
-DESCRIPTION
-
->       Allocates (with malloc(3)) and returns an array of strings obtained
->       by splitting s using the character c as a delimiter. The array must
->       be ended by a NULL pointer.
-
-RETURN VALUE
-
->       The array of new strings result of the split. NULL if the allocation
->       fails.
-
-### 16. ft_itoa
->       char *ft_itoa(int n);
-
-DESCRIPTION
-
->       Allocates (with malloc(3)) and returns a string representing the
->       integer received as an argument. Negative numbers must be handled.
-
-RETURN VALUE
-
->       The string representing the integer. NULL if the allocation fails.
 
 ### 17. ft_putchar
 >       void ft_putchar(char c);
@@ -874,7 +872,6 @@ RETURN VALUE
 DESCRIPTION
 
 >       Prints contents (string) of linked list starting from head.
-
 
 ### 10. ft_strsplit_lst
 >       t_list	*ft_strsplit_lst(char const *s, char c)
