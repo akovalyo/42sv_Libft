@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 15:14:45 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/02/19 15:15:17 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/02/19 16:14:43 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/04/13 23:21:17 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+void	ft_putstr(char const *s)
 {
 	size_t i;
 
 	i = 0;
-	if (s != NULL)
+	while (s[i])
 	{
-		while (s[i])
-		{
-			s[i] = '\0';
-			i++;
-		}
+		write(1, &s[i], 1);
+		i++;
 	}
 }

@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*   ft_strcspn_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 19:48:39 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/02/19 21:15:27 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/02/10 17:07:23 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/04/13 23:15:42 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+size_t	ft_strcspn(const char *s, const char *reject)
 {
-	t_list *tmp;
+	size_t i;
 
-	if (*alst == NULL || del == NULL)
-		return ;
-	while (*alst != NULL)
-	{
-		tmp = (*alst)->next;
-		del((*alst)->content, (*alst)->content_size);
-		free(*alst);
-		(*alst) = tmp;
-	}
+	i = 0;
+	while (s[i] && ft_strchr(reject, s[i]) == NULL)
+		i++;
+	return (i);
 }

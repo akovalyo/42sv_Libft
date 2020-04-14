@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putnbr_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 15:20:05 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/02/19 15:27:58 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/02/19 16:20:32 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/04/13 23:22:00 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_putnbr(int n)
 {
-	size_t i;
-
-	i = 0;
-	if (s == NULL || f == NULL)
-		return ;
-	while (s[i])
+	if (n == -2147483648)
+		ft_putstr("-2147483648");
+	else
 	{
-		f(i, &s[i]);
-		i++;
+		if (n < 0)
+		{
+			ft_putchar('-');
+			n = -n;
+		}
+		if (n >= 10)
+			ft_putnbr(n / 10);
+		ft_putchar(n % 10 + 48);
 	}
 }

@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 15:51:47 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/02/19 16:00:56 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/01/02 20:52:39 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/04/13 23:02:58 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+char	*ft_strncpy(char *dest, const char *src, size_t n)
 {
-	char	*fresh;
-	size_t	i;
+	size_t i;
 
 	i = 0;
-	if (s == NULL)
-		return (NULL);
-	fresh = (char *)malloc(len + 1);
-	if (fresh == NULL)
-		return (NULL);
-	while (i < len)
+	while (i < n && src[i] != '\0')
 	{
-		fresh[i] = s[start + i];
+		dest[i] = src[i];
 		i++;
 	}
-	fresh[i] = '\0';
-	return (fresh);
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
 }

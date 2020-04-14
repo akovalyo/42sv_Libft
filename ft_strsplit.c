@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 16:01:24 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/02/26 11:31:12 by akovalyo         ###   ########.fr       */
+/*   Updated: 2020/04/13 22:06:11 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ static int	last_word_i(char const *s, char c, int i)
 	return (i);
 }
 
-char		**ft_strsplit(char const *s, char c)
+char		**ft_split(char const *s, char c)
 {
 	int		words;
 	int		i;

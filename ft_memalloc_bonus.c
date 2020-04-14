@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_memalloc_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 20:34:24 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/02/19 20:40:55 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/02/19 14:30:14 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/04/13 22:51:14 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+void	*ft_memalloc(size_t size)
 {
-	t_list *next_elem;
+	void *f;
 
-	if (!lst || !f)
-		return ;
-	while (lst != NULL)
-	{
-		next_elem = lst->next;
-		f(lst);
-		lst = next_elem;
-	}
+	f = (void *)malloc(size);
+	if (f == NULL)
+		return (NULL);
+	ft_bzero(f, size);
+	return (f);
 }

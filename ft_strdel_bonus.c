@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_strdel_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 20:24:14 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/02/19 20:27:02 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/02/19 15:07:38 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/04/13 23:04:24 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **alst, t_list *new)
+void	ft_strdel(char **as)
 {
-	t_list *last;
-
-	if (*alst == NULL)
-	{
-		*alst = new;
+	if (as == NULL)
 		return ;
-	}
-	last = *alst;
-	while (last->next != NULL)
-		last = last->next;
-	last->next = new;
+	free(*as);
+	*as = NULL;
 }

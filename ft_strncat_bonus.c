@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nbrlen.c                                        :+:      :+:    :+:   */
+/*   ft_strncat_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 16:29:53 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/02/19 16:31:10 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/01/08 20:21:00 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/04/13 22:58:09 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_nbrlen(int n)
+char	*ft_strncat(char *dest, const char *src, size_t n)
 {
-	int i;
+	size_t dest_len;
+	size_t src_len;
+	size_t i;
 
+	dest_len = ft_strlen(dest);
+	src_len = ft_strlen(src);
 	i = 0;
-	if (n < 0)
-		i++;
-	while (n >= 10 || n <= -10)
+	while (i < n && i <= src_len)
 	{
-		n = n / 10;
+		dest[dest_len] = src[i];
+		dest_len++;
 		i++;
 	}
-	i++;
-	return (i);
+	if (i <= src_len)
+		dest[dest_len] = '\0';
+	return (dest);
 }

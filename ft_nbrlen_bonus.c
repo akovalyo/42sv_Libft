@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_nbrlen_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 15:07:38 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/02/19 22:40:59 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/02/19 16:29:53 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/04/13 22:52:39 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strdel(char **as)
+int		ft_nbrlen(int n)
 {
-	if (as == NULL)
-		return ;
-	free(*as);
-	*as = NULL;
+	int i;
+
+	i = 0;
+	if (n < 0)
+		i++;
+	while (n >= 10 || n <= -10)
+	{
+		n = n / 10;
+		i++;
+	}
+	i++;
+	return (i);
 }

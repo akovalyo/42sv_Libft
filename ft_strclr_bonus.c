@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstprint_str.c                                  :+:      :+:    :+:   */
+/*   ft_strclr_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 20:55:38 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/02/19 20:56:59 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/02/19 15:14:45 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/04/13 23:00:38 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstprint_str(t_list *lst)
+void	ft_strclr(char *s)
 {
-	while (lst != NULL && lst->content != NULL)
+	size_t i;
+
+	i = 0;
+	if (s != NULL)
 	{
-		ft_putstr(lst->content);
-		ft_putchar('\n');
-		lst = lst->next;
+		while (s[i])
+		{
+			s[i] = '\0';
+			i++;
+		}
 	}
 }

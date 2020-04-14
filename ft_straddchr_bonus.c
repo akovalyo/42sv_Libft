@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_straddchr_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/02 20:52:39 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/02/19 15:10:52 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/03/28 10:08:28 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/04/13 22:57:42 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, size_t n)
+char	*ft_straddchr(char *str, char ch)
 {
-	size_t i;
-
-	i = 0;
-	while (i < n && src[i] != '\0')
+	char	*new;
+	size_t	len;
+	
+	len = 0;
+	if (str)
 	{
-		dest[i] = src[i];
-		i++;
+		len = ft_strlen(str);
+		if(!(new = ft_strnew(len + 2)))
+			return (NULL);
+		ft_memmove(new, str, len);
+		ft_strdel(&str);
 	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
+	else
+		new = ft_strnew(1);
+	new[len] = ch;
+	return (new);
 }

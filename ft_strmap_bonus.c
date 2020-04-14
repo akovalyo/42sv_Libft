@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 15:09:34 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/02/19 15:11:48 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/02/19 15:31:46 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/04/13 23:07:16 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	size_t i;
+	size_t	i;
+	char	*fresh;
 
 	i = 0;
-	while (src[i])
+	if (s == NULL || f == NULL)
+		return (NULL);
+	fresh = (char *)(malloc(ft_strlen(s) + 1));
+	if (fresh == NULL)
+		return (NULL);
+	while (s[i])
 	{
-		dest[i] = src[i];
+		fresh[i] = f(s[i]);
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	fresh[i] = '\0';
+	return (fresh);
 }

@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strspn.c                                        :+:      :+:    :+:   */
+/*   ft_strnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 16:34:22 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/02/19 21:25:50 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/02/19 14:40:34 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/04/13 23:06:30 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strspn(const char *s, const char *accept)
+char	*ft_strnew(size_t size)
 {
-	size_t i;
-
-	i = 0;
-	while (s[i] && ft_strchr(accept, s[i]) != NULL)
-		i++;
-	return (i);
+	return ((char *)ft_memalloc(size + 1));
 }

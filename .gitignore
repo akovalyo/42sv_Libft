@@ -4,3 +4,4 @@ libft.a
 .*.swp
 .DS_Store
 ._*
+.vscode

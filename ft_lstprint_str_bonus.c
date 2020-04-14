@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstprint_str_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 20:50:27 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/02/19 20:51:31 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/02/19 20:55:38 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/04/13 22:47:51 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_lstsize(t_list *lst)
+void	ft_lstprint_str(t_list *lst)
 {
-	int i;
-
-	i = 1;
-	if (!lst)
-		return (0);
-	while (lst->next != NULL)
+	while (lst != NULL && lst->content != NULL)
 	{
+		ft_putstr(lst->content);
+		ft_putchar('\n');
 		lst = lst->next;
-		i++;
 	}
-	return (i);
 }

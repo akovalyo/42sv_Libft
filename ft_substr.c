@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 15:31:46 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/02/21 09:07:26 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/02/19 15:51:47 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/04/13 21:33:40 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
 	char	*fresh;
+	size_t	i;
 
 	i = 0;
-	if (s == NULL || f == NULL)
+	if (s == NULL)
 		return (NULL);
-	fresh = (char *)(malloc(ft_strlen(s) + 1));
+	fresh = (char *)malloc(len + 1);
 	if (fresh == NULL)
 		return (NULL);
-	while (s[i])
+	while (i < len)
 	{
-		fresh[i] = f(s[i]);
+		fresh[i] = s[start + i];
 		i++;
 	}
 	fresh[i] = '\0';
