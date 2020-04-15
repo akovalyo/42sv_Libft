@@ -393,7 +393,7 @@ RETURN VALUE
 
 
 ### 4. ft_split
->       char **ft_strsplit(char const *s, char c);
+>       char **ft_split(char const *s, char c);
 
 DESCRIPTION
 

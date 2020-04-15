@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 15:51:47 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/04/14 09:18:28 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/02/19 20:41:34 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/04/14 10:23:09 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	char	*fresh;
-	size_t	i;
+	t_list *new;
+	t_list *elem;
 
-	i = 0;
-	if (s == NULL)
+	if (!lst || !f || !del)
 		return (NULL);
-	fresh = (char *)malloc(len + 1);
-	if (fresh == NULL)
-		return (NULL);
-	while (i < len)
+	while (lst)
 	{
-		fresh[i] = s[start + i];
-		i++;
+		if (!(elem = ft_lstnew(f(lst->content))))
+		{
+			ft_lstclear(&new, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&new, elem);
+		lst = lst->next;
 	}
-	fresh[i] = '\0';
-	return (fresh);
+	return (new);
 }

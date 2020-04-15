@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 15:51:47 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/04/14 09:18:28 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/02/19 20:50:27 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/04/14 09:35:53 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+int		ft_lstsize(t_list *lst)
 {
-	char	*fresh;
-	size_t	i;
+	int i;
 
 	i = 0;
-	if (s == NULL)
-		return (NULL);
-	fresh = (char *)malloc(len + 1);
-	if (fresh == NULL)
-		return (NULL);
-	while (i < len)
+	if (!lst)
+		return (0);
+	while (lst)
 	{
-		fresh[i] = s[start + i];
+		lst = lst->next;
 		i++;
 	}
-	fresh[i] = '\0';
-	return (fresh);
+	return (i);
 }

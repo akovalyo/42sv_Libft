@@ -6,7 +6,7 @@
 #    By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/01 21:26:34 by akovalyo          #+#    #+#              #
-#    Updated: 2020/04/13 23:23:09 by akovalyo         ###   ########.fr        #
+#    Updated: 2020/04/14 12:57:12 by akovalyo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,16 @@ SRC = ft_memset.c \
       ft_putendl_fd.c \
       ft_putnbr_fd.c \
 
-BONUS = ft_lstprint_str_bonus.c \
+BONUS = ft_lstnew.c \
+		ft_lstadd_front.c \
+		ft_lstsize.c \
+		ft_lstlast.c \
+		ft_lstadd_back.c \
+		ft_lstdelone.c \
+		ft_lstclear.c \
+		ft_lstiter.c \
+		ft_lstmap.c \
+		ft_lstprint_str_bonus.c \
 		ft_memalloc_bonus.c \
 		ft_memdel_bonus.c \
 		ft_nbrlen_bonus.c \
@@ -90,7 +99,7 @@ bonus:
 	@ranlib $(NAME)
 
 clean:
-	@rm -f $(OF)
+	@rm -f $(OF) $(OF_BONUS)
 
 fclean: clean 
 	@rm -f $(NAME)
