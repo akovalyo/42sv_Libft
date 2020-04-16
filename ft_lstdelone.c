@@ -6,7 +6,7 @@
 /*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 19:39:22 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/04/14 09:44:05 by akovalyo         ###   ########.fr       */
+/*   Updated: 2020/04/16 10:54:40 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (lst == NULL)
+	if (!lst || !del)
 		return ;
 	del(lst->content);
-	free(lst->content);
+	free(lst);
 }

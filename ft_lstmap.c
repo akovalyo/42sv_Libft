@@ -6,7 +6,7 @@
 /*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 20:41:34 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/04/14 10:23:09 by akovalyo         ###   ########.fr       */
+/*   Updated: 2020/04/16 11:37:29 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,20 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list *new;
 	t_list *elem;
 
-	if (!lst || !f || !del)
+	if (!lst)
 		return (NULL);
+	if (!(elem = ft_lstnew(f(lst->content))))
+		return (NULL);
+	lst = lst->next;
 	while (lst)
 	{
-		if (!(elem = ft_lstnew(f(lst->content))))
+		if (!(new = ft_lstnew(f(lst->content))))
 		{
-			ft_lstclear(&new, del);
+			ft_lstclear(&elem, del);
 			return (NULL);
 		}
-		ft_lstadd_back(&new, elem);
+		ft_lstadd_back(&elem, new);
 		lst = lst->next;
 	}
-	return (new);
+	return (elem);
 }
