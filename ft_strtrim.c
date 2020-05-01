@@ -3,47 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
+/*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 12:42:53 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/04/14 12:18:42 by akovalyo         ###   ########.fr       */
+/*   Updated: 2020/02/19 21:13:53 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_check(char c, char const *set)
+char	*ft_strtrim(char const *s)
 {
 	int i;
+	int j;
+	int end;
 
 	i = 0;
-	while (set[i])
-	{
-		if (set[i] == c)
-			return (1);
+	j = 0;
+	if (s == NULL)
+		return (NULL);
+	end = ft_strlen(s) - 1;
+	while ((s[i] == ' ' || s[i] == '\n' || s[i] == '\t') && s[i] != '\0')
 		i++;
-	}
-	return (0);
-}
-
-char		*ft_strtrim(char const *s1, char const *set)
-{
-	char	*outp;
-	int		begin;
-	int		end;
-
-	begin = 0;
-	end = ft_strlen(s1) - 1;
-	while (ft_check(s1[begin], set) == 1)
-		begin++;
-	if ((begin - 1) == end)
+	while ((s[end] == ' ' || s[end] == '\n' || s[end] == '\t') && end > i)
 	{
-		outp = malloc(1);
-		outp[0] = 0;
-		return (outp);
-	}
-	while (ft_check(s1[end], set) == 1)
+		j++;
 		end--;
-	outp = ft_substr(s1, begin, (end - begin + 1));
-	return (outp);
+	}
+	return (ft_strsub(s, i, (ft_strlen(s) - i - j)));
 }

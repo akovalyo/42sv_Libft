@@ -3,37 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
+/*   By: akovalyo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/29 11:50:28 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/04/14 12:16:36 by akovalyo         ###   ########.fr       */
+/*   Updated: 2020/02/19 16:14:00 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_nbr_len(int n)
-{
-	int i;
-
-	i = 0;
-	if (n < 0)
-		i++;
-	while (n >= 10 || n <= -10)
-	{
-		n = n / 10;
-		i++;
-	}
-	i++;
-	return (i);
-}
-
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*new;
 	int		end;
 
-	end = ft_nbr_len(n);
+	end = ft_nbrlen(n);
 	new = (char *)malloc(sizeof(char) * end + 1);
 	if (new == NULL)
 		return (NULL);
