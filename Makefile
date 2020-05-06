@@ -6,7 +6,7 @@
 #    By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/01 21:26:34 by akovalyo          #+#    #+#              #
-#    Updated: 2020/04/30 10:22:18 by akovalyo         ###   ########.fr        #
+#    Updated: 2020/05/05 23:02:48 by akovalyo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,7 +86,19 @@ SRC = ft_memset.c \
 	  ft_straddchr_free.c \
 	  ft_ftoa_long.c \
 	  ft_ftoa.c \
-	  ft_strchr_ind.c
+	  ft_strchr_ind.c \
+	  ft_printf.c \
+	  pf_get_c.c \
+	  pf_get_s.c \
+	  pf_get_di.c \
+	  pf_get_u.c \
+	  pf_get_p.c \
+	  pf_get_x.c \
+	  pf_checker.c \
+	  pf_analyse.c \
+	  pf_helpers.c \
+	  pf_print.c \
+	  pf_asterisk.c
 
 OF = $(SRC:%.c=%.o)
 
@@ -106,13 +118,18 @@ fclean: clean
 re: fclean all
 
 norm:
-	@norminette -R CheckForbiddenSourceHeader $(SRC) libft.h
+	@norminette -R CheckForbiddenSourceHeader $(SRC) includes/libft.h includes/printf.h
 
-test: 
-	@gcc -o test test*.c -L. -lft
-
-testcl:
+memory:
+	@gcc -g -o test main.c -L. -lft -I ./includes
+	@valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --num-callers=20 --track-fds=yes ./test
 	@rm test
 
-testclall:
-	@rm test*
+test:
+	@gcc -o test main.c -L. -lft -I ./includes
+	@./test
+	@rm test
+
+debug:
+	@gcc -g -o test main.c -L. -lft -I ./includes
+
