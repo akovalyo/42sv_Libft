@@ -6,7 +6,7 @@
 #    By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/01 21:26:34 by akovalyo          #+#    #+#              #
-#    Updated: 2020/05/05 23:02:48 by akovalyo         ###   ########.fr        #
+#    Updated: 2020/05/05 23:56:54 by akovalyo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -124,9 +124,12 @@ memory:
 	@gcc -g -o test main.c -L. -lft -I ./includes
 	@valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --num-callers=20 --track-fds=yes ./test
 	@rm test
+	@gcc -g -fsanitize=address -o test main.c -L. -lft -I ./includes
+	@./test
+	@rm test
 
 test:
-	@gcc -o test main.c -L. -lft -I ./includes
+	@clang -o test main.c -L. -lft -I ./includes
 	@./test
 	@rm test
 
