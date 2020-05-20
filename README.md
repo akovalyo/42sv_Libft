@@ -15,6 +15,7 @@ will be allowed to use in all other projects.
 * ft_strchr_ind
 * ft_printf
 * ft_strarraylen
+* ft_atof
 
 
 ***
@@ -689,56 +690,21 @@ ___
 ## Bonus part:
 
 ### 1. ft_lstnew
->       t_list *ft_lstnew(void const *content, size_t content_size);
+>       t_list *ft_lstnew(void *content);
 
 DESCRIPTION
 
->       Allocates (with malloc(3)) and returns a “fresh” link. The variables
->       content and content_size of the new link are initialized by copy of
->       the parameters of the function. If the parameter content is nul, the
->       variable content is initialized to NULL and the variable content_size
->       is initialized to 0 even if the parameter content_size isn’t. The
->       variable next is initialized to NULL. If the allocation fails, the 
->       function returns NULL.
+>       Allocates (with malloc(3)) and returns a new element. 
+>       The variable ’content’ is initialized with the value
+>       of the parameter ’content’. The variable ’next’ is
+>       initialized to NULL.
 
 RETURN VALUE
 
->       The new link.
+>       The new element.
 
-### 2. ft_lstdelone
->       void ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
-
-DESCRIPTION
-
->       Takes as a parameter a link’s pointer address and frees the
->       memory of the link’s content using the function del given as
->       a parameter, then frees the link’s memory using free(3). The
->       memory of next must not be freed under any circumstance.
->       Finally, the pointer to the link that was just freed must be
->       set to NULL (quite similar to the function ft_memdel in the
->       mandatory part).
-
-RETURN VALUE
-
->       None
-
-### 3. ft_lstdel
->       void ft_lstdel(t_list **alst, void (*del)(void *, size_t));
-
-DESCRIPTION
-
->       Takes as a parameter the adress of a pointer to a link and frees
->       the memory of this link and every successors of that link
->       using the functions del and free(3). Finally the pointer to
->       the link that was just freed must be set to NULL (quite similar
->       to the function ft_memdel from the mandatory part).
-
-RETURN VALUE
-
->       None
-
-### 4. ft_lstadd
->       void ft_lstadd(t_list **alst, t_list *new);
+### 2. ft_lstadd_front
+>       void ft_lstadd_front(t_list **lst, t_list *new);
 
 DESCRIPTION
 
@@ -748,30 +714,98 @@ RETURN VALUE
 
 >       None
 
-### 5. ft_lstiter
->       void ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+
+### 3. ft_lstsize
+>       int ft_lstsize(t_list *lst);
 
 DESCRIPTION
 
->       Iterates the list ’lst’ and applies the function ’f’ to the
->       content of each element.
+>       Counts the number of elements in a list.
+
+RETURN VALUE
+
+>       Length of the list.
+
+
+### 4. ft_lstlast
+>       t_list *ft_lstlast(t_list *lst);
+
+DESCRIPTION
+
+>       Returns the last element of the list.
+
+RETURN VALUE
+
+>       Last element of the list.
+
+
+### 5. ft_lstadd_back
+>       void ft_lstadd_back(t_list **lst, t_list *new);
+
+DESCRIPTION
+
+>       Adds the element ’new’ at the end of the list.
 
 RETURN VALUE
 
 >       None
 
-### 6. ft_lstmap
->       t_list *ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+### 6. ft_lstdelone
+>       void ft_lstdelone(t_list *lst, void (*del)(void*));
 
 DESCRIPTION
 
->       Iterates a list lst and applies the function f to each link to
->       create a “fresh” list (using malloc(3)) resulting from the successive
->       applications of f. If the allocation fails, the function returns NULL.
+>       Takes as a parameter an element and frees the memory
+>       of the element’s content using the function ’del’ 
+>       given as a parameter and free the element. The memory
+>       of ’next’ must not be freed.
+
+RETURN VALUE
+
+>       None
+
+### 7. ft_lstclear
+>       void ft_lstdel(t_list **lst, void (*del)(void *));
+
+DESCRIPTION
+
+>       Deletes and frees the given element and every successor
+>       of that element, using the function ’del’ and free(3).
+>       Finally, the pointer to the list must be set to NULL.
+
+RETURN VALUE
+
+>       None
+
+
+### 8. ft_lstiter
+>       void ft_lstiter(t_list *lst, void (*f)(void *));
+
+DESCRIPTION
+
+>       Iterates the list ’lst’ and applies the function ’f’
+>       to the content of each element.
+
+RETURN VALUE
+
+>       None
+
+### 9. ft_lstmap
+>       t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+DESCRIPTION
+
+>       Iterates the list ’lst’ and applies the function ’f’ to
+>       the content of each element. Creates a new list resulting
+>       of the successive applications of the function ’f’. The
+>       ’del’ function is used to delete the content of an element
+>       if needed.
 
 RETURN VALUE
 
 >       The new list. NULL if the allocation fails.
+
 ___
 
 ## 4. Personal functions:
@@ -1000,4 +1034,17 @@ DESCRIPTION
 RETURN VALUE
 
 >       Returns the number of string in the array
+
+
+### 18. ft_atof
+
+>       double	ft_atof(char *nptr)
+
+DESCRIPTION
+
+>       Converts the initial portion of the string pointed to by nptr to float.
+
+RETURN VALUE
+
+>       The converted value.
 
