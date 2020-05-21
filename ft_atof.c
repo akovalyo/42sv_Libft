@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-double	ft_atof(char *nptr)
+float	ft_atof(char *nptr)
 {
-	double	val;
-	double	signif;
+	float	val;
+	float	signif;
 	int		sign;
 
 	val = 0;

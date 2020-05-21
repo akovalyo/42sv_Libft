@@ -1038,7 +1038,7 @@ RETURN VALUE
 
 ### 18. ft_atof
 
->       double	ft_atof(char *nptr)
+>       float	ft_atof(char *nptr)
 
 DESCRIPTION
 
