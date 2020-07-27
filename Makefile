@@ -6,12 +6,13 @@
 #    By: akovalyo <akovalyo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/01 21:26:34 by akovalyo          #+#    #+#              #
-#    Updated: 2020/07/27 11:40:02 by akovalyo         ###   ########.fr        #
+#    Updated: 2020/07/27 12:24:25 by akovalyo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 FLAGS = -Wall -Wextra -Werror -c
+SRC_DIR = srcs/
 SRC = ft_memset.c \
 	  ft_bzero.c \
 	  ft_memcpy.c \
@@ -102,18 +103,18 @@ SRC = ft_memset.c \
 	  pf_helpers.c \
 	  pf_print.c \
 	  pf_asterisk.c
-
-OF = $(SRC:%.c=%.o)
+SRCS = ${addprefix ${SRC_DIR}, ${SRC}}
+OBJS = $(SRC:%.c=%.o)
 
 all: $(NAME)
 
 $(NAME):
-	@gcc $(FLAGS) $(SRC) -I ./includes
-	@ar rc $(NAME) $(OF)
+	@gcc $(FLAGS) $(SRCS) -I ./includes
+	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
 
 clean:
-	@rm -f $(OF)
+	@rm -f $(OBJS)
 
 fclean: clean 
 	@rm -f $(NAME)
@@ -121,7 +122,7 @@ fclean: clean
 re: fclean all
 
 norm:
-	@norminette -R CheckForbiddenSourceHeader $(SRC) includes/libft.h includes/printf.h
+	@norminette -R CheckForbiddenSourceHeader $(SRCS) includes/libft.h includes/printf.h
 
 memory:
 	@gcc -g -o test main.c -L. -lft -I ./includes
