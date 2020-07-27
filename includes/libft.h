@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+        */
+/*   By: akovalyo <akovalyo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/01 18:00:42 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/05/20 15:53:16 by akovalyo         ###   ########.fr       */
+/*   Updated: 2020/07/27 12:04:01 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,6 +131,7 @@ char				*ft_ftoa_long(long double nbr, int precis, int sign);
 char				*ft_ftoa(double nbr, int precis);
 int					ft_strchr_ind(const char *s, char c);
 size_t 				ft_strarraylen(char **arr);
-double				ft_atof(char *nptr);
+float				ft_atof(char *nptr);
+int					ft_atoi_base(char *str, char *base);
 
 #endif

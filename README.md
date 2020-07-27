@@ -2,6 +2,7 @@
 
 # Summary: 
 Libft with updates
+Updated: 07/27/2020
 
 The aim of this project is to code a C library regrouping usual functions that
 will be allowed to use in all other projects.
@@ -16,6 +17,7 @@ will be allowed to use in all other projects.
 * ft_printf
 * ft_strarraylen
 * ft_atof
+* ft_atoi_base
 
 
 ***
@@ -1048,3 +1050,15 @@ RETURN VALUE
 
 >       The converted value.
 
+### 18. ft_atoi_base
+
+>       int	ft_atoi_base(char *str, char *base)
+
+DESCRIPTION
+
+>       Converts the initial portion of the string pointed to by str to integer. 
+>       The string reveals the number in a specific base, given as a second parameter
+
+RETURN VALUE
+
+>       The converted value.

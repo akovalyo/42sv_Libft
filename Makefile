@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: akovalyo <al.kovalyov@gmail.com>           +#+  +:+       +#+         #
+#    By: akovalyo <akovalyo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/01 21:26:34 by akovalyo          #+#    #+#              #
-#    Updated: 2020/05/20 15:48:39 by akovalyo         ###   ########.fr        #
+#    Updated: 2020/07/27 11:40:02 by akovalyo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -90,6 +90,7 @@ SRC = ft_memset.c \
 	  ft_printf.c \
 	  ft_strarraylen.c \
 	  ft_atof.c \
+	  ft_atoi_base.c \
 	  pf_get_c.c \
 	  pf_get_s.c \
 	  pf_get_di.c \
