@@ -2,7 +2,7 @@
 
 # Summary: 
 Libft with updates
-Updated: 07/27/2020
+Last update: 4 sep 2020
 
 The aim of this project is to code a C library regrouping usual functions that
 will be allowed to use in all other projects.
