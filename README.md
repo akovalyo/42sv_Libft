@@ -18,6 +18,7 @@ will be allowed to use in all other projects.
 * ft_strarraylen
 * ft_atof
 * ft_atoi_base
+* ft_realloc
 
 
 ***
@@ -1062,3 +1063,17 @@ DESCRIPTION
 RETURN VALUE
 
 >       The converted value.
+
+### 19. ft_realloc
+
+>       int	ft_realloc(char *ptr, size_t size)
+
+DESCRIPTION
+
+>       Tries to change the size of the allocation pointed to by ptr to size, and
+>       returns pointer to the allocated memory. If ptr is NULL, ft_realloc() is identical
+>       to a call to ft_memalloc() for size bytes.
+
+RETURN VALUE
+
+>       Pointer to the allocated memory
