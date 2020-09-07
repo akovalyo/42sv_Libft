@@ -3,7 +3,7 @@
 # Summary: 
 Libft with updates
 
-Last update: 4 sep 2020
+Last update: 7 sep 2020
 
 The aim of this project is to code a C library regrouping usual functions that
 will be allowed to use in all other projects.
@@ -20,6 +20,8 @@ will be allowed to use in all other projects.
 * ft_atof
 * ft_atoi_base
 * ft_realloc
+* ft_isspace
+* ft_strsplit_space
 
 
 ***
@@ -1078,3 +1080,22 @@ DESCRIPTION
 RETURN VALUE
 
 >       Pointer to the allocated memory
+
+### 20. ft_isspace
+
+### 21. ft_strsplit_space
+
+>       char **ft_strsplit_space(char const *s);
+
+DESCRIPTION
+
+>       Allocates (with malloc(3)) and returns an array of strings obtained
+>       by splitting s using "space" characters (space, \t, \r, \f)  as a delimiter. 
+>       The array must be ended by a NULL pointer.
+
+RETURN VALUE
+
+>       The array of new strings result of the split. NULL if the allocation fails.
+
+
+
