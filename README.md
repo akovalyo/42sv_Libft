@@ -1,7 +1,5 @@
 # 42sv_Libft - akovalyo
 
-[create an anchor](#1.\ ft_bzero)
-
 # Summary: 
 Libft with updates
 
@@ -13,7 +11,7 @@ will be allowed to use in all other projects.
 
 |Libc functions|Additional functions|Bonus functions|Personal functions|
 |---|---|---|---|
-|[1. ft_bzero](#1.ft_bzero)|[1. ft_itoa](#1.ft_itoa)|[1. ft_lstnew](#1.ft_lstnew)|[1. ft_strlcpy](#1.ft_strlcpy)|
+|[1.ft_bzero](#1.ft_bzero)|[1. ft_itoa](#1.ft_itoa)|[1. ft_lstnew](#1.ft_lstnew)|[1. ft_strlcpy](#1.ft_strlcpy)|
 |[2. ft_memchr](#2.ft_memchr)|[2. ft_memalloc](#2.ft_memalloc)|[2. ft_lstadd_front](#2.ft_lstadd_front)|[2. ft_calloc](#2.ft_calloc)|
 |[3. ft_memcpy](#3.ft_memcpy)|[3. ft_memdel](#3.ft_memdel)|[3. ft_lstsize](#3.ft_lstsize)|[3. ft_nbrlen](#3.ft_nbrlen)|
 |[4. ft_memccpy](#4.ft_memccpy)|[4. ft_strclr](#4.ft_strclr)|[4. ft_lstlast](#4.ft_lstlast)|[4. ft_strspn](#4.ft_strspn)|
@@ -43,23 +41,6 @@ will be allowed to use in all other projects.
 |[28. ft_tolower](#28.ft_tolower)||||
 
 <br>
-<br>
-
-**New functions added**
-
-* get_next_line
-* ft_itoa_uns
-* ft_itoa_long
-* ft_straddchr
-* ft_strchr_ind
-* ft_printf
-* ft_strarraylen
-* ft_atof
-* ft_atoi_base
-* ft_realloc
-* ft_isspace
-* ft_strsplit_space
-
 
 ***
 
