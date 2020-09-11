@@ -71,8 +71,8 @@ DESCRIPTION
 
 RETURN VALUE
 
->       The memchr() function returns a pointer to the byte located, or NULL if no such
->       byte exists within n bytes.
+>       The memchr() function returns a pointer to the byte located, or NULL if no 
+>       such byte exists within n bytes.
 
 ### ft_memcpy
 >       void *ft_memcpy(void *dest, const void *src, size_t n);
@@ -156,11 +156,12 @@ RETURN VALUE
 >       char *strcat(char *dest, const char *src);
 
 DESCRIPTION
->       The  strcat()  function  appends  the src string to the dest string, overwriting the
->       terminating null byte ('\0') at the end of dest, and then adds  a  terminating  null
->       byte.   The  strings may not overlap, and the dest string must have enough space for
->       the result.  If dest is not large enough, program behavior is unpredictable;  buffer
->       overruns are a favorite avenue for attacking secure programs.
+>       The  strcat()  function  appends  the src string to the dest string, 
+>       overwriting the terminating null byte ('\0') at the end of dest, and
+>       then adds  a  terminating  null byte.   The  strings may not overlap, 
+>       and the dest string must have enough space for the result.  If dest
+>       is not large enough, program behavior is unpredictable;  buffer overruns
+>       are a favorite avenue for attacking secure programs.
 
 RETURN VALUE
 
@@ -171,11 +172,12 @@ RETURN VALUE
 
 DESCRIPTION
 
->       The strncat() function is similar to strcat(), except that it will use at most n bytes
->       from src; and src does not need to be null-terminated if it contains n or more bytes. 
->       As with strcat(), the resulting string in dest is always null-terminated. If src contains
->       n or more bytes, strncat() writes n+1 bytes to dest (n from src plus the terminating
->       null byte). Therefore, the size of dest must  be  at  least strlen(dest)+n+1.
+>       The strncat() function is similar to strcat(), except that it will use at
+>       most n bytes from src; and src does not need to be null-terminated if it 
+>       contains n or more bytes. As with strcat(), the resulting string in dest 
+>       is always null-terminated. If src contains n or more bytes, strncat()
+>       writes n+1 bytes to dest (n from src plus the terminating null byte).
+>       Therefore, the size of dest must  be  at  least strlen(dest)+n+1.
 
 RETURN VALUE
 
@@ -329,7 +331,7 @@ RETURN VALUE
 
 DESCRIPTION
 
->       The ft_strnstr() function locates the	first occurrence of the	null-termi-
+>       The ft_strnstr() function locates the first occurrence of the null-termi-
 >       nated string little in the string big, where not more than len characters
 >       are searched.  Characters that appear after a '\0' character are not
 >       searched.
@@ -480,8 +482,8 @@ RETURN VALUE
 
 DESCRIPTION
 
->       Lexicographical comparison between s1 and s2. If the 2 strings are identical
->       the function returns 1, or 0 otherwise.
+>       Lexicographical comparison between s1 and s2. If the 2 strings are 
+>       identical the function returns 1, or 0 otherwise.
 
 RETURN VALUE
 
@@ -505,9 +507,9 @@ RETURN VALUE
 
 DESCRIPTION
 
->       Lexicographical comparison between s1 and s2 up to n characters or until a 
->       ’\0’ is reached. If the 2 strings are identical, the function returns 1, or
->       0 otherwise.
+>       Lexicographical comparison between s1 and s2 up to n characters or  
+>       until a ’\0’ is reached. If the 2 strings are identical, the function 
+>       returns 1, or 0 otherwise.
 
 RETURN VALUE
 
@@ -543,9 +545,9 @@ RETURN VALUE
 
 DESCRIPTION
 
->       Applies the function f to each character of the string given as argument to
->       create a “fresh” new string (with malloc(3)) resulting from the successive
->       applications of f.
+>       Applies the function f to each character of the string given as 
+>       argument to create a “fresh” new string (with malloc(3)) resulting 
+>       from the successive applications of f.
 
 RETURN VALUE
 
@@ -837,8 +839,8 @@ ___
 
 DESCRIPTION
 
->       The ft_strlcpy() function copies up to (size - 1) characters from the NUL-
->       terminated string src to dest, NUL-terminating the result.
+>       The ft_strlcpy() function copies up to (size - 1) characters from 
+>       the NUL-terminated string src to dest, NUL-terminating the result.
 
 RETURN VALUE
 
@@ -851,18 +853,18 @@ RETURN VALUE
 
 DESCRIPTION
 
->       The  calloc() function allocates memory for an array of nmemb elements of
->       size bytes each and returns a pointer to the allocated memory.  The  mem‐
->       ory  is set to zero.  If nmemb or size is 0, then calloc() returns either
->       NULL, or a unique pointer value that can later be successfully passed  to
->       free().
+>       The  calloc() function allocates memory for an array of nmemb 
+>       elements of size bytes each and returns a pointer to the allocated 
+>       memory.  The  memory  is set to zero.  If nmemb or size is 0, then 
+>       calloc() returns either NULL, or a unique pointer value that can 
+>       later be successfully passed to free().
 
 RETURN VALUE
 
 >       The calloc() function returns a  pointer  to  the  allocated
->       memory, which is suitably aligned for any built-in type.  On error, it
->       returns NULL. NULL may also be returned by a successful call to calloc()
->       with nmemb or size equal to zero.
+>       memory, which is suitably aligned for any built-in type.  On error, 
+>       it returns NULL. NULL may also be returned by a successful call to 
+>       calloc() with nmemb or size equal to zero.
 
 ### ft_nbrlen
 >       int ft_nbrlen(long n);
@@ -965,8 +967,9 @@ DESCRIPTION
 
 RETURN VALUE
 
->       The return value can be **1, 0 or -1** depending on whether a line has been
->       read, when the reading has been completed, or if an error has happened respectively.
+>       The return value can be **1, 0 or -1** depending on whether a line has 
+>       been read, when the reading has been completed, or if an error has happened
+>       respectively.
 
 ### ft_itoa_uns
 
@@ -1000,8 +1003,8 @@ DESCRIPTION
 
 RETURN VALUE
 
->       The ft_strchr_ind() function returns index of the located character in the string, or -1
->       if the character does not appear in the string.
+>       The ft_strchr_ind() function returns index of the located character in the 
+>       string, or -1 if the character does not appear in the string.
 
 ### ft_printf
 
@@ -1009,9 +1012,10 @@ RETURN VALUE
 
 DESCRIPTION
 
->       Writes the C string pointed by format to the standard output (stdout). If format includes format
->       specifiers (subsequences beginning with %), the additional arguments following format are formatted
->       and inserted in the resulting string replacing their respective specifiers.
+>       Writes the C string pointed by format to the standard output (stdout). If 
+>       format includes format specifiers (subsequences beginning with %), the 
+>       additional arguments following format are formatted and inserted in the
+>       resulting string replacing their respective specifiers.
 
 
 RETURN VALUE
@@ -1104,8 +1108,8 @@ RETURN VALUE
 DESCRIPTION
 
 >       Tries to change the size of the allocation pointed to by ptr to size, and
->       returns pointer to the allocated memory. If ptr is NULL, ft_realloc() is identical
->       to a call to ft_memalloc() for size bytes.
+>       returns pointer to the allocated memory. If ptr is NULL, ft_realloc() is 
+>       identical to a call to ft_memalloc() for size bytes.
 
 RETURN VALUE
 
