@@ -9,34 +9,34 @@ will be allowed to use in all other projects.
 
 |Libc functions|Additional functions|Bonus functions|Personal functions|
 |---|---|---|---|
-|[1. ft_bzero](#ft_bzero)|[1. ft_itoa](#ft_itoa)|[1. ft_lstnew](#ft_lstnew)|[1. ft_strlcpy](#ft_strlcpy)|
-|[2. ft_memchr](#ft_memchr)|[2. ft_memalloc](#ft_memalloc)|[2. ft_lstadd_front](#ft_lstadd_front)|[2. ft_calloc](#ft_calloc)|
-|[3. ft_memcpy](#ft_memcpy)|[3. ft_memdel](#ft_memdel)|[3. ft_lstsize](#ft_lstsize)|[3. ft_nbrlen](#ft_nbrlen)|
-|[4. ft_memccpy](#ft_memccpy)|[4. ft_strclr](#ft_strclr)|[4. ft_lstlast](#ft_lstlast)|[4. ft_strspn](#ft_strspn)|
-|[5. ft_memcmp](#ft_memcmp)|[5. ft_strdel](#ft_strdel)|[5. ft_lstadd_back](#ft_lstadd_back)|[5. ft_strcspn](#ft_strcspn)|
-|[6. ft_memmove](#ft_memmove)|[6. ft_strequ](#ft_strequ)|[6. ft_lstdelone](#ft_lstdelone)|[6. ft_lstadd_back](#ft_lstadd_back)|
-|[7. ft_memset](#ft_memset)|[7. ft_strjoin](#ft_strjoin)|[7. ft_lstclear](#ft_lstclear)|[7. ft_lstsize](#ft_lstsize)|
-|[8. ft_strcat](#ft_strcat)|[8. ft_strnequ](#ft_strnequ)|[8. ft_lstiter](#ft_lstiter)|[8. ft_lstlast](#ft_lstlast)|
-|[9. ft_strncat](#ft_strncat)|[9. ft_striter](#ft_striter)|[9. ft_lstmap](#ft_lstmap)|[9. ft_lstprint_str](#ft_lstprint_str)|
-|[10. ft_strlcat](#ft_strlcat)|[10. ft_striteri](#ft_striteri)||[10. ft_strsplit_lst](#ft_strsplit_lst)|
-|[11. ft_strchr](#ft_strchr)|[11.f t_strmap](#ft_strmap)||[11. get_next_line](#get_next_line)|
-|[12. ft_strrchr](#ft_strrchr)|[12. ft_strmapi](#ft_strmapi)||[12. ft_itoa_uns](#ft_itoa_uns)|
-|[13. ft_strcmp](#ft_strcmp)|[13. ft_strnew](#ft_strnew)||[13. ft_itoa_long](#ft_itoa_long)|
-|[14. ft_strncmp](#ft_strncmp)|[14. ft_strsplit](#ft_strsplit)||[14. ft_straddchr](#ft_straddchr)|
-|[15. ft_strcpy](#ft_strcpy)|[15. ft_strsub](#ft_strsub)||[15. ft_strchr_ind](#ft_strchr_ind)|
-|[16. ft_strncpy](#ft_strncpy)|[16. ft_strtrim](#ft_strtrim)||[16. ft_printf](#ft_printf)|
-|[17. ft_strdup](#ft_strdup)|[17. ft_putchar](#ft_putchar)||[17. ft_strarraylen](#ft_strarraylen)|
-|[18. ft_strlen](#ft_strlen)|[18. ft_putstr](#ft_putstr)||[18. ft_atof](#ft_atof)|
-|[19. ft_strstr](#ft_strstr)|[19. ft_putendl](#ft_putendl)||[19.ft_atoi_base](#ft_atoi_base)|
-|[20. ft_strnstr](#ft_strnstr)|[20. ft_putnbr](#ft_putnbr)||[20.ft_realloc](#ft_realloc)|
-|[21. ft_atoi](#ft_atoi)|[21. ft_putchar_fd](#ft_putchar_fd)||[21.ft_isspace](#ft_isspace)|
-|[22. ft_isalpha](#ft_isalpha)|[22. ft_putstr_fd](#ft_putstr_fd)||[22.ft_strtab_free](#ft_strtab_free)|
-|[23. ft_isdigit](#ft_isdigit)|[23. ft_putendl_fd](#ft_putendl_fd)|||
-|[24. ft_isalnum](#ft_isalnum)|[24. ft_putnbr_fd](#ft_putnbr_fd)|||
-|[25. ft_isascii](#ft_isascii)||||
-|[26. ft_isprint](#ft_isprint)||||
-|[27. ft_toupper](#ft_toupper)||||
-|[28. ft_tolower](#ft_tolower)||||
+|[1. ft_bzero](#ft_bzero) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_bzero.c)|[1. ft_itoa](#ft_itoa) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_itoa.c)|[1. ft_lstnew](#ft_lstnew) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_lstnew.c)|[1. ft_strlcpy](#ft_strlcpy) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strlcpy.c)|
+|[2. ft_memchr](#ft_memchr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_memchr.c)|[2. ft_memalloc](#ft_memalloc) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_memalloc.c)|[2. ft_lstadd_front](#ft_lstadd_front) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_lstadd_front.c)|[2. ft_calloc](#ft_calloc) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_calloc.c)|
+|[3. ft_memcpy](#ft_memcpy) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_memcpy.c)|[3. ft_memdel](#ft_memdel) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_memdel.c)|[3. ft_lstsize](#ft_lstsize) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_lstsize.c)|[3. ft_nbrlen](#ft_nbrlen) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_nbrlen.c)|
+|[4. ft_memccpy](#ft_memccpy) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_memccpy.c)|[4. ft_strclr](#ft_strclr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strclr.c)|[4. ft_lstlast](#ft_lstlast) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_lstlast.c)|[4. ft_strspn](#ft_strspn) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strspn.c)|
+|[5. ft_memcmp](#ft_memcmp) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_memcmp.c)|[5. ft_strdel](#ft_strdel) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strdel.c)|[5. ft_lstadd_back](#ft_lstadd_back) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_lstadd_back.c)|[5. ft_strcspn](#ft_strcspn) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strcspn.c)|
+|[6. ft_memmove](#ft_memmove) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_memmove.c)|[6. ft_strequ](#ft_strequ) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strequ.c)|[6. ft_lstdelone](#ft_lstdelone) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_lstdelone.c)|[6. ft_lstsize](#ft_lstsize) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_lstsize.c)|
+|[7. ft_memset](#ft_memset) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_memset.c)|[7. ft_strjoin](#ft_strjoin) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strjoin.c)|[7. ft_lstclear](#ft_lstclear) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_lstclear.c)|[7. ft_lstlast](#ft_lstlast) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_lstlast.c)|
+|[8. ft_strcat](#ft_strcat) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strcat.c)|[8. ft_strnequ](#ft_strnequ) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strnequ.c)|[8. ft_lstiter](#ft_lstiter) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_lstiter.c)|[8. ft_lstprint_str](#ft_lstprint_str) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_lstprint_str.c)|
+|[9. ft_strncat](#ft_strncat) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strncat.c)|[9. ft_striter](#ft_striter) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_lstiter.c)|[9. ft_lstmap](#ft_lstmap) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_lstmap.c)|[9. ft_strsplit_lst](#ft_strsplit_lst) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strsplit_lst.c)|
+|[10. ft_strlcat](#ft_strlcat) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strlcat.c)|[10. ft_striteri](#ft_striteri) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_striteri.c)||[10. get_next_line](#get_next_line) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/get_next_line.c)|
+|[11. ft_strchr](#ft_strchr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strchr.c)|[11.ft_strmap](#ft_strmap) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strmap.c)||[11. ft_itoa_uns](#ft_itoa_uns) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_itoa_uns.c)|
+|[12. ft_strrchr](#ft_strrchr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strrchr.c)|[12. ft_strmapi](#ft_strmapi) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strmapi.c)||[12. ft_itoa_long](#ft_itoa_long) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_itoa_long.c)|
+|[13. ft_strcmp](#ft_strcmp) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strcmp.c)|[13. ft_strnew](#ft_strnew) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strnew.c)||[13. ft_straddchr](#ft_straddchr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_straddchr.c)|
+|[14. ft_strncmp](#ft_strncmp) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strncmp.c)|[14. ft_strsplit](#ft_strsplit) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strsplit.c)||[14. ft_strchr_ind](#ft_strchr_ind) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strchr_ind.c)|
+|[15. ft_strcpy](#ft_strcpy) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strcpy.c)|[15. ft_strsub](#ft_strsub) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strsub.c)||[15. ft_printf](#ft_printf)|
+|[16. ft_strncpy](#ft_strncpy) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strncpy.c)|[16. ft_strtrim](#ft_strtrim) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strtrim.c)||[16. ft_strarraylen](#ft_strarraylen) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strarraylen.c)|
+|[17. ft_strdup](#ft_strdup) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strdup.c)|[17. ft_putchar](#ft_putchar) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putchar.c)||[17. ft_atof](#ft_atof) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_atof.c)|
+|[18. ft_strlen](#ft_strlen) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strlen.c)|[18. ft_putstr](#ft_putstr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putstr.c)||[18.ft_atoi_base](#ft_atoi_base) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_atoi_base.c)|
+|[19. ft_strstr](#ft_strstr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strstr.c)|[19. ft_putendl](#ft_putendl) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putendl.c)||[19.ft_realloc](#ft_realloc) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_realloc.c)|
+|[20. ft_strnstr](#ft_strnstr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strnstr.c)|[20. ft_putnbr](#ft_putnbr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putnbr.c)||[20.ft_isspace](#ft_isspace) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isspace.c)|
+|[21. ft_atoi](#ft_atoi) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_atoi.c)|[21. ft_putchar_fd](#ft_putchar_fd) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putchar_fd.c)||[21.ft_strtab_free](#ft_strtab_free) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strtab_free.c)|
+|[22. ft_isalpha](#ft_isalpha) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isalpha.c)|[21. ft_putstr_fd](#ft_putstr_fd) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putstr_fd.c)|||
+|[23. ft_isdigit](#ft_isdigit) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isdigit.c)|[22. ft_putendl_fd](#ft_putendl_fd) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putnbr_fd.c)|||
+|[24. ft_isalnum](#ft_isalnum) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isalnum.c)|[23. ft_putnbr_fd](#ft_putnbr_fd) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putnbr_fd.c)|||
+|[25. ft_isascii](#ft_isascii) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isascii.c)||||
+|[26. ft_isprint](#ft_isprint) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isprint.c)||||
+|[27. ft_toupper](#ft_toupper) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_toupper.c)||||
+|[28. ft_tolower](#ft_tolower) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_tolower.c)||||
 
 <br>
 
@@ -898,13 +898,6 @@ RETURN VALUE
 
 >        The strcspn() function returns the number of bytes in the
 >        initial  segment of s which are not in the string reject.
-
-### ft_lstadd_back
->       void ft_lstadd_back(t_list **alst, t_list *new);
-
-DESCRIPTION
-
->       Adds the element ’new’ at the end of the list.
 
 RETURN VALUE
 
