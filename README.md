@@ -30,9 +30,9 @@ will be allowed to use in all other projects.
 |[19. ft_strstr](#ft_strstr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strstr.c)|[19. ft_putendl](#ft_putendl) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putendl.c)||[19.ft_realloc](#ft_realloc) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_realloc.c)|
 |[20. ft_strnstr](#ft_strnstr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strnstr.c)|[20. ft_putnbr](#ft_putnbr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putnbr.c)||[20.ft_isspace](#ft_isspace) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isspace.c)|
 |[21. ft_atoi](#ft_atoi) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_atoi.c)|[21. ft_putchar_fd](#ft_putchar_fd) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putchar_fd.c)||[21.ft_strtab_free](#ft_strtab_free) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strtab_free.c)|
-|[22. ft_isalpha](#ft_isalpha) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isalpha.c)|[21. ft_putstr_fd](#ft_putstr_fd) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putstr_fd.c)|||
-|[23. ft_isdigit](#ft_isdigit) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isdigit.c)|[22. ft_putendl_fd](#ft_putendl_fd) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putnbr_fd.c)|||
-|[24. ft_isalnum](#ft_isalnum) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isalnum.c)|[23. ft_putnbr_fd](#ft_putnbr_fd) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putnbr_fd.c)|||
+|[22. ft_isalpha](#ft_isalpha) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isalpha.c)|[22. ft_putstr_fd](#ft_putstr_fd) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putstr_fd.c)||[22. ft_strip](#ft_strip) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strip.c)|
+|[23. ft_isdigit](#ft_isdigit) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isdigit.c)|[23. ft_putendl_fd](#ft_putendl_fd) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putnbr_fd.c)|||
+|[24. ft_isalnum](#ft_isalnum) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isalnum.c)|[24. ft_putnbr_fd](#ft_putnbr_fd) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putnbr_fd.c)|||
 |[25. ft_isascii](#ft_isascii) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isascii.c)||||
 |[26. ft_isprint](#ft_isprint) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isprint.c)||||
 |[27. ft_toupper](#ft_toupper) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_toupper.c)||||
@@ -1132,4 +1132,31 @@ DESCRIPTION
 
 >       Frees array of strings
 
+### ft_strsplit_space
+
+>       char **ft_strsplit_space(char const *s);
+
+DESCRIPTION
+
+>       Allocates (with malloc(3)) and returns an array of strings obtained
+>       by splitting s using "space" characters (space, \t, \r, \f)  as a delimiter. 
+>       The array must be ended by a NULL pointer.
+
+RETURN VALUE
+
+>       The array of new strings result of the split. NULL if the allocation fails.
+
+
+### ft_strip
+
+>       char *ft_strip(char *str);
+
+DESCRIPTION
+
+>       Allocates (with malloc(3)) and returns a new string without leading and trailing "space"
+>       characters.
+
+RETURN VALUE
+
+>       The new string. Returns NULL if NULL-str or allocation fails.
 
