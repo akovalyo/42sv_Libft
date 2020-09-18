@@ -610,12 +610,12 @@ RETURN VALUE
 >       The substring. NULL if the allocation fails.
 
 ### ft_strtrim
->       char *ft_strtrim(char const *s1, char const *set);
+>       char *ft_strtrim(char const *s1);
 
 DESCRIPTION
 >       Allocates (with malloc(3)) and returns a copy of the string given
->       as argument without the characters specified in the set argument
->       at the beginning andthe end of the string.
+>       as argument without without space chatacters
+>       at the beginning and the end of the string.
 
 RETURN VALUE
 
