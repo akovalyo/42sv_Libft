@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strip.c                                         :+:      :+:    :+:   */
+/*   ft_strncmp_alpha.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalyo <akovalyo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/16 15:47:47 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/09/16 16:36:15 by akovalyo         ###   ########.fr       */
+/*   Created: 2020/01/10 19:58:16 by akovalyo          #+#    #+#             */
+/*   Updated: 2020/09/18 16:12:51 by akovalyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-char	*ft_strip(char *str)
+int		ft_strnequ_alpha(const char *s1, const char *s2, size_t n)
 {
-	int		start;
-	int		end;
-	char	*new;
+	size_t i;
 
-	if (!str)
-		return (NULL);
-	start = 0;
-	end = ft_strlen(str);
-	end = end > 0 ? end - 1 : 0;
-	if (end == 0)
-		return (ft_strnew(0));
-	while (ft_isspace(str[start]))
-		start++;
-	while (ft_isspace(str[end]))
-		end--;
-	if (!(new = ft_strsub(str, start, end - start + 2)))
-		return (NULL);
-	return (new);
+	i = 0;
+	while ((s1[i] || s2[i]) && i < n)
+	{
+		if (ft_tolower(s1[i]) != ft_tolower(s2[i]))
+			return (1);
+		i++;
+	}
+	return (0);
 }
