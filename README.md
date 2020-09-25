@@ -22,17 +22,17 @@ will be allowed to use in all other projects.
 |[11. ft_strchr](#ft_strchr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strchr.c)|[11.ft_strmap](#ft_strmap) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strmap.c)||[11. ft_itoa_uns](#ft_itoa_uns) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_itoa_uns.c)|
 |[12. ft_strrchr](#ft_strrchr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strrchr.c)|[12. ft_strmapi](#ft_strmapi) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strmapi.c)||[12. ft_itoa_long](#ft_itoa_long) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_itoa_long.c)|
 |[13. ft_strcmp](#ft_strcmp) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strcmp.c)|[13. ft_strnew](#ft_strnew) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strnew.c)||[13. ft_straddchr](#ft_straddchr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_straddchr.c)|
-|[14. ft_strncmp](#ft_strncmp) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strncmp.c)|[14. ft_strsplit](#ft_strsplit) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strsplit.c)||[14. ft_strchr_ind](#ft_strchr_ind) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strchr_ind.c)|
-|[15. ft_strcpy](#ft_strcpy) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strcpy.c)|[15. ft_strsub](#ft_strsub) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strsub.c)||[15. ft_printf](#ft_printf)|
-|[16. ft_strncpy](#ft_strncpy) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strncpy.c)|[16. ft_strtrim](#ft_strtrim) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strtrim.c)||[16. ft_strarraylen](#ft_strarraylen) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strarraylen.c)|
-|[17. ft_strdup](#ft_strdup) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strdup.c)|[17. ft_putchar](#ft_putchar) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putchar.c)||[17. ft_atof](#ft_atof) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_atof.c)|
-|[18. ft_strlen](#ft_strlen) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strlen.c)|[18. ft_putstr](#ft_putstr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putstr.c)||[18.ft_atoi_base](#ft_atoi_base) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_atoi_base.c)|
-|[19. ft_strstr](#ft_strstr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strstr.c)|[19. ft_putendl](#ft_putendl) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putendl.c)||[19.ft_realloc](#ft_realloc) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_realloc.c)|
-|[20. ft_strnstr](#ft_strnstr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strnstr.c)|[20. ft_putnbr](#ft_putnbr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putnbr.c)||[20.ft_isspace](#ft_isspace) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isspace.c)|
-|[21. ft_atoi](#ft_atoi) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_atoi.c)|[21. ft_putchar_fd](#ft_putchar_fd) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putchar_fd.c)||[21.ft_strarr_free](#ft_strarr_free) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strarr_free.c)|
-|[22. ft_isalpha](#ft_isalpha) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isalpha.c)|[22. ft_putstr_fd](#ft_putstr_fd) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putstr_fd.c)||[22. ft_strsplit_space](#ft_strsplit_space) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strsplit_space.c)|
-|[23. ft_isdigit](#ft_isdigit) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isdigit.c)|[23. ft_putendl_fd](#ft_putendl_fd) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putnbr_fd.c)||[23. ft_strnequ_alpha](#ft_strnequ_alpha) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strnequ_alpha.c)|
-|[24. ft_isalnum](#ft_isalnum) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isalnum.c)|[24. ft_putnbr_fd](#ft_putnbr_fd) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putnbr_fd.c)|||
+|[14. ft_strncmp](#ft_strncmp) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strncmp.c)|[14. ft_strsplit](#ft_strsplit) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strsplit.c)||[14. ft_straddchr_free](#ft_straddchr_free) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_straddchr_free.c)|
+|[15. ft_strcpy](#ft_strcpy) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strcpy.c)|[15. ft_strsub](#ft_strsub) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strsub.c)||[15. ft_strchr_ind](#ft_strchr_ind) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strchr_ind.c)|
+|[16. ft_strncpy](#ft_strncpy) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strncpy.c)|[16. ft_strtrim](#ft_strtrim) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strtrim.c)||[16. ft_printf](#ft_printf)|
+|[17. ft_strdup](#ft_strdup) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strdup.c)|[17. ft_putchar](#ft_putchar) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putchar.c)||[17. ft_strarraylen](#ft_strarraylen) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strarraylen.c)|
+|[18. ft_strlen](#ft_strlen) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strlen.c)|[18. ft_putstr](#ft_putstr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putstr.c)||[18. ft_atof](#ft_atof) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_atof.c)|
+|[19. ft_strstr](#ft_strstr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strstr.c)|[19. ft_putendl](#ft_putendl) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putendl.c)||[19.ft_atoi_base](#ft_atoi_base) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_atoi_base.c)|
+|[20. ft_strnstr](#ft_strnstr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strnstr.c)|[20. ft_putnbr](#ft_putnbr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putnbr.c)||[20.ft_realloc](#ft_realloc) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_realloc.c)|
+|[21. ft_atoi](#ft_atoi) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_atoi.c)|[21. ft_putchar_fd](#ft_putchar_fd) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putchar_fd.c)||[21.ft_isspace](#ft_isspace) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isspace.c)|
+|[22. ft_isalpha](#ft_isalpha) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isalpha.c)|[22. ft_putstr_fd](#ft_putstr_fd) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putstr_fd.c)||[22.ft_strarr_free](#ft_strarr_free) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strarr_free.c)|
+|[23. ft_isdigit](#ft_isdigit) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isdigit.c)|[23. ft_putendl_fd](#ft_putendl_fd) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putnbr_fd.c)||[23. ft_strsplit_space](#ft_strsplit_space) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strsplit_space.c)|
+|[24. ft_isalnum](#ft_isalnum) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isalnum.c)|[24. ft_putnbr_fd](#ft_putnbr_fd) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putnbr_fd.c)||[24. ft_strnequ_alpha](#ft_strnequ_alpha) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strnequ_alpha.c)|
 |[25. ft_isascii](#ft_isascii) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isascii.c)||||
 |[26. ft_isprint](#ft_isprint) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isprint.c)||||
 |[27. ft_toupper](#ft_toupper) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_toupper.c)||||
@@ -978,6 +978,22 @@ DESCRIPTION
 >       Returns a pointer to a new string which is copy of string str
 >       and appended char *ch*, ending with null byte. Memory for the
 >       new string is  obtained with  malloc(3), and can be freed with free(3).
+>       If str is not exists, returns pointer to a new string with *ch*,
+>       ending with null byte.
+
+RETURN VALUE
+
+>       Pointer to a new string
+
+### ft_straddchr_free
+
+>       char	*ft_straddchr_free(char *str, char ch)
+
+DESCRIPTION
+
+>       Returns a pointer to a new string which is copy of string str
+>       and appended char *ch*, ending with null byte. Memory for the
+>       new string is  obtained with  malloc(3), and can be freed with free(3). Initially str should be malloced 
 >       If str is not exists, returns pointer to a new string with *ch*,
 >       ending with null byte.
 
