@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit_lst.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalyo <akovalyo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 11:53:41 by akovalyo          #+#    #+#             */
-/*   Updated: 2020/09/16 10:46:55 by akovalyo         ###   ########.fr       */
+/*   Updated: 2020/09/24 21:14:47 by alex             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,20 +26,20 @@ static void	add_node(t_list **result, char *str)
 
 t_list		*ft_strsplit_lst(char const *s, char c)
 {
-	char	**tab;
+	char	**arr;
 	t_list	*result;
-	int		tab_len;
+	int		arr_len;
 	int		i;
 
 	result = NULL;
-	tab = ft_strsplit(s, c);
-	tab_len = ft_strarraylen(tab);
+	arr = ft_strsplit(s, c);
+	arr_len = ft_strarraylen(arr);
 	i = 0;
-	while (i < tab_len)
+	while (i < arr_len)
 	{
-		add_node(&result, tab[i]);
+		add_node(&result, arr[i]);
 		i++;
 	}
-	ft_strtab_free(tab);
+	ft_strarr_free(arr);
 	return (result);
 }

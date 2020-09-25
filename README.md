@@ -29,7 +29,7 @@ will be allowed to use in all other projects.
 |[18. ft_strlen](#ft_strlen) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strlen.c)|[18. ft_putstr](#ft_putstr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putstr.c)||[18.ft_atoi_base](#ft_atoi_base) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_atoi_base.c)|
 |[19. ft_strstr](#ft_strstr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strstr.c)|[19. ft_putendl](#ft_putendl) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putendl.c)||[19.ft_realloc](#ft_realloc) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_realloc.c)|
 |[20. ft_strnstr](#ft_strnstr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strnstr.c)|[20. ft_putnbr](#ft_putnbr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putnbr.c)||[20.ft_isspace](#ft_isspace) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isspace.c)|
-|[21. ft_atoi](#ft_atoi) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_atoi.c)|[21. ft_putchar_fd](#ft_putchar_fd) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putchar_fd.c)||[21.ft_strtab_free](#ft_strtab_free) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strtab_free.c)|
+|[21. ft_atoi](#ft_atoi) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_atoi.c)|[21. ft_putchar_fd](#ft_putchar_fd) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putchar_fd.c)||[21.ft_strarr_free](#ft_strarr_free) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strarr_free.c)|
 |[22. ft_isalpha](#ft_isalpha) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isalpha.c)|[22. ft_putstr_fd](#ft_putstr_fd) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putstr_fd.c)||[22. ft_strsplit_space](#ft_strsplit_space) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strsplit_space.c)|
 |[23. ft_isdigit](#ft_isdigit) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isdigit.c)|[23. ft_putendl_fd](#ft_putendl_fd) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putnbr_fd.c)||[23. ft_strnequ_alpha](#ft_strnequ_alpha) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strnequ_alpha.c)|
 |[24. ft_isalnum](#ft_isalnum) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_isalnum.c)|[24. ft_putnbr_fd](#ft_putnbr_fd) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putnbr_fd.c)|||
@@ -1124,9 +1124,9 @@ RETURN VALUE
 
 >       The array of new strings result of the split. NULL if the allocation fails.
 
-### ft_strtab_free
+### ft_strarr_free
 
->       void ft_strtab_free(char **tab, int len);
+>       void ft_strarr_free(char **tab, int len);
 
 DESCRIPTION
 
