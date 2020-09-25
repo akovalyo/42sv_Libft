@@ -305,7 +305,7 @@ RETURN VALUE
 DESCRIPTION
 
 >       The  ft_strlen()  function calculates the length of the string pointed to by
->       s, excluding the terminating null byte ('\0').
+>       s, excluding the terminating null byte ('\0'). If s = NULL, returns 0
 
 RETURN VALUE
 
@@ -496,7 +496,8 @@ RETURN VALUE
 DESCRIPTION
 
 >       Allocates (with malloc(3)) and returns a new string, result of 
->       the concatenation of s1 and s2.
+>       the concatenation of s1 and s2. If s1 or s2 is NULL, returns a new 
+>       string s2 or s1 accordingly. If s1 and s2 are NULL, returns NULL
 
 RETURN VALUE
 
