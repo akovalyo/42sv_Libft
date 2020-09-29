@@ -25,7 +25,7 @@ will be allowed to use in all other projects.
 |[14. ft_strncmp](#ft_strncmp) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strncmp.c)|[14. ft_strsplit](#ft_strsplit) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strsplit.c)||[14. ft_straddchr_free](#ft_straddchr_free) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_straddchr_free.c)|
 |[15. ft_strcpy](#ft_strcpy) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strcpy.c)|[15. ft_strsub](#ft_strsub) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strsub.c)||[15. ft_strchr_ind](#ft_strchr_ind) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strchr_ind.c)|
 |[16. ft_strncpy](#ft_strncpy) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strncpy.c)|[16. ft_strtrim](#ft_strtrim) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strtrim.c)||[16. ft_printf](#ft_printf)|
-|[17. ft_strdup](#ft_strdup) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strdup.c)|[17. ft_putchar](#ft_putchar) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putchar.c)||[17. ft_strarraylen](#ft_strarraylen) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strarraylen.c)|
+|[17. ft_strdup](#ft_strdup) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strdup.c)|[17. ft_putchar](#ft_putchar) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putchar.c)||[17. ft_arraylen](#ft_arraylen) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_arraylen.c)|
 |[18. ft_strlen](#ft_strlen) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strlen.c)|[18. ft_putstr](#ft_putstr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putstr.c)||[18. ft_atof](#ft_atof) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_atof.c)|
 |[19. ft_strstr](#ft_strstr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strstr.c)|[19. ft_putendl](#ft_putendl) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putendl.c)||[19.ft_atoi_base](#ft_atoi_base) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_atoi_base.c)|
 |[20. ft_strnstr](#ft_strnstr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_strnstr.c)|[20. ft_putnbr](#ft_putnbr) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_putnbr.c)||[20.ft_realloc](#ft_realloc) [:clipboard:](https://github.com/akovalyo/42sv_Libft/blob/master/srcs/ft_realloc.c)|
@@ -1072,13 +1072,13 @@ ___
 
 ___
 
-### ft_strarraylen
+### ft_arraylen
 
->       size_t	ft_strarraylen(char **arr)
+>       size_t	ft_arraylen(void **arr)
 
 DESCRIPTION
 
->       The  function calculates the length of the array of strings, excluding
+>       The  function calculates the length of the array of pointers, excluding
 >       the terminating null.
 
 RETURN VALUE
