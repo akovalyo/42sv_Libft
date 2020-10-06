@@ -503,6 +503,20 @@ RETURN VALUE
 
 >       The new string. NULL if the allocation fails.
 
+### ft_strjoin_free
+
+>       char *ft_strjoin_free(char *s1, char *s2);
+
+DESCRIPTION
+
+>       Allocates (with malloc(3)) and returns a new string, result of 
+>       the concatenation of s1 and s2. If s1 or s2 is NULL, returns a new 
+>       string s2 or s1 accordingly. If s1 and s2 are NULL, returns NULL. Frees s1.
+
+RETURN VALUE
+
+>       The new string. NULL if the allocation fails.
+
 ### ft_strnequ
 >       int ft_strnequ(char const *s1, char const *s2, size_t n);
 
