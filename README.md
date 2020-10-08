@@ -141,7 +141,7 @@ RETURN VALUE
 >       The ft_memmove() function returns a pointer to dest.
 
 ### ft_memset
->       void  \*ft_memset(void \*s, int c, size_t n);
+>       void  *ft_memset(void *s, int c, size_t n);
 
 DESCRIPTION
 
@@ -153,7 +153,7 @@ RETURN VALUE
 >       The ft_memset() function returns a pointer to the memory area s.
 
 ### ft_strcat
->       char  \*strcat(char \*dest, const char \*src);
+>       char  *strcat(char *dest, const char *src);
 
 DESCRIPTION
 >       The  strcat()  function  appends  the src string to the dest string, 
@@ -168,7 +168,7 @@ RETURN VALUE
 >        The strcat() function returns a pointer to the resulting string dest.
 
 ### ft_strncat
->        char \*strncat(char \*dest, const char \*src, size_t n);
+>        char *strncat(char *dest, const char *src, size_t n);
 
 DESCRIPTION
 
@@ -184,7 +184,7 @@ RETURN VALUE
 >       The strncat() function returns a pointer to the resulting string dest.
 
 ### ft_strlcat
->       size_t       ft_strlcat(char \*dest, const char \*src, size_t size);
+>       size_t       ft_strlcat(char *dest, const char *src, size_t size);
 
 DESCRIPTION
 
@@ -197,7 +197,7 @@ RETURN VALUE
 >       it tried to create (the initial length of dest plus the length of src).
 
 ### ft_strchr
->       char  \*ft_strchr(const char \*s, int c);
+>       char  *ft_strchr(const char *s, int c);
 
 DESCRIPTION
 
@@ -212,7 +212,7 @@ RETURN VALUE
 >       if the character does not appear in the string.
        
 ### ft_strrchr
->       char  \*ft_strrchr(const char \*s, int c);
+>       char  *ft_strrchr(const char *s, int c);
 
 DESCRIPTION
 
@@ -225,7 +225,7 @@ RETURN VALUE
 >       if the character does not appear in the string.
 
 ### ft_strcmp
->       int   ft_strcmp(const char \*s1, const char \*s2);
+>       int   ft_strcmp(const char *s1, const char *s2);
 
 DESCRIPTION
 
@@ -241,7 +241,7 @@ RETURN VALUE
 
 ### ft_strncmp
 
->       int   ft_strncmp(const char \*s1, const char \*s2, size_t n);
+>       int   ft_strncmp(const char *s1, const char *s2, size_t n);
 
 DESCRIPTION
 
@@ -257,7 +257,7 @@ RETURN VALUE
 >       respectively, to be less than, to match, or be greater than s2.
 
 ### ft_strcpy
->       char  \*strcpy(char \*dest, const char \*src);
+>       char  *strcpy(char *dest, const char *src);
 
 DESCRIPTION
 
@@ -271,7 +271,7 @@ RETURN VALUE
 >       The  strcpy() function returns a pointer to the destination string dest.
 
 ### ft_strncpy
->       char  \*strncpy(char \*dest, const char \*src, size_t n);
+>       char  *strncpy(char *dest, const char *src, size_t n);
 
 DESCRIPTION
 
@@ -286,7 +286,7 @@ RETURN VALUE
 >       The  strncpy() function returns a pointer to the destination string dest.
 
 ### ft_strdup
->       char  \*ft_strdup(const char \*s);
+>       char  *ft_strdup(const char *s);
 
 DESCRIPTION
 
@@ -300,7 +300,7 @@ RETURN VALUE
 >       duplicated string. It returns NULL if insufficient memory was available
 
 ### ft_strlen
->       size_t       ft_strlen(const char \*s);
+>       size_t       ft_strlen(const char *s);
 
 DESCRIPTION
 
@@ -313,7 +313,7 @@ RETURN VALUE
 >       pointed to by s.
 
 ### ft_strstr
->       char  \*ft_strstr(const char \*haystack, const char \*needle);
+>       char  *ft_strstr(const char *haystack, const char *needle);
 
 DESCRIPTION
 
@@ -327,7 +327,7 @@ RETURN VALUE
 >       the first occurrence of needle is returned.
 
 ### ft_strnstr
->       char  \*strnstr(const char \*haystack, const char \*needle, size_t len);
+>       char  *strnstr(const char *haystack, const char *needle, size_t len);
 
 DESCRIPTION
 
@@ -343,7 +343,7 @@ RETURN VALUE
 >       the first occurrence of little is returned.
 
 ### ft_atoi
->       int   atoi(const char \*nptr);
+>       int   atoi(const char *nptr);
 
 DESCRIPTION
 
@@ -418,7 +418,7 @@ ___
 ## Part 2 - Additional functions
 
 ### ft_itoa
->       char  \*ft_itoa(int n);
+>       char  *ft_itoa(int n);
 
 DESCRIPTION
 
@@ -430,7 +430,7 @@ RETURN VALUE
 >       The string representing the integer. NULL if the allocation fails.
 
 ### ft_memalloc
->       void  \*ft_memalloc(size_t size);
+>       void  *ft_memalloc(size_t size);
 
 DESCRIPTION
 
@@ -443,7 +443,7 @@ RETURN VALUE
 >       The allocated memory area.
 
 ### ft_memdel
->       void  ft_memdel(void \*\*ap);
+>       void  ft_memdel(void **ap);
 
 DESCRIPTION
 
@@ -455,7 +455,7 @@ RETURN VALUE
 >       None
 
 ### ft_strclr
->       void  ft_strclr(char \*s);
+>       void  ft_strclr(char *s);
 
 DESCRIPTION
 
@@ -466,7 +466,7 @@ RETURN VALUE
 >       None
 
 ### ft_strdel
->       void  ft_strdel(char \*\*as);
+>       void  ft_strdel(char **as);
 
 DESCRIPTION
 
@@ -478,7 +478,7 @@ RETURN VALUE
 >       None
 
 ### ft_strequ
->       int   ft_strequ(char const \*s1, char const \*s2);
+>       int   ft_strequ(char const *s1, char const *s2);
 
 DESCRIPTION
 
@@ -491,7 +491,7 @@ RETURN VALUE
 
 ### ft_strjoin
 
->       char  \*ft_strjoin(char const \*s1, char const \*s2);
+>       char  *ft_strjoin(char const *s1, char const *s2);
 
 DESCRIPTION
 
@@ -505,7 +505,7 @@ RETURN VALUE
 
 ### ft_strjoin_free
 
->       char  \*ft_strjoin_free(char \*s1, char \*s2);
+>       char  *ft_strjoin_free(char *s1, char *s2);
 
 DESCRIPTION
 
@@ -518,7 +518,7 @@ RETURN VALUE
 >       The new string. NULL if the allocation fails.
 
 ### ft_strnequ
->       int   ft_strnequ(char const \*s1, char const \*s2, size_t n);
+>       int   ft_strnequ(char const *s1, char const *s2, size_t n);
 
 DESCRIPTION
 
@@ -531,7 +531,7 @@ RETURN VALUE
 >       1 or 0 according to if the 2 strings are identical or not.
 
 ### ft_striter
->       void  ft_striter(char \*s, void (\*f)(char \*));
+>       void  ft_striter(char *s, void (*f)(char *));
 
 DESCRIPTION
 
@@ -543,7 +543,7 @@ RETURN VALUE
 >       None
 
 ### ft_striteri
->       void  ft_striteri(char \*s, void (\*f)(unsigned int, char \*));
+>       void  ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 DESCRIPTION
 
@@ -556,7 +556,7 @@ RETURN VALUE
 >       None
 
 ### ft_strmap
->       char  \*ft_strmap(char const \*s, char (\*f)(char));
+>       char  *ft_strmap(char const *s, char (*f)(char));
 
 DESCRIPTION
 
@@ -569,7 +569,7 @@ RETURN VALUE
 >       The “fresh” string created from the successive applications off.
 
 ### ft_strmapi
->       char  \*ft_strmapi(char \*s, void (\*f)(unsigned int, char));
+>       char  *ft_strmapi(char *s, void (*f)(unsigned int, char));
 
 DESCRIPTION
 
@@ -583,7 +583,7 @@ RETURN VALUE
 >       Returns NULL if the allocation fails.
 
 ### ft_strnew
->       char  \*ft_strnew(size_t size);
+>       char  *ft_strnew(size_t size);
 
 DESCRIPTION
 
@@ -596,7 +596,7 @@ RETURN VALUE
 >       The string allocated and initialized to 0.
 
 ### ft_strsplit
->       char        \*\*ft_strsplit(char const \*s, char c);
+>       char        **ft_strsplit(char const *s, char c);
 
 DESCRIPTION
 
@@ -610,7 +610,7 @@ RETURN VALUE
 >       fails.
 
 ### ft_strsub
->       char	\*ft_substr(char const \*s, unsigned int start, size_t len);
+>       char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 DESCRIPTION
 
@@ -625,7 +625,7 @@ RETURN VALUE
 >       The substring. NULL if the allocation fails.
 
 ### ft_strtrim
->       char \*ft_strtrim(char const \*s1);
+>       char *ft_strtrim(char const *s1);
 
 DESCRIPTION
 >       Allocates (with malloc(3)) and returns a copy of the string given
@@ -648,7 +648,7 @@ RETURN VALUE
 >       None
 
 ### ft_putstr
->       void ft_putstr(char const \*s);
+>       void ft_putstr(char const *s);
 
 DESCRIPTION
 
@@ -659,7 +659,7 @@ RETURN VALUE
 >       None
 
 ### ft_putendl
->       void ft_putendl(char \*s);
+>       void ft_putendl(char *s);
 
 DESCRIPTION
 
@@ -692,7 +692,7 @@ RETURN VALUE
 >       None
 
 ### ft_putstr_fd
->       void ft_putstr_fd(char \*s, int fd);
+>       void ft_putstr_fd(char *s, int fd);
 
 DESCRIPTION
 
@@ -703,7 +703,7 @@ RETURN VALUE
 >       None
 
 ### ft_putendl_fd
->       void ft_putendl_fd(char \*s, int fd);
+>       void ft_putendl_fd(char *s, int fd);
 
 DESCRIPTION
 
@@ -729,7 +729,7 @@ ___
 ## Bonus part:
 
 ### ft_lstnew
->       t_list \*ft_lstnew(void \*content);
+>       t_list *ft_lstnew(void *content);
 
 DESCRIPTION
 
@@ -743,7 +743,7 @@ RETURN VALUE
 >       The new element.
 
 ### ft_lstadd_front
->       void ft_lstadd_front(t_list \*\*lst, t_list \*new);
+>       void ft_lstadd_front(t_list **lst, t_list *new);
 
 DESCRIPTION
 
@@ -755,7 +755,7 @@ RETURN VALUE
 
 
 ### ft_lstsize
->       int ft_lstsize(t_list \*lst);
+>       int ft_lstsize(t_list *lst);
 
 DESCRIPTION
 
@@ -767,7 +767,7 @@ RETURN VALUE
 
 
 ### ft_lstlast
->       t_list \*ft_lstlast(t_list \*lst);
+>       t_list *ft_lstlast(t_list *lst);
 
 DESCRIPTION
 
@@ -779,7 +779,7 @@ RETURN VALUE
 
 
 ### ft_lstadd_back
->       void ft_lstadd_back(t_list \*\*lst, t_list \*new);
+>       void ft_lstadd_back(t_list **lst, t_list *new);
 
 DESCRIPTION
 
@@ -791,7 +791,7 @@ RETURN VALUE
 
 
 ### ft_lstdelone
->       void ft_lstdelone(t_list \*lst, void (\*del)(void\*));
+>       void ft_lstdelone(t_list *lst, void (*del)(void*));
 
 DESCRIPTION
 
@@ -805,7 +805,7 @@ RETURN VALUE
 >       None
 
 ### ft_lstclear
->       void ft_lstdel(t_list \*\*lst, void (\*del)(void \*));
+>       void ft_lstdel(t_list **lst, void (*del)(void *));
 
 DESCRIPTION
 
@@ -819,7 +819,7 @@ RETURN VALUE
 
 
 ### ft_lstiter
->       void ft_lstiter(t_list \*lst, void (\*f)(void \*));
+>       void ft_lstiter(t_list *lst, void (*f)(void *));
 
 DESCRIPTION
 
@@ -831,7 +831,7 @@ RETURN VALUE
 >       None
 
 ### ft_lstmap
->       t_list \*ft_lstmap(t_list \*lst, void \*(\*f)(void \*), void (\*del)(void \*));
+>       t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 DESCRIPTION
 
@@ -850,7 +850,7 @@ ___
 ## 4. Personal functions:
 
 ### ft_strlcpy
->       size_t ft_strlcpy(char \*dest, const char \*src, size_t dstsize);
+>       size_t ft_strlcpy(char *dest, const char *src, size_t dstsize);
 
 DESCRIPTION
 
@@ -889,7 +889,7 @@ DESCRIPTION
 >       The ft_nbrlen functions returns the length of number
 
 ### ft_strspn
->       size_t strspn(const char \*s, const char \*accept);
+>       size_t strspn(const char *s, const char *accept);
 
 DESCRIPTION
 
@@ -902,7 +902,7 @@ RETURN VALUE
 >       initial segment of s which consist only of bytes from accept.
 
 ### ft_strcspn
->       size_t strcspn(const char \*s, const char \*reject);
+>       size_t strcspn(const char *s, const char *reject);
 
 DESCRIPTION
 
@@ -930,7 +930,7 @@ RETURN VALUE
 >       Length of the list.
 
 ### ft_lstlast
->       t_list \*ft_lstlast(t_list \*lst);
+>       t_list *ft_lstlast(t_list *lst);
 
 DESCRIPTION
 
@@ -941,7 +941,7 @@ RETURN VALUE
 >       Last element of the list.
 
 ### ft_lstprint_str
->       void ft_lstprint_str(t_list \*lst)
+>       void ft_lstprint_str(t_list *lst)
 
 
 DESCRIPTION
@@ -949,7 +949,7 @@ DESCRIPTION
 >       Prints contents (string) of linked list starting from head.
 
 ### ft_strsplit_lst
->       t_list	\*ft_strsplit_lst(char const \*s, char c)
+>       t_list	*ft_strsplit_lst(char const *s, char c)
 
 
 DESCRIPTION
@@ -964,7 +964,7 @@ RETURN VALUE
 
 ### get_next_line
 
->       int		get_next_line(int fd, char \*\*line)
+>       int		get_next_line(int fd, char **line)
 
 
 DESCRIPTION
@@ -1001,7 +1001,7 @@ RETURN VALUE
 
 ### ft_straddchr_free
 
->       char	\*ft_straddchr_free(char \*str, char ch)
+>       char	*ft_straddchr_free(char *str, char ch)
 
 DESCRIPTION
 
@@ -1017,7 +1017,7 @@ RETURN VALUE
 
 ### ft_strchr_ind
 
->       int	ft_strchr_ind(const char \*s, char c)
+>       int	ft_strchr_ind(const char *s, char c)
 
 DESCRIPTION
 
@@ -1032,7 +1032,7 @@ RETURN VALUE
 
 ### ft_printf
 
->       int printf (const char \*format, ... );
+>       int printf (const char *format, ... );
 
 DESCRIPTION
 
@@ -1088,7 +1088,7 @@ ___
 
 ### ft_arraylen
 
->       size_t	ft_arraylen(void \*\*arr)
+>       size_t	ft_arraylen(void **arr)
 
 DESCRIPTION
 
@@ -1102,7 +1102,7 @@ RETURN VALUE
 
 ### ft_atof
 
->       float	ft_atof(char \*nptr)
+>       float	ft_atof(char *nptr)
 
 DESCRIPTION
 
@@ -1114,7 +1114,7 @@ RETURN VALUE
 
 ### ft_atoi_base
 
->       int	ft_atoi_base(char \*str, char \*base)
+>       int	ft_atoi_base(char *str, char *base)
 
 DESCRIPTION
 
@@ -1143,7 +1143,7 @@ RETURN VALUE
 
 ### ft_strsplit_space
 
->       char  \*\*ft_strsplit_space(char const \*s);
+>       char  **ft_strsplit_space(char const *s);
 
 DESCRIPTION
 
@@ -1157,7 +1157,7 @@ RETURN VALUE
 
 ### ft_strarr_free
 
->       void  ft_strarr_free(char \*\*tab, int len);
+>       void  ft_strarr_free(char **tab, int len);
 
 DESCRIPTION
 
@@ -1165,7 +1165,7 @@ DESCRIPTION
 
 ### ft_strsplit_space
 
->       char  \*\*ft_strsplit_space(char const \*s);
+>       char  **ft_strsplit_space(char const *s);
 
 DESCRIPTION
 
@@ -1180,7 +1180,7 @@ RETURN VALUE
 
 ### ft_strnequ_alpha
 
->       int   ft_strnequ_alpha(const char \*s1, const char \*s2, size_t n);
+>       int   ft_strnequ_alpha(const char *s1, const char *s2, size_t n);
 
 DESCRIPTION
 
@@ -1194,7 +1194,7 @@ RETURN VALUE
 
 ### ft_strarr_print
 
->       void  ft_strarr_print(char \*\*arr)
+>       void  ft_strarr_print(char **arr)
 
 DESCRIPTION
 
